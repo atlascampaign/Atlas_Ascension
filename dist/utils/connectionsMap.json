@@ -1,0 +1,21 @@
+{"erevan" :{
+    "one": ["two", "three", "four"],
+    "two": ["five", "seven"],
+    "three": ["five"],
+    "four": ["seven"],
+    "five": ["twelve", "six"],
+    "six": ["sixteen"],
+    "seven": ["fourteen", "eleven"],
+    "eight": ["nineteen"],
+    "nine": ["eighteen"],
+    "ten": ["nineteen"],
+    "eleven": ["fifteen"],
+    "twelve": ["sixteen"],
+    "fourteen": ["fifteen"],
+    "seventeen": ["twentyone", "nine"],
+    "eighteen": ["thirteen"],
+    "nineteen": ["thirteen"],
+    "twenty": ["ten", "eight"],
+    "twentyone": ["eighteen"]
+}
+}

@@ -1,0 +1,293 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 25px;
+  background: #000;
+}
+
+#outer {
+  border-radius: 12px;
+  max-width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+#inner {
+  width: 2560px;
+  height: 1440px;
+  position: absolute;
+  background: radial-gradient(#ddd, #222);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(https://i.imgur.com/oxVKKsi.jpg);
+  background-size: cover;
+}
+
+/*
+animations
+*/
+
+.fade-in {
+  -webkit-animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.fade-in-line {
+  -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+* svg line (rubbish code, change it at a later date)
+*/
+
+#skillline {
+  width: 1520px;
+  height: 800px;
+  z-index: -1;
+  margin: 0;
+  position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+
+#line {
+  stroke-width: 2px;
+  stroke: rgba(245, 175, 25, 0.2);
+}
+.sixseven,
+.twothree {
+  display: none;
+}
+
+/*
+ * skill points left
+ */
+.skillsleft {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+}
+.skillsleft span {
+  font-size: 22px;
+}
+.skillsleft p {
+  margin: 0;
+}
+/*
+* points
+*/
+
+.point {
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  border-radius: 50%;
+  box-shadow:
+    0 0 2px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(245, 175, 25, 0.5),
+    0 0 30px rgba(245, 175, 25, 0.5),
+    0 0 40px rgba(245, 175, 25, 0.5),
+    0 0 50px rgba(245, 175, 25, 0.2),
+    0 0 80px rgba(245, 175, 25, 0.2);
+  cursor: pointer;
+  background-size: 28px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1d242c;
+  position: absolute;
+  z-index: 2;
+}
+.point:focus {
+}
+.starting {
+  box-shadow:
+    0 0 2px rgba(255,255,255,.5),
+    0 0 8px rgba(255,255,255,.5),
+    0 0 10px rgba(240,248,255,.5),
+    0 0 20px rgba(240,248,255,.5),
+    0 0 30px rgba(240,248,255,.5),
+    0 0 40px rgba(240,248,255,.5),
+    0 0 50px 28px rgba(240,248,255,.2),
+    0 0 80px 28px rgba(240,248,255,.2);
+}
+.locked {
+  border: 2px solid rgba(245, 175, 25, 0.2);
+  z-index: 1;
+  background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
+  background-size: 24px 24px;
+}
+
+.p1 {
+  background-image: url(https://inmyculture.com/icons/dnd-dice20.svg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p2 {
+  background-image: url(https://inmyculture.com/icons/dnd-expertise-active.svg);
+  margin: 0;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p3 {
+  background-image: url(https://inmyculture.com/icons/dnd-sneak-attack-active.svg);
+  top: 45.5%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+}
+
+.p4 {
+  background-image: url(https://inmyculture.com/icons/dnd-cunning-action-active.svg);
+  top: 45.5%;
+  left: 52.5%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.p5 {
+  background-image: url(https://inmyculture.com/icons/dnd-rogue-archetype-active.svg);
+  top: 37.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p6 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 31.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p7 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 50%;
+  left: 46.2%;
+  transform: translate(-50%, -50%);
+}
+
+.p8 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.p9 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 54.5%;
+  left: 52.5%;
+  transform: translate(-50%, -50%);
+}
+
+.p10 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p11 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 54.5%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+}
+
+.p12 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 62.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*skills*/
+.hide {
+  display: none;
+}
+.point:hover .hide {
+  display: block;
+  z-index: 3;
+  overflow-y: auto;
+}
+.card {
+  width: 215px;
+  height: auto;
+  min-height: 260px;
+  background: #fff6dd;
+  position: relative;
+  border-radius: 12px;
+  margin-left: 45px;
+}
+.card-head img {
+  width: 100%;
+  height: auto;
+}
+.card h3 {
+  padding: 0 8px;
+  margin: -28px 0 0 0;
+  font-size: 14px;
+  color: #ffffff;
+  position: relative;
+}
+.card-foot {
+  padding: 8px;
+}
+.card-foot span {
+  font-size: 12px;
+}
+/*media quaries*/
+@media (max-width: 720px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  #outer {
+    border-radius: 0;
+  }
+}

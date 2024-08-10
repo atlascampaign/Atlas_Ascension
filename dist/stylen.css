@@ -1,0 +1,442 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background: url('images/shabalaya._dnd_fantasy_wallpaper_a_armored_individual_is_standi_2c7c04bb-8d1d-4f2d-bc57-7818e8ca63e6.png') no-repeat center center;
+  background-size: cover;
+}
+
+
+/*
+animations
+*/
+
+.fade-in {
+  -webkit-animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.fade-in-line {
+  -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+* svg line (rubbish code, change it at a later date)
+*/
+
+#skillline {
+  width: 1520px;
+  height: 800px;
+  z-index: -1;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+#line {
+  stroke-width: 2px;
+  stroke: rgba(118, 133, 173, 0.2);
+}
+
+/*
+ * skill points left
+ */
+ .skillsleft {
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-align: center;
+  background-color: #1d242c8f;
+  border-radius: 5px;
+}
+
+.skillsleft span {
+  font-size: 40px;
+  font-family: 'EB Garamond', serif;
+  align-content: center;
+}
+
+.skillsleft p {
+  margin: 345534;
+  font-family: 'EB Garamond', serif;
+}
+/*
+* points
+*/
+
+.point {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 2px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(22, 93, 217, 0.5),
+    0 0 30px rgba(51, 135, 196, 0.5),
+    0 0 40px rgba(22, 107, 139, 0.5),
+    0 0 50px rgba(13, 64, 152, 0.2),
+    0 0 80px rgba(25, 84, 245, 0.2);
+  cursor: pointer;
+  background-size: 28px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  position: fixed;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0) !important; 
+}
+
+.point:hover .card {
+  opacity: 1; /* Show the card on hover */
+  visibility: visible; /* Show the card on hover */
+}
+
+.starting {
+  height: 60px;
+  width: 60px;
+  box-shadow:
+    0 0 2px rgba(255,255,255,.5),
+    0 0 8px rgba(255,255,255,.5),
+    0 0 10px rgba(240,248,255,.5),
+    0 0 20px rgba(240,248,255,.5),
+    0 0 30px rgba(240,248,255,.5),
+    0 0 40px rgba(240,248,255,.5),
+    0 0 50px 28px rgba(240,248,255,.2),
+    0 0 80px 28px rgba(240,248,255,.2);
+}
+
+
+.p1 {
+  background-image: url('images/starting_hesperia.png');
+  background-size: cover;
+  top: 90%;
+  left: 47.8%;
+  transform: translate(-50%, -50%);
+}
+
+.p2 {
+  background-image: url('images/icon1.png');
+  background-size: cover;
+  background-color: #1d242c;
+  top: 78%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.p3 {
+  background-image: url('images/icon2.png');
+  background-size: cover;
+  background-color: #1d242c;
+  top: 80%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.p4 {
+  background-image: url(https://inmyculture.com/icons/dnd-cunning-action-active.svg);
+  background-color: #1d242c;
+  top: 80%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}
+
+.p5 {
+  background-image: url('images/icon1.png');
+  background-size: cover;
+  background-color: #1d242c; /* Add this line to make the background image cover the circle */
+  top: 65%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+}
+
+.p6 {
+  background-image: url('images/icon1.png');
+  background-size: cover;
+  background-color: #1d242c;
+  top: 60%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+}
+
+.p7 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 65%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+}
+
+.p8 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 25%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+}
+
+.p9 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 24%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+}
+
+.p10 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 43%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.p11 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 47%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+}
+
+.p12 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 47%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+.p13 {
+  background-color: #fcfdff;
+  top: 45%;
+  left:48%;
+  transform: translate(-50%, -50%);
+}
+
+.p14 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 78%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+}
+
+.p15 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 42%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+}
+
+.p16 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 42%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+}
+
+.p17 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 25%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+}
+
+.p18 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 59%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.p19 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 59%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}
+
+.p20 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.p21 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 43%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}
+
+.p22 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 60%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+}
+
+/*skills*/
+.hide {
+  display: none;
+  position: relative;
+  top: 50%;
+  left: calc(100% + 20px); /* Place the card 20px to the right of the hovered element */
+  transform: translateY(-50%);
+  transition: left 0.3s ease-in-out;
+  overflow: visible; /* Ensure the card is above other elements */
+}
+
+
+.point:not(.locked):hover .hide {
+  display: block;
+  overflow-y: visible;
+  position: absolute;
+  z-index: 3;
+}
+
+.card {
+  width: 340px;
+  height: auto;
+  min-height: 100px;
+  background-color: rgba(19, 23, 27, 1); /* Set the background color with opacity */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-size: contain; /* Adjust background image size */
+  position: relative;
+  border-radius: 0px;
+  margin-left: 0px; /* Increase the z-index to ensure the card is above other elements */
+  /* Add any additional styles as needed */
+}
+
+
+
+.card-head img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  padding: 7px; /* Add padding to give space around the text */
+  margin: 15px auto 0; /* Adjust margin to center vertically and add space at the top */
+  font-size: 18px;
+  font-family: "Jacques Francois", serif;
+  color: #d34d4d;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  text-align: center; /* Center the text horizontally */
+}
+
+.card-foot {
+  padding: 8px;
+}
+
+.card-foot span {
+  font-size: 16px;
+  font-family: 'EB Garamond';
+  color: rgba(157, 231, 237, 0.762);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-rendering: optimizeLegibility;
+  
+}
+
+.top-svg {
+  position: absolute;
+  width: 350px;
+  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
+  top: -20px;
+  left:-5px;
+  overflow:unset; /* Adjust the top position as needed */
+}
+
+.bottom-svg {
+  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
+  bottom: -11px;
+ 
+  position: absolute;
+  width: 340px; /* Adjust the bottom position as needed */
+}
+
+/*media quaries*/
+@media (max-width: 720px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  #outer {
+    border-radius: 0;
+  }
+}
+
+/* Add this CSS to define the click effect */
+.point.clicked {
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 0 200px rgb(255, 255, 255); /* Change to the desired glow effect */
+    transition: box-shadow 3s ease; /* Adjust the transition duration as needed */
+}
+
+.locked {
+  border: 2px solid rgba(206, 176, 91, 0.382);
+  z-index: 1;
+background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
+  background-size: 24px 24px;
+  box-shadow: none;
+}
+
+.forget {
+  position: absolute;
+  top: 20px;
+  left: 500px;
+  color: white;
+  text-align: center;
+  background-color: #1d242cb3;
+  border-radius: 10%;
+  padding: 10px;
+  width: 5%;
+}
+
+/* Specific rule for starting points */
+.starting:hover .hide {
+  left: 50%;
+  top: -30px; /* Place the card 20px above the hovered element */
+  transform: translate(-50%, -100%);
+}
