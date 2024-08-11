@@ -72,36 +72,6 @@ animations
   display: none;
 }
 
-/*
- * skill points left
- */
- .skillsleft {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  text-align: center;
-  background-color: #1d242cb3;
-  border-radius: 10%;
-  padding: 10px;
-}
-
-.skillsleft span {
-  font-size: 40px;
-  font-family: 'EB Garamond', serif;
-  align-content: center;
-  text-align: center;
-}
-
-.skillsleft p {
-  margin: 345534;
-  font-family: 'EB Garamond', serif;
-  text-align: center;
-}
-/*
-* points
-*/
-
 .point {
   height: 50px;
   width: 50px;

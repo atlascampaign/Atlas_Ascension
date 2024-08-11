@@ -1,3 +1,9 @@
+const ascension = {"hesperia" : "Astromanzia",
+    "fedra" : "Primofulmine",
+    "erevan" : "Campione del Fato",
+    "narkran" : "Sentinella dell'Equilibrio",
+    "yvette" : "Driade Iridescente"}
+
 // Create a new link element for the preconnect to Google Fonts
 const preconnectGoogleFonts = document.createElement('link');
 preconnectGoogleFonts.setAttribute('rel', 'preconnect');
@@ -22,13 +28,7 @@ head.appendChild(preconnectGoogleFonts);
 head.appendChild(preconnectGoogleFontsGstatic);
 head.appendChild(googleFontsStylesheet);
 
-const ascension = {"hesperia" : "Astromanzia",
-    "fedra" : "Primofulmine",
-    "erevan" : "Campione del Fato",
-    "narkran" : "Sentinella dell'Equilibrio",
-    "yvette" : "Driade Iridescente"}
-
-const character = document.querySelector('body').id;
-const desc = ascension[character];
+const pc = document.querySelector('body').id;
+const desc = ascension[pc];
 
 document.querySelector('.skillsleft h1').textContent = desc

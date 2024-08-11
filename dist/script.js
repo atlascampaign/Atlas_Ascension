@@ -124,7 +124,7 @@ function unlockPoint(pointClass) {
     saveUnlockedDataToLocalstorage(unlockedData);
   }
 }
-
+updateSkillPoints();  
 var retrievedData = getUnlockedDataFromLocalstorage();
 console.log(retrievedData);
 unlockElementsFromData(retrievedData);
@@ -333,7 +333,11 @@ function unlockElementsFromData(data) {
 };
 
 function loadSkillPoints(data) {
-console.log("OOOOO",data[0].skillpoints)
-  var skillPoints = data[0].skillpoints;
-  document.querySelector('.skillsleft h3').textContent = skillPoints.toString();
+  if (data.length > 0 && data[0].hasOwnProperty('skillpoints')) {
+      var skillPoints = data[0].skillpoints;
+      document.querySelector('.skillsleft h3').textContent = skillPoints.toString();
+  } else {
+      data = { id: "", maps: "", skillpoints: 0 };
+      document.querySelector('.skillsleft h3').textContent = "0"; // or handle as needed
+  }
 }
