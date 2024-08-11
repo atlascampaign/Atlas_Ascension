@@ -68,29 +68,39 @@ function unlockPointsFromMap(clickedPoint) {
 
 
 function updateSkillPoints() {
-  document.querySelector('.skillsleft span').textContent = skillPoints;
+  document.querySelector('.skillsleft h3').textContent = skillPoints;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
   // Initialize the skill points available
-  skillPoints = parseInt(document.querySelector('.skillsleft span').textContent);
+  skillPoints = parseInt(document.querySelector('.skillsleft h3').textContent);
 
   // Function to update the display of skill points
 
 
   // Increment skill points when clicking on the skillsleft element
-  document.querySelector('.skillsleft').addEventListener('click', function() {
+  document.querySelector('.skillsleft h3').addEventListener('click', function() {
     skillPoints++;
     updateSkillPoints();
   });
 
   // Check if there's any data in the local storage
   var retrievedData = getUnlockedDataFromLocalstorage();
+  console.log('HAAAAAAAAAAAAAAAAAAAAAAAAAAA', retrievedData);
 
   // If local storage is empty, initialize with a default JSON structure
   if (!retrievedData || retrievedData.length === 0) {
-    var defaultData = [{ id: "", skillpoints: 0 }];
+    var defaultData = [{ id: "", maps: "", skillpoints: 0 }];
     saveUnlockedDataToLocalstorage(defaultData);
+  }
+  else {
+    var mapss = retrievedData.map(function(item) {
+      return item.maps;
+    });
+    console.log(mapss);
+    mapss.forEach(point => unlockPointsFromMap(point));
+
+    
   }
 });
 
@@ -118,6 +128,7 @@ function unlockPoint(pointClass) {
 var retrievedData = getUnlockedDataFromLocalstorage();
 console.log(retrievedData);
 unlockElementsFromData(retrievedData);
+loadSkillPoints(retrievedData);
 
 function drawLines() {
   const container = document.getElementById('container');
@@ -269,21 +280,26 @@ points.forEach(point => {
 function gatherUnlockedData() {
   var unlockedElements = document.querySelectorAll('.clicked');
   var unlockedData = [];
-  var skillPointsElement = document.querySelector('.skillsleft span');
+  var skillPointsElement = document.querySelector('.skillsleft h3');
   var skillPoints = skillPointsElement ? parseInt(skillPointsElement.textContent) : 0;
 
   unlockedElements.forEach(function(element) {
     var id = element.getAttribute('id');
+    var map = element.getAttribute('class').split(' ')[1];
+    console.log("HERE",map);
 
     // Construct an object for each unlocked element
     var unlockedItem = {
       id: id,
+      maps: map,
       skillpoints: skillPoints // Add more properties as needed
     };
 
     // Push the object to the array
     unlockedData.push(unlockedItem);
   });
+
+
 
   return unlockedData;
 }
@@ -315,3 +331,9 @@ function unlockElementsFromData(data) {
     }
   });
 };
+
+function loadSkillPoints(data) {
+console.log("OOOOO",data[0].skillpoints)
+  var skillPoints = data[0].skillpoints;
+  document.querySelector('.skillsleft h3').textContent = skillPoints.toString();
+}

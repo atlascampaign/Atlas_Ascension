@@ -66,28 +66,6 @@ animations
 /*
  * skill points left
  */
- .skillsleft {
-  padding-left: 5px;
-  padding-right: 5px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  text-align: center;
-  background-color: #1d242c8f;
-  border-radius: 5px;
-}
-
-.skillsleft span {
-  font-size: 40px;
-  font-family: 'EB Garamond', serif;
-  align-content: center;
-}
-
-.skillsleft p {
-  margin: 345534;
-  font-family: 'EB Garamond', serif;
-}
 /*
 * points
 */

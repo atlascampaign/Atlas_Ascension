@@ -85,22 +85,36 @@ animations
  * skill points left
  */
  .skillsleft {
+  align-items: center;
   position: absolute;
   top: 20px;
   left: 20px;
   color: white;
+  /*background-color: #1d242cde;*/
+  border-radius: 12px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px
 }
 
-.skillsleft span {
+.skillsleft h3 {
   font-size: 40px;
-  font-family: 'EB Garamond', serif;
-  align-content: center;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  position: relative
 }
 
-.skillsleft p {
-  margin: 345534;
-  font-family: 'EB Garamond', serif;
+.skillsleft h2 {
+  text-align: center;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
 }
+
 /*
 * points
 */
@@ -397,7 +411,7 @@ animations
 }
 
 /* Specific rule for starting points */
-.starting:hover .hide {
+.starting:hover {
   left: 50%;
   top: -30px; /* Place the card 20px above the hovered element */
   transform: translate(-50%, -100%);
