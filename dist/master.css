@@ -33,3 +33,32 @@
     font-style: normal;
     font-size: 20px;
   }
+
+  .forget {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .forget img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .forget span {
+    position: absolute; /* Change to absolute */
+    color: white;
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    left: 50%;
+    top: 49%;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  }

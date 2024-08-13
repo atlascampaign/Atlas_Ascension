@@ -74,12 +74,12 @@ const unlockmap = {
   
   
   function updateSkillPoints() {
-    document.querySelector('.skillsleft span').textContent = skillPoints;
+    document.querySelector('.skillsleft h3').textContent = skillPoints;
   }
   
   document.addEventListener("DOMContentLoaded", function() {
     // Initialize the skill points available
-    skillPoints = parseInt(document.querySelector('.skillsleft span').textContent);
+    skillPoints = parseInt(document.querySelector('.skillsleft h3').textContent);
   
     // Function to update the display of skill points
   
@@ -99,12 +99,7 @@ const unlockmap = {
       saveUnlockedDataToLocalstorage(defaultData);
     }
   });
-  
-  document.querySelector('.forget').addEventListener('click', function() {
-    localStorage.removeItem('unlockedData');
-    console.log("Local storage cleared.");
-    location.reload();
-  });
+
   
   function unlockPoint(pointClass) {
     const point = document.querySelector(`.${pointClass}`);
@@ -309,7 +304,7 @@ drawLines();
   function gatherUnlockedData() {
     var unlockedElements = document.querySelectorAll('.clicked');
     var unlockedData = [];
-    var skillPointsElement = document.querySelector('.skillsleft span');
+    var skillPointsElement = document.querySelector('.skillsleft h3');
     var skillPoints = skillPointsElement ? parseInt(skillPointsElement.textContent) : 0;
   
     unlockedElements.forEach(function(element) {

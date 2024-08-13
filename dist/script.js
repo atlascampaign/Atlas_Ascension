@@ -104,11 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-document.querySelector('.forget').addEventListener('click', function() {
-  localStorage.removeItem('unlockedData');
-  console.log("Local storage cleared.");
-  location.reload();
-});
+
 
 function unlockPoint(pointClass) {
   const point = document.querySelector(`.${pointClass}`);

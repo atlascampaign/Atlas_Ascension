@@ -398,18 +398,6 @@ animations
   box-shadow: none;
 }
 
-.forget {
-  position: absolute;
-  top: 20px;
-  left: 500px;
-  color: white;
-  text-align: center;
-  background-color: #1d242cb3;
-  border-radius: 10%;
-  padding: 10px;
-  width: 5%;
-}
-
 /* Specific rule for starting points */
 .starting:hover {
   left: 50%;

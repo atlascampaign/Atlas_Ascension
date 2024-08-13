@@ -349,15 +349,3 @@ animations
   background-size: 24px 24px;
   box-shadow: none;
 }
-
-.forget {
-  position: absolute;
-  top: 20px;
-  left: 500px;
-  color: white;
-  text-align: center;
-  background-color: #1d242cb3;
-  border-radius: 10%;
-  padding: 10px;
-  width: 5%;
-}

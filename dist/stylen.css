@@ -66,31 +66,7 @@ animations
 /*
  * skill points left
  */
- .skillsleft {
-  padding-left: 5px;
-  padding-right: 5px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  text-align: center;
-  background-color: #1d242c8f;
-  border-radius: 5px;
-}
 
-.skillsleft span {
-  font-size: 40px;
-  font-family: 'EB Garamond', serif;
-  align-content: center;
-}
-
-.skillsleft p {
-  margin: 345534;
-  font-family: 'EB Garamond', serif;
-}
-/*
-* points
-*/
 
 .point {
   height: 50px;
@@ -422,17 +398,7 @@ background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
   box-shadow: none;
 }
 
-.forget {
-  position: absolute;
-  top: 20px;
-  left: 500px;
-  color: white;
-  text-align: center;
-  background-color: #1d242cb3;
-  border-radius: 10%;
-  padding: 10px;
-  width: 5%;
-}
+
 
 /* Specific rule for starting points */
 .starting:hover .hide {

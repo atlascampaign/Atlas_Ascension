@@ -32,3 +32,25 @@ const pc = document.querySelector('body').id;
 const desc = ascension[pc];
 
 document.querySelector('.skillsleft h1').textContent = desc
+
+const container = document.getElementById('container');
+
+const forgetDiv = document.createElement('div');
+forgetDiv.className = 'forget';
+
+const span = document.createElement('span');
+span.textContent = 'Oblio';
+
+const img = document.createElement('img');
+img.src = 'images/oblivion.png';
+
+forgetDiv.appendChild(span);
+forgetDiv.appendChild(img);
+
+container.appendChild(forgetDiv);
+
+document.querySelector('.forget').addEventListener('click', function() {
+    localStorage.removeItem('unlockedData');
+    console.log("Local storage cleared.");
+    location.reload();
+  });
