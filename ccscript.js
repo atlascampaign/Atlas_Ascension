@@ -39,10 +39,10 @@ jQuery(document).ready(function() {
 
     // Define passwords and page URLs for each ccicon ID
     var ccIconData = {
-        "fireseed": { password: "willow", pageURL: "yvette.html", truth: "<i>Surael ambrorian zelorid\nPhaladonos enalar elura\nLuthanor astinian pheliris...</i>" },
-        "naboar": { password: "serenya", pageURL: "erevan.html", truth: "<i>Vaer'nazil uthua xairae...</i>" },
-        "storm": {password: "zinrea", pageURL: "fedra.html", truth: "<i>Naroth traszaera\nAstrarai drazaroth\nYen'haleth elunan Ilitr...</i>"},
-        "winged": {password: "eara", pageURL: "hesperia.html", truth:"<i>Naroth ignerior\nZarhelanar astraiad\nYoh-Phaleth elunan Zorionos...</i>"}
+        "fireseed": { password: "willow", pageURL: "./dist/yvette.html", truth: "<i>Surael ambrorian zelorid\nPhaladonos enalar elura\nLuthanor astinian pheliris...</i>" },
+        "naboar": { password: "serenya", pageURL: "./dist/erevan.html", truth: "<i>Vaer'nazil uthua xairae...</i>" },
+        "storm": {password: "zinrea", pageURL: "./dist/fedra.html", truth: "<i>Naroth traszaera\nAstrarai drazaroth\nYen'haleth elunan Ilitr...</i>"},
+        "winged": {password: "eara", pageURL: "./dist/hesperia.html", truth:"<i>Naroth ignerior\nZarhelanar astraiad\nYoh-Phaleth elunan Zorionos...</i>"}
     };
 
     // Iterate over each ccicon element
