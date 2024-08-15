@@ -24,7 +24,7 @@
 body {
     margin: 0;
     padding: 0;
-    cursor: url('/dist/images/cursorbase.svg'), auto;
+    cursor: url('./dist/images/cursorbase.svg'), auto;
     overflow: hidden;
 }
 
@@ -33,11 +33,11 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url('/dist/images/shabalaya._universe_cosmos_background_dark_colors_9ffa5c87-94fa-4780-8b81-477d5ce3f1ee.png');
+    background-image: url('./dist/images/shabalaya._universe_cosmos_background_dark_colors_9ffa5c87-94fa-4780-8b81-477d5ce3f1ee.png');
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-    cursor: url('/dist/images/cccursor.svg');
+    cursor: url('./dist/images/cccursor.svg');
     overflow: hidden;
     
 }
@@ -168,7 +168,7 @@ h1 {
     width: 4%;
     top: 17%;
     transform: translate(-50%, -50%);
-    cursor: url('/dist/images/pointerbase.svg'), auto;
+    cursor: url('./dist/images/pointerbase.svg'), auto;
     left:15%
 }
 
