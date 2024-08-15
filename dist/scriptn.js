@@ -257,49 +257,7 @@ drawLines();
   });
   
   // Add click event listener to each .point element
-  const points = document.querySelectorAll('.point');
-  points.forEach(point => {
-    point.addEventListener('click', function() {
-      // Check if the point is locked
-      if (!this.classList.contains('locked')) {
-        // Check if there are skill points available and if the point hasn't been clicked before
-        if (skillPoints > 0 && !this.classList.contains('clicked')) {
-          // Decrease the skill points available
-          skillPoints--;
-          // Update the display
-          updateSkillPoints();
   
-          // Add classes to indicate that the point has been clicked and apply border
-          this.classList.add('clicked', 'bordered');
-          // Add a class to trigger the flash effect
-          this.classList.add('flash');
-          // Remove the class after a delay to reset the effect
-          setTimeout(() => {
-            this.classList.remove('flash');
-          }, 500); // Adjust the duration as needed
-  
-          // Unlock points based on the map
-          unlockPointsFromMap(this.classList[1]);
-  
-          // Additional logic for when points are clicked
-          var pointsClicked = document.querySelectorAll('.point.clicked').length;
-          if (pointsClicked >= 8) {
-            unlockPoint('p13');
-          }
-  
-          console.log(pointsClicked);
-  
-          drawLines();
-        } else {
-          // Display a message or perform any other action if no skill points are available
-          console.log("No skill points available or the point has been clicked before.");
-        }
-      } else {
-        // Display a message or perform any other action if the point is locked
-        console.log("This point is locked and cannot be clicked.");
-      }
-    });
-  });
   
   function gatherUnlockedData() {
     var unlockedElements = document.querySelectorAll('.clicked');
