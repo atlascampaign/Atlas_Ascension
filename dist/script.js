@@ -63,7 +63,7 @@ function unlockPointsFromMap(clickedPoint) {
   } else {
     console.log("No unlock list found for clicked point:", clickedPoint);
   }
-}
+};
 
 
 
