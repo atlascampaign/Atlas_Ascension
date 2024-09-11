@@ -308,53 +308,6 @@ animations
   z-index: 3;
 }
 
-.card {
-  width: 340px;
-  height: auto;
-  min-height: 100px;
-  background-color: rgba(19, 23, 27, 1); /* Set the background color with opacity */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-size: contain; /* Adjust background image size */
-  position: relative;
-  border-radius: 0px;
-  margin-left: 0px; /* Increase the z-index to ensure the card is above other elements */
-  /* Add any additional styles as needed */
-}
-
-
-
-.card-head img {
-  width: 100%;
-  height: auto;
-}
-
-.card h3 {
-  padding: 7px; /* Add padding to give space around the text */
-  margin: 15px auto 0; /* Adjust margin to center vertically and add space at the top */
-  font-size: 18px;
-  font-family: "Jacques Francois", serif;
-  color: #d34d4d;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  text-align: center; /* Center the text horizontally */
-}
-
-.card-foot {
-  padding: 8px;
-}
-
-.card-foot span {
-  font-size: 16px;
-  font-family: 'EB Garamond';
-  color: rgba(157, 231, 237, 0.762);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  text-rendering: optimizeLegibility;
-  
-}
-
 .top-svg {
   position: absolute;
   width: 350px;
@@ -383,6 +336,8 @@ animations
   }
 }
 
+
+
 /* Add this CSS to define the click effect */
 .point.clicked {
     border: 2px solid rgba(255, 255, 255, 1);
@@ -399,8 +354,44 @@ animations
 }
 
 /* Specific rule for starting points */
-.starting:hover {
+.starting:hover .hide {
   left: 50%;
   top: -30px; /* Place the card 20px above the hovered element */
   transform: translate(-50%, -100%);
+}
+
+.p3:hover .hide {
+  top: calc(50% - 90px);
+  left: calc(100% + 20px);
+  
+}
+
+.p5:hover .hide {
+  top: calc(50% - 90px);
+  left: calc(100% + 20px);
+  
+}
+
+.p12:hover .hide {
+  top: calc(100% + 20px); /* move the card below the point */
+  left: 50%; /* center the card horizontally */
+  transform: translateX(-50%); /* adjust the position to center the card */
+}
+
+.p14:hover .hide {
+  top: calc(100% + 20px); /* move the card below the point */
+  left: 50%; /* center the card horizontally */
+  transform: translateX(-50%); /* adjust the position to center the card */
+}
+
+ul {
+  list-style: circle;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }

@@ -94,3 +94,51 @@
     transform: translateX(-50%); /* Move it back by half of its own width */
     top: 70%;
   }
+
+  .card-foot span {
+    font-size: 16px;
+    font-family: 'EB Garamond';
+    color: rgba(223, 226, 207, 0.762);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    
+  }
+
+  .card h3 {
+    padding: 7px; /* Add padding to give space around the text */
+    margin: 15px auto 0; /* Adjust margin to center vertically and add space at the top */
+    font-size: 18px;
+    font-family: "Bona Nova SC", serif;
+    color: #c7c668;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    text-align: center; /* Center the text horizontally */
+ 
+  }
+
+  .card {
+    width: 400px;
+    height: auto;
+    min-height: 100px;
+    background-color: rgba(19, 23, 27, 0.885); /* Set the background color with opacity */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-size: contain; /* Adjust background image size */
+    position: absolute;
+    border-radius: 0px;
+    margin-left: 0px;
+  }
+  
+  
+  
+  .card-head img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  
+  .card-foot {
+    padding: 8px;
+  }

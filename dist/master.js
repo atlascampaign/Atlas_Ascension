@@ -247,3 +247,4 @@ points.forEach(point => {
     });
   return unlockedData;
 }
+
