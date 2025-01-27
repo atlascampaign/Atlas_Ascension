@@ -1,3 +1,5 @@
+const fedra_4_3= new Audio('audio/fedra_4_3.mp3');
+
 const unlockmap = {
   fedra: {
     "p1": ["p2"],
@@ -293,3 +295,12 @@ function loadSkillPoints(data) {
       document.querySelector('.skillsleft h3').textContent = "0"; // or handle as needed
   }
 }
+
+points.forEach(point => {
+  point.addEventListener('click', function() {
+    // Check if the point is locked
+    if (!this.classList.contains('locked') & this.classList.contains('p8')) {
+        console.log("running audio fedra");
+        fedra_4_3.play();
+        }
+        })});

@@ -395,3 +395,39 @@ li {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+.p1 .card-title {
+  position: relative;
+}
+
+.p1 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/shabalaya._energy_fluxes_and_magic_influences_in_the_cosmos_fan_9718fe4a-73d8-4c5e-8982-bec872fe1096.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p3 .card-title {
+  position: relative;
+}
+
+.p3 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/shabalaya._black_hole_in_the_cosmos_fantasy_wallpaper_digital_a_f7c1ccfb-93f6-4b6f-ac2c-e1b7f28c4d17.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}

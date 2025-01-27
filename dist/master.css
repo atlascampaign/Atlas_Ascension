@@ -49,6 +49,28 @@
     left: 0;
     z-index: 0;
   }
+
+  .back-link {
+    position: absolute;
+    bottom: 50%;
+    left: 7%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .back-link img:hover {
+    cursor: pointer;
+    box-shadow: inset 2px 0 0 12px rgba(252, 244, 15, 0.85);
+    border-radius: 50%;
+  }
+
+  .back-link img {
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
   
   .forget span {
     position: absolute; /* Change to absolute */
@@ -107,15 +129,14 @@
 
   .card h3 {
     padding: 7px; /* Add padding to give space around the text */
-    margin: 15px auto 0; /* Adjust margin to center vertically and add space at the top */
     font-size: 18px;
     font-family: "Bona Nova SC", serif;
     color: #c7c668;
     font-weight: 400;
+    text-shadow:  1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0);
     font-style: normal;
     position: relative;
-    text-align: center; /* Center the text horizontally */
- 
+    text-align: center;
   }
 
   .card {
@@ -141,4 +162,11 @@
   
   .card-foot {
     padding: 8px;
+  }
+
+  .quote {
+    display: inline-block;
+    text-align: center;
+    font-style: italic;
+    color: rgb(199, 212, 232) !important;
   }

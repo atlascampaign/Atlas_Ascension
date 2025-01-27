@@ -149,6 +149,17 @@ head.appendChild(googleFontsStylesheet);
 
 document.querySelector('.skillsleft h1').textContent = desc
 
+const baclinkDiv = document.createElement('div');
+baclinkDiv.className = 'back-link';
+
+const a = document.createElement('a');
+a.href = '../index.html';
+
+const backImg = document.createElement('img');
+backImg.src = 'images/ccorb.png';
+
+a.appendChild(backImg);
+
 const forgetDiv = document.createElement('div');
 forgetDiv.className = 'forget';
 
@@ -161,7 +172,10 @@ img.src = 'images/oblivion.png';
 forgetDiv.appendChild(span);
 forgetDiv.appendChild(img);
 
+baclinkDiv.appendChild(a);
+
 container.appendChild(forgetDiv);
+container.appendChild(baclinkDiv);
 
 document.querySelector('.forget').addEventListener('click', function() {
     localStorage.removeItem('unlockedData');
@@ -184,6 +198,7 @@ points.forEach(point => {
             audio.pause();
             audio.currentTime = 0.1;
           }
+          console.log("master audio played");
           audio.play();
   
           // Decrease the skill points available
