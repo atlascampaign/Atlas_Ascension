@@ -52,8 +52,8 @@
 
   .back-link {
     position: absolute;
-    bottom: 50%;
-    left: 7%;
+    bottom: 10%;
+    right: 4%;
     width: 100px;
     height: 100px;
   }

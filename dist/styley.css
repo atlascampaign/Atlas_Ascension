@@ -292,6 +292,22 @@ animations
   transform: translate(-50%, -50%);
 }
 
+.p21 {
+    background-color: #1d242c;
+  box-shadow: none;
+  top: 50%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.p22 {
+  background-color: #1d242c;
+box-shadow: none;
+top: 50%;
+right: 6%;
+transform: translate(-50%, -50%);
+}
+
 /*skills*/
 .hide {
   display: none;
