@@ -1,0 +1,115 @@
+    {
+        "p1": {
+          "titolo": "Materia e Sogni",
+          "abilita": "La tua essenza è in bilico tra il piano materiale e quello del Fey.<br><br>Le tue capacità e quelle di Willow vengono incrementate nel seguente modo:<br><ul><li>I tuoi incantesimi che infliggono danni da Fuoco causano Braci, infliggendo un dado aggiuntivo di danno all'inizio del turno successivo del bersaglio.</li><li>Willow può lanciare i tuoi incantesimi a contatto nel suo turno utilizzando un tuo slot. Non può utilizzare incantesimi che infliggono danni da Fuoco.</li></ul>",
+          "quote": "<br>“Non so se la mia gente ha sbagliato. Quello che so è che sono pronta a rimediare.”<br>-Willow, Erede della Corte Sayari"
+        },
+        "p2": {
+          "titolo": "Forma della Driade",
+          "abilita": "Come azione bonus ti è possibile assorbire Willow per assumere la forma di una Driade Iridescente per un numero di turni uguale al modificatore di Carisma di Willow, una volta per riposo lungo.<br><br>La metamorfosi ti concede i seguenti benefici:<br><ul><li>Ottieni delle ali da spiritello, ancora troppo poco sviluppate per volare. Il tuo movimento aumenta di 3m.</li><li>I tuoi incantesimi sono più difficili da resistere. La loro CD aumenta di +1.</li></ul>",
+          "quote": "<br>“Sarai il legame che tiene il piano materiale ed il Feywild assieme. Rinasci, mia Driade.”"
+        },
+        "p3": {
+          "titolo": "Fuochi Fatui",
+          "abilita": "I tuoi incantesimi che infliggono danni da fuoco non possono essere resistiti.<br>Le fiamme generate da essi assumono sfumature iridescenti.",
+          "quote": "<br>“C'è fuoco e fuoco. Alcuni illuminano, altri bruciano.”<br>-Brenfas, Arcidruido del Circolo delle Braci"
+        },
+        "p5": {
+          "titolo": "Grazia della Corte",
+          "abilita": "Quando è Willow a lanciare incantesimi di cura o quando sei in Forma della Driade, questi vengono lanciati come fossero di 1 livello superiore.<br>Willow assume una forma più elegante e riminiscente delle Corti Fey.<br><br>",
+          "quote": "“Nel Feywild l'altruismo è essenziale. Non lo sottovaluterei affatto.”<br>-Ghastàar, Saggio Sayari"
+        },
+        "p6": {
+          "titolo": "Benedizione di Auralith",
+          "abilita": "Il confine tra il Piano Materiale ed il Feywild si assottiglia attorno a te.<br>Ogniqualvolta lanci un incantesimo di livello 1° o superiore, puoi scegliere di teletrasportarti di 3m in uno spazio non occupato che puoi vedere.<br>Puoi utilizzare questa abilità un numero di volte pari al tuo modificatore di Saggezza per riposo lungo.",
+          "quote": "<br>“Corri Driade, i tuoi nemici sono rapidi e spietati, non esitare.”"
+        },
+        "p4": {
+          "titolo": "Sentiero della Corte",
+          "abilita": "Il tuo legame con il Feywild cresce ulteriormente. Hai controllo sull'estetica di alcune parti del tuo corpo come fossi una creatura proveniente dal Feywild.<br>In particolare, puoi modificare il colore degli occhi, dei capelli, l'aspetto delle lentigini e altro.<br><br>Puoi decidere se infliggere danni psichici quando lanci un incantesimo piuttosto che l'elemento normalmente ad esso associato.<br><br>In Forma della Driade, ti è possibile spendere una reazione per saltare temporaneamente nel Feywild, dimezzando i danni che riceveresti. Puoi usare questa capacità una volta per riposo lungo.",
+          "quote": "“È tutto magico e colorato finchè non vieni divorato da un fungo.”<br>-Willow, Erede della Corte Sayari"
+        },
+        "p7": {
+        "titolo": "Sentiero dell'Iridescenza",
+        "abilita": "La Fiamma Iridescente scorre nel tuo sangue. I tuoi capelli ottengono sfumature reminiscenti di una fiamma viva. Sei in grado di generare calore nel raggio di 6m da te. Tutte le creature in questo raggio non subiscono penalità per temperature eccessivamente basse.<br><br>Tutte le creature ostili che terminano il proprio turno entro 1,5m da te subiscono Braci.<br><br>In Forma della Driade ottieni Investitura della Fiamma.",
+        "quote": "<br>“È dopo gli incendi più terribili, che nascono i fiori più forti.”<br>-Brenfas, Arcidruido del Circolo delle Braci"
+        },
+        "p10": {
+            "titolo": "Esplosione Mentale",
+            "abilita": "Gli incantesimi critici che mandi a segno infliggendo danni psichici causano il triplo del danno invece che il doppio.",
+            "quote": "<br>“Molti di coloro che si perdono nel Feywild finiscono per impazzire. Farei attenzione, fossi in te.”<br>-Xaviri, Incubo dei Grovigli"
+        },
+        "p8": {
+            "titolo": "Cortesia Fey",
+            "abilita": "Quando utilizzi Benedizione di Auralith puoi portare una creatura di taglia al più Grande con te. Lo spazio in cui vi teletrasportate deve essere sufficiente a contenervi entrambi.",
+            "quote": "<br>“Ossequi, mia signora! Benvenuta nella mia corte!”<br>-Verzivir, Giullare Fungineo"
+        },
+        "p11": {
+            "titolo": "Vampate Brucianti",
+            "abilita": "Le creature affette da Braci sono più suscettibili agli attacchi.<br><br>I tuoi incantesimi infliggono 1d6 danni da fuoco aggiuntivi contro di essi, 1d8 se sei in Forma della Driade.<br><br>Colpire un nemico affetto da Braci causa un'eruzione di fiamme attorno ad esso. Le creature ostili nel raggio di 3m subiscono 1d6 danni da fuoco, 1d8 se sei in Forma della Driade.",
+            "quote": "<br>“Il fuoco che porti dentro è una responsabilità. Non permettere che bruci chi ti è vicino.”"
+        },
+        "p9": {
+            "titolo": "Incendio Planare",
+            "abilita": "Le tue fiamme bruciano nel Feywild oltre che in quello materiale.<br><br>Quando un nemico subisce danni da fuoco da un tuo incantesimo, deve effettuare un tiro salvezza su Saggezza. Se fallisce, fino alla fine del tuo prossimo turno le fiamme si avvolgono attorno ad esso, fornendogli svantaggio ai tiri per colpire contro di te.<br><br>Il prossimo attacco in mischia con cui il bersaglio viene colpito causa 1d12 danni da fuoco aggiuntivi.",
+            "quote": "<br>“Chi ha detto che un incendio va contenuto non ha mai visto bruciare chi ti ha tolto tutto.”<br>-Sayari, la Torcia Inesorabile"
+        },
+        "p12": {
+            "titolo": "Avversione Onirica",
+            "abilita": "Non necessiti di dormire. Puoi affacciarti nel piano Fey circostante per 10 minuti una volta al giorno.<br><br>A chi chiede, solitamente viene dato, quando il cuore che li porta è leggero.<br><br>Mentre sei in Forma di Driade, i tuoi incantesimi che infliggono danni psichici sono considerati critici con un tiro pari o superiore a 19.<br><br>Quando mandi a segno un colpo critico con un incantesimo che infligge danni psichici, recuperi uno slot incantesimo pari al livello dell'incantesimo lanciato -2. Incantesimi di 2° e 1° livello che mandano a segno un colpo critico ripristinano uno slot di 1°.",
+            "quote": "<br>“Non mi fido dei sogni, e tantomeno degli incubi.”"
+        },
+        "p16": {
+            "titolo": "Shock Psichico",
+            "abilita": "Quando devi effettuare un tiro salvezza su Saggezza, ottieni salvezza critica con un 19. Se superi il tiro con una salvezza critica, tutte le creature alleate nel raggio di 18m passano automaticamente il tiro.<br><br>Sei immune al danno psichico.<br><br>Mentre sei in Forma di Driade, i tuoi incantesimi che infliggono danni psichici sono considerati critici con un tiro pari o superiore a 19.<br><br>Quando mandi a segno un incantesimo critico, la creatura che lo subisce deve effettuare un tiro su Saggezza. In caso di fallimento è paralizzata fino al suo prossimo turno.",
+            "quote": "<br>“Sono immune alla tua magia. E ai tuoi insulti.”"
+        },
+        "p20": {
+            "titolo": "Benedizione di Auralith Superiore",
+            "abilita": "Puoi usare Forma Selvatica per scambiarti di posizione con una creatura consenziente nel raggio di 60m.<br><br>Puoi parlare con gli animali senza lanciare incantesimi.<br><br>Utilizzare Benedizione di Auralith genera un'apertura dimensionale verso il Feywild che si richiude rapidamente. Il portale rimane aperto fino alla fine del tuo prossimo round, permettendo ad altre creature di entrarvi. Le creature che decidono di attraversare il portale appaiono in un punto casuale nel raggio di 6m. Le creature alleate che lo attraversano ottengono una reazione aggiuntiva nel loro successivo turno.",
+            "quote": "<br>“Un sacrificio non significa perdita.”"
+        },
+        "p19": {
+            "titolo": "Promessa di Xeviri",
+            "abilita": "Quando sei tu a togliere la vita a una creatura, puoi chiedere alla Corte Fey di reclamarne lo spirito. Ciò che avverrà in seguito varia a seconda del bersaglio.<br><br>Ottieni accesso al seguente incantesimo:<br><br><b>Tormento di Xeviri</b><br><i>Incantesimo di 6° livello (Illusione/Enchantment)</i><br><b>Tempo di Lancio:</b> 1 azione<br><b>Gittata:</b> 18 metri<br><b>Componenti:</b> V, S, M (una lacrima di fata cristallizzata)<br><b>Durata:</b> Concentrazione, fino a 1 minuto",
+            "quote": "<br>“Ogni angolo, anfratto, nascondiglio che cercherai non potrà proteggerti dalla mia vendetta.”"
+        },
+        "p14": {
+            "titolo": "Incendio Fatato",
+            "abilita": "Hai accesso al Piano Elementale del Fuoco. Apprendi l'Ignan. Nei tuoi occhi, una fiamma brucia eternamente.",
+            "quote": "<br>“Vedo foglie Arse<br>Nel mio Nido<br>Di risa Sparse<br>Non più mi Fido.”<br>-Filastrocca della Corte Sayari"
+        },
+        "p15": {
+            "titolo": "Divinazione Piretica",
+            "abilita": "Nelle fiamme spente di torce, falò, braceri o altri recipienti che accoglievano fiamme, vedi il passato di esse. Puoi accedere ai ricordi stessi delle fiamme, udendo chi attorno ad esse ha parlato. Questa abilità ti richiede un enorme sforzo.<br><br>Ottieni accesso ai seguenti incantesimi:<br><ul><li><b>Bagliore Solare:</b> infligge danni da Fuoco.</li><li><b>Scudo di Fuoco:</b> ti concede un bonus di +2 alla CA, oltre ai suoi effetti, quando lo lanci.</li></ul>",
+            "quote": "<br>“Potessi rigettare questo dono, Filiar, lo farei. Certi sussurri non sono destinati ad orecchio alcuno.”"
+        },
+        "p17": {
+            "titolo": "Oppressione Iridescente",
+            "abilita": "Le fiamme generate da te non si spengono mai completamente.<br><br>Sei in grado di aprire un portale all'interno di fiamme alte almeno 1m. Il portale conduce ad altre fiamme da te conosciute, purché siano vive e sufficientemente intense.<br><br>La CD per resistere ai tuoi incantesimi che infliggono danni da fuoco aumenta di +1.<br><br>Quando un bersaglio non supera un tiro salvezza che imponi, recuperi 2d8 punti vita, 2d12 se l'incantesimo infligge danni da fuoco.",
+            "quote": "<br>“Ovunque andrai, terrò una brace accesa per te. Così, nelle fiamme che incontrerai, troverai il mio sorriso ad attenderti.”"
+        },
+        "p18": {
+            "titolo": "Sguardo Bruciante",
+            "abilita": "Sei in grado di vedere qualsiasi forma di invisibilità. I tuoi occhi assumono tonalità bluastre, a seconda di quanto è limpido il cielo nel Feywild.<br><br>Le creature invisibili che puoi vedere subiscono 2d10 danni da fuoco all'inizio del proprio turno finché sono nel tuo raggio visivo.<br><br>Quando lanci Raggio Rovente, le fiamme vengono emesse dai tuoi occhi. Il dado di Raggio Rovente diventa un d10.",
+            "quote": "<br>“Gli occhi di un Sayari andrebbero lasciati soli. Sempre.”"
+        },
+        "p21": {
+            "titolo": "Gloria del Ducato",
+            "abilita": "Sei finalmente in equilibrio con il caos del Feywild. Le tue ali maturano in ampiezza assumendo sfumature che variano dal rosa all'azzurro al verde acqua.<br><br>Forma della Driade ti permette di portare una creatura aggiuntiva con te quando usi Sentiero della Corte.<br><br>Ogni incantesimo curativo lanciato da te o da Willow accumula un nucleo di energia Fey nelle tue ali. Per ogni nucleo il tuo movimento aumenta di 1m. Puoi consumare tutti i nuclei accumulati come azione per lanciare il seguente incantesimo:<br><br><b>Bombardamento Crepuscolare:</b><br>Tutte le creature ostili nel raggio di 18m subiscono 2d12 danni psichici per nucleo consumato. Un tiro salvezza su Destrezza dimezza il danno.",
+            "quote": "<br>“Il Feywild è sempre stato in pericolo. Nessuno ha mai potuto salvarlo da solo.”"
+        },
+        "p22": {
+            "titolo": "Furia di Sayari",
+            "abilita": "Le fiamme in te hanno bruciato in diversi colori, ma il loro fuoco produce lo stesso calore.<br><br>Le tue ali crescono in dimensione ed emanano una luce tale da disperdere qualsiasi oscurità nel raggio di 9m.<br><br>Come azione bonus, puoi decidere di consumare ogni istanza di Braci attiva al momento. Se lo fai, le fiamme raccolte tornano a te, conferendoti poteri addizionali:<br><ul><li>Il tuo corpo diventa simile a una stella, emanando un calore inarrestabile in tutte le direzioni.</li><li>Le creature che cominciano il proprio turno entro 3m da te subiscono 3d10 danni da fuoco.</li><li>Come azione puoi lanciare Raggio Rovente di 5° livello senza consumare uno slot.</li><li>Per ogni Brace richiamata, il tuo prossimo incantesimo che infligge danni da Fuoco imporrà 1d8 danni aggiuntivi (escluso Raggio Rovente se usato senza consumare uno slot).</li></ul>",
+            "quote": "<br>“Sparisci Yrisil, sei una vergogna per il Ducato.”"
+        },
+        "p13": {
+            "titolo": "Verità Driadica",
+            "abilita": "Forma della Driade è permanente, ma puoi disattivarla quando vuoi come azione bonus.<br><br>Sei immune ai danni psichici e a quelli da fuoco.<br><br>Le tue ali ti permettono di volare.<br><br>Quando sei in Forma della Driade, Willow ottiene le stesse capacità.",
+            "quote": "<br>“Sono fiera di te, Yvette. Ora, volgi lo sguardo al cielo, senza paura.”"
+        }
+
+    }
+      
+    

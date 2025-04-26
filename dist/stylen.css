@@ -97,8 +97,6 @@ animations
 }
 
 .starting {
-  height: 60px;
-  width: 60px;
   box-shadow:
     0 0 2px rgba(255,255,255,.5),
     0 0 8px rgba(255,255,255,.5),
@@ -321,57 +319,6 @@ animations
   /* Add any additional styles as needed */
 }
 
-
-
-.card-head img {
-  width: 100%;
-  height: auto;
-}
-
-.card h3 {
-  padding: 7px; /* Add padding to give space around the text */
-  margin: 15px auto 0; /* Adjust margin to center vertically and add space at the top */
-  font-size: 18px;
-  font-family: "Jacques Francois", serif;
-  color: #d34d4d;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  text-align: center; /* Center the text horizontally */
-}
-
-.card-foot {
-  padding: 8px;
-}
-
-.card-foot span {
-  font-size: 16px;
-  font-family: 'EB Garamond';
-  color: rgba(157, 231, 237, 0.762);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  text-rendering: optimizeLegibility;
-  
-}
-
-.top-svg {
-  position: absolute;
-  width: 350px;
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  top: -20px;
-  left:-5px;
-  overflow:unset; /* Adjust the top position as needed */
-}
-
-.bottom-svg {
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  bottom: -11px;
- 
-  position: absolute;
-  width: 340px; /* Adjust the bottom position as needed */
-}
-
 /*media quaries*/
 @media (max-width: 720px) {
   body {
@@ -403,6 +350,21 @@ background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
 /* Specific rule for starting points */
 .starting:hover .hide {
   left: 50%;
-  top: -30px; /* Place the card 20px above the hovered element */
+  top: -10px; /* Place the card 20px above the hovered element */
   transform: translate(-50%, -100%);
+}
+
+.particle {
+  position: absolute;
+  background-color: rgb(255, 255, 255); /* Pure bright red core */
+  box-shadow: 
+    0 0 5px rgb(119, 0, 216),  /* Bright red inner glow */
+    0 0 5px rgb(119, 0, 216),  /* Stronger red outer glow */
+    0 0 15px rgb(119, 0, 216),    /* Intense red bloom effect */
+    0 0 15px rgb(119, 0, 216), /* Larger fading red glow */
+    0 0 15px rgb(119, 0, 216), /* Extended soft glow */
+    0 0 15px rgb(119, 0, 216); /* Final fading glow */
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
 }

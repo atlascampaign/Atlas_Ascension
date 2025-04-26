@@ -188,7 +188,7 @@ function drawLines() {
           lineFill.setAttribute('y2', y2);
 
           if (connectedPoint.classList.contains('clicked') && point.classList.contains('clicked')) {
-            lineFill.setAttribute('stroke', 'rgba(255, 204, 0, 0.8)');
+            lineFill.setAttribute('stroke', 'rgb(255, 255, 255)');
             lineFill.setAttribute('stroke-width', '4');
             lineBorder.setAttribute('stroke-width', '6')
           } else {

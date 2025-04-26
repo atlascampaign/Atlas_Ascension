@@ -143,7 +143,7 @@
     width: 400px;
     height: auto;
     min-height: 100px;
-    background-color: rgba(19, 23, 27, 0.885); /* Set the background color with opacity */
+    background-color: rgba(19, 23, 27, 0.885) !important; /* Set the background color with opacity */
     background-repeat: no-repeat; /* Prevent background image from repeating */
     background-size: contain; /* Adjust background image size */
     position: absolute;
@@ -165,8 +165,23 @@
   }
 
   .quote {
-    display: inline-block;
-    text-align: center;
+    display: block;
+    text-align: center !important;
     font-style: italic;
     color: rgb(199, 212, 232) !important;
   }
+
+  .particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
+                0 0 12px rgba(22, 93, 217, 0.6), 
+                0 0 16px rgba(51, 135, 196, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.p13 {
+  border: 2px solid rgba(196, 199, 0, 0.8) !important;
+}

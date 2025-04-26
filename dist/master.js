@@ -263,3 +263,52 @@ points.forEach(point => {
   return unlockedData;
 }
 
+let lastParticleTime = 0; // Tracks the last time a particle was created
+const particleCooldown = 50; // Time in milliseconds between particles
+
+document.addEventListener("mousemove", function (e) {
+    const now = Date.now();
+    if (now - lastParticleTime > particleCooldown) {
+        createParticle(e.pageX, e.pageY);
+        lastParticleTime = now;
+    }
+});
+
+function createParticle(x, y) {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+
+    document.body.appendChild(particle);
+
+    // Set initial position
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+
+    // Random size
+    const size = Math.random() + 1; // Random size between 6px and 14px
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
+    // Random movement direction
+    const angle = Math.random() * 2 * Math.PI; // Random angle (0 to 360 degrees in radians)
+    const distance = Math.random() * 25 + 10; // Moves between 10px and 35px
+    const xMove = distance * Math.cos(angle);
+    const yMove = distance * Math.sin(angle);
+
+    // Apply animation (slower, more random movement)
+    particle.animate(
+        [
+            { transform: `translate(0, 0)`, opacity: 1 },
+            { transform: `translate(${xMove}px, ${yMove}px)`, opacity: 0 }
+        ],
+        {
+            duration: 1200 + Math.random() * 500, // 1.2s - 1.7s for slower fade-out
+            easing: "ease-out"
+        }
+    );
+
+    // Remove particle after animation
+    setTimeout(() => {
+        particle.remove();
+    }, 1100);
+}

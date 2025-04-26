@@ -414,6 +414,24 @@ li {
   z-index: -1;
 }
 
+.p2 .card-title {
+  position: relative;
+}
+
+.p2 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/shabalaya._energy_fluxes_and_magic_influences_in_the_cosmos_f_a6b7c150-5bd2-41d0-982d-29c619f639b1_1.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
 .p3 .card-title {
   position: relative;
 }
@@ -430,4 +448,19 @@ li {
   background-position: center;
   opacity: 0.5; /* adjust the value to your liking */
   z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  background-color: rgb(145, 212, 237); /* Pure bright red core */
+  box-shadow: 
+    0 0 15px rgb(224, 215, 215),  /* Bright red inner glow */
+    0 0 30px rgb(162, 183, 229),  /* Stronger red outer glow */
+    0 0 45px rgb(112, 170, 211),    /* Intense red bloom effect */
+    0 0 60px rgba(99, 172, 235, 0.8), /* Larger fading red glow */
+    0 0 80px rgba(63, 192, 235, 0.7), /* Extended soft glow */
+    0 0 100px rgba(115, 182, 244, 0.549); /* Final fading glow */
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
 }
