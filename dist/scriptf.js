@@ -1,5 +1,3 @@
-const fedra_4_3= new Audio('audio/fedra_4_3.mp3');
-
 const unlockmap = {
   fedra: {
     "p1": ["p2"],
@@ -54,9 +52,6 @@ const pointElements = document.querySelectorAll('.point');
   });
 
 let skillPoints;
-
-let character = document.querySelector('body').id; // Declare skillPoints globally
-console.log(character);
 
 function unlockPointsFromMap(clickedPoint) {
   const unlockList = unlockmap[character][clickedPoint]; // Access the correct nested object

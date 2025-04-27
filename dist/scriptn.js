@@ -1,21 +1,4 @@
-let abilityData = {};
-let character; // Declare character globally
 
-async function loadAbilities() {
-  try {
-    const response = await fetch('utils/narkran.json'); // Fetch the JSON file
-    abilityData = await response.json();
-    populateUnlockedPoints();
-    console.log(abilityData) // Store the JSON data
-  } catch (error) {
-    console.error('Error loading abilities:', error);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  character = document.querySelector('body').id;
-  loadAbilities();
-});
 
 const unlockmap = {
     narkran: {
@@ -123,26 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
     mapss.forEach(point => unlockPointsFromMap(point));
   }
 });
-
-function populateUnlockedPoints() {
-  document.querySelectorAll('.point').forEach(point => {
-    if (!point.classList.contains('locked')) { // Only target non-locked points
-      const pointClass = [...point.classList].find(cls => /^p\d+$/.test(cls)); // Find class matching "pX"
-      if (pointClass && abilityData[pointClass]) {
-        const ability = abilityData[pointClass];
-
-        // Find the card elements inside this point
-        const card = point.querySelector('.card');
-        if (card) {
-          card.querySelector('.card-title h3').textContent = ability.titolo;
-          card.querySelector('.card-foot span:not(.quote)').innerHTML = ability.abilita.replace(/\n/g, '<br>'); // Preserve line breaks
-          card.querySelector('.quote').innerHTML = ability.quote;
-        }
-      }
-    }
-  });
-}
-populateUnlockedPoints();
 
 function unlockPoint(pointClass) {
   const point = document.querySelector(`.${pointClass}`);

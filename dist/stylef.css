@@ -6,9 +6,6 @@
   box-sizing: border-box;
 }
 
-
-
-
 #container {
   width: 100%;
   height: 100vh;
@@ -17,40 +14,6 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
-
-/*
-animations
-*/
-
-.fade-in {
-  -webkit-animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-.fade-in-line {
-  -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/*
-* svg line (rubbish code, change it at a later date)
-*/
 
 #skillline {
   width: 1520px;
@@ -72,44 +35,9 @@ animations
   display: none;
 }
 
-.point {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  box-shadow:
-    0 0 2px rgba(255, 255, 255, 0.5),
-    0 0 8px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(22, 93, 217, 0.5),
-    0 0 30px rgba(51, 135, 196, 0.5),
-    0 0 40px rgba(22, 107, 139, 0.5),
-    0 0 50px rgba(13, 64, 152, 0.2),
-    0 0 80px rgba(25, 84, 245, 0.2);
-  cursor: pointer;
-  background-size: 28px 28px;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 2;
-  position: absolute;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0) !important; 
-}
-
 .point:hover .card {
   opacity: 1; /* Show the card on hover */
   visibility: visible; /* Show the card on hover */
-}
-
-.starting {
-  box-shadow:
-    0 0 2px rgba(255,255,255,.5),
-    0 0 8px rgba(255,255,255,.5),
-    0 0 10px rgba(240,248,255,.5),
-    0 0 20px rgba(240,248,255,.5),
-    0 0 30px rgba(240,248,255,.5),
-    0 0 40px rgba(240,248,255,.5),
-    0 0 50px 28px rgba(240,248,255,.2),
-    0 0 80px 28px rgba(240,248,255,.2);
 }
 
 
@@ -260,70 +188,6 @@ animations
   z-index: 3;
 }
 
-.card {
-  width: 340px;
-  height: auto;
-  min-height: 100px;
-  background-color: rgba(19, 23, 27, 1); /* Set the background color with opacity */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-size: contain; /* Adjust background image size */
-  position: relative;
-  border-radius: 0px;
-  margin-left: 0px; /* Increase the z-index to ensure the card is above other elements */
-  /* Add any additional styles as needed */
-}
-
-
-
-.card-head img {
-  width: 100%;
-  height: auto;
-}
-
-.card h3 {
-  padding: 7px; /* Add padding to give space around the text */
-  margin: 15px auto 0; /* Adjust margin to center vertically and add space at the top */
-  font-size: 18px;
-  font-family: "Jacques Francois", serif;
-  color: #d34d4d;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  text-align: center; /* Center the text horizontally */
-}
-
-.card-foot {
-  padding: 8px;
-}
-
-.card-foot span {
-  font-size: 16px;
-  font-family: 'EB Garamond';
-  color: rgba(157, 231, 237, 0.762);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  text-rendering: optimizeLegibility;
-  
-}
-
-.top-svg {
-  position: absolute;
-  width: 350px;
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  top: -20px;
-  left:-5px;
-  overflow:unset; /* Adjust the top position as needed */
-}
-
-.bottom-svg {
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  bottom: -11px;
- 
-  position: absolute;
-  width: 340px; /* Adjust the bottom position as needed */
-}
-
 /*media quaries*/
 @media (max-width: 720px) {
   body {
@@ -335,13 +199,6 @@ animations
   }
 }
 
-/* Add this CSS to define the click effect */
-.point.clicked {
-    border: 2px solid rgba(255, 255, 255, 1);
-    box-shadow: 0 0 200px rgb(255, 255, 255); /* Change to the desired glow effect */
-    transition: box-shadow 3s ease; /* Adjust the transition duration as needed */
-}
-
 .locked {
   border: 2px solid rgba(206, 176, 91, 0.382);
   z-index: 1;
@@ -349,3 +206,4 @@ animations
   background-size: 24px 24px;
   box-shadow: none;
 }
+

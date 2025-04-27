@@ -27,40 +27,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
-/*
-animations
-*/
-
-.fade-in {
-  -webkit-animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-.fade-in-line {
-  -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/*
-* svg line (rubbish code, change it at a later date)
-*/
-
 #skillline {
   width: 1520px;
   height: 800px;
@@ -81,87 +47,14 @@ animations
   display: none;
 }
 
-/*
- * skill points left
- */
- .skillsleft {
-  align-items: center;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  /*background-color: #1d242cde;*/
-  border-radius: 12px;
-  font-family: "Bona Nova SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 10px
-}
-
-.skillsleft h3 {
-  font-size: 40px;
-  font-family: "Bona Nova SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-  position: relative
-}
-
-.skillsleft h2 {
-  text-align: center;
-  font-family: "Bona Nova SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-}
-
-/*
-* points
-*/
-
-.point {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  box-shadow:
-    0 0 2px rgba(255, 255, 255, 0.5),
-    0 0 8px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(22, 93, 217, 0.5),
-    0 0 30px rgba(51, 135, 196, 0.5),
-    0 0 40px rgba(22, 107, 139, 0.5),
-    0 0 50px rgba(13, 64, 152, 0.2),
-    0 0 80px rgba(25, 84, 245, 0.2);
-  cursor: pointer;
-  background-size: 28px 28px;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 2;
-  position: absolute;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0) !important; 
-}
-
 .point:hover .card {
   opacity: 1; /* Show the card on hover */
   visibility: visible; /* Show the card on hover */
 }
 
-.starting {
-  box-shadow:
-    0 0 2px rgba(255,255,255,.5),
-    0 0 8px rgba(255,255,255,.5),
-    0 0 10px rgba(240,248,255,.5),
-    0 0 20px rgba(240,248,255,.5),
-    0 0 30px rgba(240,248,255,.5),
-    0 0 40px rgba(240,248,255,.5),
-    0 0 50px 28px rgba(240,248,255,.2),
-    0 0 80px 28px rgba(240,248,255,.2);
-}
-
 
 .p1 {
-  background-image: url('images/starting_hesperia.png');
+  background-image: url('images/hesperia/bg_1.png');
   background-size: cover;
   top: 85%;
   left: 48%;
@@ -169,7 +62,7 @@ animations
 }
 
 .p2 {
-  background-image: url('images/icon1.png');
+  background-image: url('images/hesperia/bg_2.png');
   background-size: cover;
   background-color: #1d242c;
   top: 72%;
@@ -178,7 +71,7 @@ animations
 }
 
 .p3 {
-  background-image: url('images/icon2.png');
+  background-image: url('images/hesperia/bg_3.png');
   background-size: cover;
   background-color: #1d242c;
   top: 59%;
@@ -187,7 +80,8 @@ animations
 }
 
 .p4 {
-  background-image: url(https://inmyculture.com/icons/dnd-cunning-action-active.svg);
+  background-image: url('images/hesperia/bg_p4.png');
+  background-size: cover;
   background-color: #1d242c;
   top:40%;
   left: 41%;
@@ -195,7 +89,7 @@ animations
 }
 
 .p5 {
-  background-image: url('images/icon1.png');
+  background-image: url('images/hesperia/bg_p5.png');
   background-size: cover;
   background-color: #1d242c; /* Add this line to make the background image cover the circle */
   top: 59%;
@@ -213,6 +107,8 @@ animations
 }
 
 .p7 {
+  background-image: url('images/hesperia/bg_p7.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 40%;
@@ -275,6 +171,8 @@ animations
 }
 
 .p15 {
+  background-image: url('images/hesperia/bg_p15.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 50%;
@@ -283,6 +181,8 @@ animations
 }
 
 .p16 {
+  background-image: url('images/hesperia/bg_p16.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 50%;
@@ -290,39 +190,11 @@ animations
   transform: translate(-50%, -50%);
 }
 
-
-/*skills*/
-.hide {
-  display: none;
-  position: relative;
-  top: 50%;
-  left: calc(100% + 20px); /* Place the card 20px to the right of the hovered element */
-  transform: translateY(-50%);
-  transition: left 0.3s ease-in-out; /* Ensure the card is above other elements */
-}
-
 .point:not(.locked):hover .hide {
   display: block;
   overflow-y: visible;
   position: absolute;
   z-index: 3;
-}
-
-.top-svg {
-  position: absolute;
-  width: 350px;
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  top: -20px;
-  left:-5px;
-  overflow:unset; /* Adjust the top position as needed */
-}
-
-.bottom-svg {
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  bottom: -11px;
- 
-  position: absolute;
-  width: 340px; /* Adjust the bottom position as needed */
 }
 
 /*media quaries*/
@@ -334,23 +206,6 @@ animations
   #outer {
     border-radius: 0;
   }
-}
-
-
-
-/* Add this CSS to define the click effect */
-.point.clicked {
-    border: 2px solid rgba(255, 255, 255, 1);
-    box-shadow: 0 0 200px rgb(255, 255, 255); /* Change to the desired glow effect */
-    transition: box-shadow 3s ease; /* Adjust the transition duration as needed */
-}
-
-.locked {
-  border: 2px solid rgba(206, 176, 91, 0.382);
-  z-index: 1;
-  background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
-  background-size: 24px 24px;
-  box-shadow: none;
 }
 
 /* Specific rule for starting points */
@@ -382,18 +237,6 @@ animations
   top: calc(100% + 20px); /* move the card below the point */
   left: 50%; /* center the card horizontally */
   transform: translateX(-50%); /* adjust the position to center the card */
-}
-
-ul {
-  list-style: circle;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  margin-left: 15px;
-  margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .p1 .card-title {
@@ -443,7 +286,97 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/shabalaya._black_hole_in_the_cosmos_fantasy_wallpaper_digital_a_f7c1ccfb-93f6-4b6f-ac2c-e1b7f28c4d17.png");
+  background-image: url("images/hesperia/bg_3.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p4 .card-title {
+  position: relative;
+}
+
+.p4 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p4.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p5 .card-title {
+  position: relative;
+}
+
+.p5 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p4.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p7 .card-title {
+  position: relative;
+}
+
+.p7 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p7.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p15 .card-title {
+  position: relative;
+}
+
+.p15 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p15.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p16 .card-title {
+  position: relative;
+}
+
+.p16 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p16.png");
   background-size: cover;
   background-position: center;
   opacity: 0.5; /* adjust the value to your liking */
@@ -463,4 +396,12 @@ li {
   border-radius: 50%;
   pointer-events: none;
   will-change: transform, opacity;
+}
+
+.locked {
+  border: 2px solid rgba(206, 176, 91, 0.382);
+  z-index: 1;
+  background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
+  background-size: 24px 24px;
+  box-shadow: none;
 }

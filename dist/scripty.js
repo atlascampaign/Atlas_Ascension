@@ -1,20 +1,3 @@
-let abilityData = {};
-async function loadAbilities() {
-  try {
-    const response = await fetch('utils/yvie.json'); // Fetch the JSON file
-    abilityData = await response.json();
-    populateUnlockedPoints();
-    console.log(abilityData) // Store the JSON data
-  } catch (error) {
-    console.error('Error loading abilities:', error);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const character = document.querySelector('body').id;
-  loadAbilities(character);
-});
-
 const connectionsMap = {
   one: ["two"],
   two: ["three", "five"],
@@ -74,8 +57,6 @@ const pointElements = document.querySelectorAll('.point');
 
 let skillPoints;
 
-let character = document.querySelector('body').id; // Declare skillPoints globally
-console.log(character);
 
 function unlockPointsFromMap(clickedPoint) {
   const unlockList = unlockmap[character][clickedPoint]; // Access the correct nested object

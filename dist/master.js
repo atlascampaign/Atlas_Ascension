@@ -1,3 +1,43 @@
+let abilityData = {};
+let character = document.querySelector('body').id; // Declare character globally
+
+function populateUnlockedPoints() {
+  document.querySelectorAll('.point').forEach(point => {
+    if (!point.classList.contains('locked')) { // Only target non-locked points
+      const pointClass = [...point.classList].find(cls => /^p\d+$/.test(cls)); // Find class matching "pX"
+      if (pointClass && abilityData[pointClass]) {
+        const ability = abilityData[pointClass];
+
+        // Find the card elements inside this point
+        const card = point.querySelector('.card');
+        if (card) {
+          card.querySelector('.card-title h3').textContent = ability.titolo;
+          card.querySelector('.card-foot span:not(.quote)').innerHTML = ability.abilita.replace(/\n/g, '<br>'); // Preserve line breaks
+          card.querySelector('.quote').innerHTML = ability.quote;
+        }
+      }
+    }
+  });
+}
+
+
+async function loadAbilities() {
+  try {
+    const response = await fetch(`utils/${character}.json`);
+    abilityData = await response.json();
+    populateUnlockedPoints();
+    console.log(abilityData) // Store the JSON data
+  } catch (error) {
+    console.error('Error loading abilities:', error);
+  }
+}
+
+populateUnlockedPoints();
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadAbilities();
+});
+
 const ascension = {"hesperia" : "Astromanzia",
     "fedra" : "Primofulmine",
     "erevan" : "Campione del Fato",
@@ -217,6 +257,7 @@ points.forEach(point => {
   
           // Unlock points based on the map
           unlockPointsFromMap(this.classList[1]);
+          populateUnlockedPoints();
   
           // Additional logic for when points are clicked
           var pointsClicked = document.querySelectorAll('.point.clicked').length;

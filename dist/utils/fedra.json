@@ -1,0 +1,82 @@
+{
+    "p1": {
+      "titolo": "Investitura della Tempesta",
+      "abilita": "La tempesta dentro di te si propaga attraverso le percosse ed I fendenti da te scagliati. Ti è possibile lanciare incantesimi a contatto o che richiedono un tiro per colpire attraverso l'uso di un'arma in mischia. Gli incantesimi così lanciati utilizzano la caratteristica associata all'arma per il bonus al tiro per colpire ed infliggono, oltre al danno dell'incantesimo, I danni che infliggerebbe un attacco in mischia con la stessa.",
+      "quote": "<br><br>“Quando il maglio della regina si abbattè sulla mascella di Grombar, il popolo del Fjall-Rag rimase attonito. Mai delle ossa spezzate avevano richiamato il rumore di un Tuono”"
+    },
+    "p2": {
+      "titolo": "Portanza dei Venti",
+      "abilita": "Quando attacchi il Vento accompagna I tuoi attacchi. Ottieni una portata aggiuntiva di 1.5m su tutti gli attacchi in mischia.",
+      "quote": "<br>“I tagli sul viso sono un vanto per le ragazze del Nord. Non sono sfregi, ma la prova che il loro cuore è tenuto al caldo, non sferzato dalla furia dei venti.”"
+    },
+    "p3": {
+      "titolo": "Barriera Statica",
+      "abilita": "Dopo aver effettuato un attacco in mischia andato a segno, l'energia statica da esso generata crea un campo magnetico che disturba gli attacchi nemici. Fino al tuo turno successivo ottieni un bonus di +1 alla CA.",
+      "quote": "<br>“Nelle nebbia Orvald non vedeva niente. Tuttavia, neanche la dozzina di Giganti che lo circondava aveva modo di vederlo.”"
+    },
+    "p4": {
+      "titolo": "Gelo Persistente",
+      "abilita": "Colpire un bersaglio con un attacco in mischia aggiunge +1 al bonus per colpire con successivi attacchi in mischia fino alla fine del tuo prossimo turno. Questo effetto non è cumulativo",
+      "quote": "<br>“Disciplina, Ilfryd. Punta il tuo obiettivo e non deviare per nulla al mondo, neanche se ti dovesse cascare il cielo addosso.”"
+    },
+    "p5": {
+      "titolo": "Sferzata del Vespro",
+      "abilita": "La tua velocità aumenta di 3m. Quando si effettua un attacco in mischia dopo aver percorso almeno 9m, una serie di fulmini colpiscono I nemici adiacenti al percorso scelto. Il percorso deve essere seguito in modo tale che tra il bersaglio ed il punto di partenza distino un minimo di 6m. I fulmini che si abbattono infliggono 2d6 danni da tuono ad ogni nemico colpito. Un tiro salvezza su Destrezza dimezza il danno subito.",
+      "quote": "<br>“Il vento è sottovalutato dagli uomini del sud: le sue sferzate sono un ferreo educatore per chi dimora oltre le montagne.”"
+    },
+    "p6": {
+      "titolo": "Carezza dell'Alba",
+      "abilita": "La tua velocità aumenta di 3m. Quando si effettua un attacco in mischia dopo aver percorso almeno 9m, un tiepido vento abbraccia tutti gli alleati adiacenti al percorso seguito. Questi vengono curati di 1d6 + il proprio modificatore da incantatore. I punti vita ripristinati aumentano a 2d6 all livello 11° e a 3d6 al livello 17°.",
+      "quote": "<br>“Quando l'ultimo gigante lasciò la Morhvall, il sole baciò I popoli del nord, che a lungo avevano anelato il suo tepore.”"
+    },
+    "p8": {
+      "titolo": "Catalizzatore Tonante",
+      "abilita": "Il beneficio \"<b>Colpo Divino</b>\" passa da garantire un bonus di 1d6 ad un 1d8. Il bonus diventa 2d6 al livello 12° e 2d8 al livello 17°.",
+      "quote": "<br>“Eppure, nelle timide notti estive, sembra quasi possibile ascoltare il suono di metalli che impattano tra loro. Se in quella prigione ghiacciata c'è ancora qualcosa, per le Alte Cime, stanne alla larga.”"
+    },
+    "p7": {
+      "titolo": "Scarica Rinvigorente",
+      "abilita": "Il beneficio \"<b>Colpo Divino</b>\" passa da garantire un bonus di 1d6 ad un bonus di 1d4. Oltre ai danni aggiuntivi scaturiti da questa abilità, si può scegliere di curare un alleato nel raggio di 9m per un punteggio uguale a quello generato dal d4 più il proprio modificatore di saggezza. Il bonus diventa 1d6 al livello 12° e 1d8 al livello 17°.",
+      "quote": "<br>“Il freddo non può nulla contro chi le fiamme le porta dentro.”<br>- Joturm, Custode del primo Calore"
+    },
+    "p16": {
+      "titolo": "Forza del Fulmine",
+      "abilita": "Il tuo punteggio di forza aumenta di 2. Il punteggio massimo raggiungibile per questa caratteristica diventa 22. Quando mandi a segno un colpo critico con un attacco in mischia, tutti I danni da tuono inferti vengono triplicati invece che raddoppiati.",
+      "quote": "<br>“La tempesta non conosce razza, tu non sei così diverso da chi odi, chi odi non è così diverso da te. Un fulmine non discrimina.”<br>- Cavalcatempesta"
+    },
+    "p9": {
+      "titolo": "Furia di Brynhilde",
+      "abilita": "Colpire un nemico con danni da fulmine lo marchia sotto il segno della Tempesta. Il successivo incantesimo dannoso o attacco in mischia andato a segno sul bersaglio infligge 1d6 danni da tuono aggiuntivi. I danni aggiuntivi diventano 2d6 al livello 11° e 3d6 al livello 17°. Se il colpo inflitto è Radiante, I danni da tuono aggiuntivi diventano 1d8, 2d8 al livello 11° e 3d8 al livello 17°.",
+      "quote": "<br>“Non permetterò che prendiate la mia terra, qui risiede ogni cosa per cui vivo, la mia casa, la mia famiglia e la mia forza. Cadrà la montagna, prima di me!”<br>- Brynhilde, La Valanga"
+    },
+    "p11": {
+      "titolo": "Sapienza del Vento",
+      "abilita": "Il tuo punteggio di Saggezza aumenta di 2. Il punteggio massimo raggiungibile per questa caratteristica diventa 22. L'incantesimo Cura Ferite viene sostituito da Imposizione delle Mani. Questo cura 2d6 per livello più il proprio bonus di Saggezza.",
+      "quote": "<br>“Scoprirai che il vento non è che una carezza data da chi ci ama da lontano.” - Durmondt, Druido delle Selve Nascoste"
+    },
+    "p15": {
+      "titolo": "Occhio del Ciclone",
+      "abilita": "Come parte della propria azione di attacco è possibile mettere in moto fortissimi venti intorno a se che causano la formazione di un vero e proprio ciclone. Una volta attivata, questa capacità rimane in effetto fino Tutte le creature ostili che cominciano il proprio turno in uno spazio tra 3 e 9 metri da te subiscono 3d6 danni da tuono. Un tiro salvezza su destrezza dimezza il danno subito.",
+      "quote": "<br>“Non tutti, fratello mio, sanno stare accanto a gente come noi. Quello che sappiamo fare è un fardello, non un dono. Un dono porta vita, mai morte.”<br>-Xavor Straum"
+    },
+    "p17": {
+      "titolo": "Tempesta controllata",
+      "abilita": "I danni da tuono che infliggi non possono essere resistiti ed un'immunità a questo tipo di danno conferisce solo una resistenza. Tutti i danni magici inflitti diventano di tipo tuono.",
+      "quote": "<br>“Li ho visti, Gallag. Non immagini quale sacrificio hanno dovuto compiere. Se sono qui, ora, dinanzi a queste porte con voi, è perchè non posso voltarmi davanti alla loro grandezza. Quando lei arriverà, io ci sarò.”<br>- Eda Zinrea Aliri, Voce del Vero"
+    },
+    "p14": {
+      "titolo": "Apparizione abbagliante",
+      "abilita": "I danni radianti causati da creature alleate affliggono quelle ostili. Ti è possibile materializzarti in forma di tuono in uno spazio entro 3m da queste creature ogniqualvolta dichiari un attacco in mischia nei loro confronti e ti trovi a meno di 18m da loro. Mandare a segno un colpo in questo modo causa 2d8 danni radianti aggiuntivi e consuma l'afflizione.",
+      "quote": "<br>“Vai! Non c'è tempo! Per lei, per loro, lo tratterrò quanto basta.”<br>- Eara, Guardiana Eterna di Secraalis"
+    },
+    "p10": {
+      "titolo": "Ali Tonanti",
+      "abilita": "Come azione bonus è possibile prendere la forma di un Aasimar della Tempesta. Questa concede volare con un bonus alla velocità di 6m. In questa forma ogni attacco andato a segno causa la caduta di un fulmine su un bersaglio casuale, causando 3d6 danni da Tuono.",
+      "quote": "<br>“Alzati, aasimar. Poichè è la tua natura che te lo dice. Le altezze sono la tua dimora, il cielo il tuo dominio.”<br>- Teunar, Signore degli Aasimar antichi"
+    },
+    "p13": {
+      "titolo": "Investitura della Tempesta",
+      "abilita": "Si ottiene accesso all'incantesimo Investitura della Tempesta:",
+      "quote": "<br>“Perdonami, Ayden. Devo farlo. So che puoi comprendere. Qualcuno deve brandire la Tempesta, e se non lo farò io, chi?”<br>- Ilfryd, La Scrutatrice"
+    }
+  }

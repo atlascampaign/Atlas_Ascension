@@ -1,3 +1,28 @@
+.fade-in {
+  -webkit-animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.fade-in-line {
+  -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .skillsleft {
     align-items: center;
     position: absolute;
@@ -184,4 +209,75 @@
 
 .p13 {
   border: 2px solid rgba(196, 199, 0, 0.8) !important;
+}
+
+ul {
+  list-style: circle;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.locked {
+  border: 2px solid rgba(206, 176, 91, 0.382);
+  z-index: 1;
+  background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
+  background-size: 24px 24px;
+  box-shadow: none;
+}
+
+.point {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid rgb(97, 97, 97);
+  box-shadow:
+    0 0 2px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(22, 93, 217, 0.5),
+    0 0 30px rgba(51, 135, 196, 0.5),
+    0 0 40px rgba(22, 107, 139, 0.5),
+    0 0 50px rgba(13, 64, 152, 0.2),
+    0 0 80px rgba(25, 84, 245, 0.2);
+  cursor: pointer;
+  background-size: 28px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  position: absolute;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0) !important; 
+}
+
+.point.clicked {
+  border: 2px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 0 200px rgb(255, 255, 255); /* Change to the desired glow effect */
+  transition: box-shadow 3s ease; /* Adjust the transition duration as needed */
+}
+
+.hide {
+  display: none;
+  position: relative;
+  top: 50%;
+  left: calc(100% + 20px); /* Place the card 20px to the right of the hovered element */
+  transform: translateY(-50%);
+  transition: left 0.3s ease-in-out; /* Ensure the card is above other elements */
+}
+
+.starting {
+  box-shadow:
+    0 0 2px rgba(255,255,255,.5),
+    0 0 8px rgba(255,255,255,.5),
+    0 0 10px rgba(240,248,255,.5),
+    0 0 20px rgba(240,248,255,.5),
+    0 0 30px rgba(240,248,255,.5),
+    0 0 40px rgba(240,248,255,.5),
+    0 0 50px 28px rgba(240,248,255,.2),
+    0 0 80px 28px rgba(240,248,255,.2);
 }
