@@ -98,7 +98,7 @@ body {
 }
 
 .p6 {
-  background-image: url('images/icon1.png');
+  background-image: url('images/hesperia/bg_p6.png');
   background-size: cover;
   background-color: #1d242c;
   top: 50%;
@@ -117,6 +117,8 @@ body {
 }
 
 .p8 {
+  background-image: url('images/hesperia/bg_p8.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 21%;
@@ -125,6 +127,8 @@ body {
 }
 
 .p9 {
+  background-image: url('images/hesperia/bg_p9.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 21%;
@@ -133,6 +137,8 @@ body {
 }
 
 .p10 {
+  background-image: url('images/hesperia/bg_p10.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 32%;
@@ -141,6 +147,8 @@ body {
 }
 
 .p11 {
+  background-image: url('images/hesperia/bg_p11.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 32%;
@@ -149,6 +157,8 @@ body {
 }
 
 .p12 {
+  background-image: url('images/hesperia/bg_p12.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 10%;
@@ -156,6 +166,8 @@ body {
   transform: translate(-50%, -50%);
 }
 .p13 {
+  background-image: url('images/hesperia/bg_p13.png');
+  background-size: cover;
   background-color: #fcfdff;
   top: 35%;
   left:48%;
@@ -163,6 +175,8 @@ body {
 }
 
 .p14 {
+  background-image: url('images/hesperia/bg_p14.png');
+  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 10%;
@@ -250,7 +264,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/shabalaya._energy_fluxes_and_magic_influences_in_the_cosmos_fan_9718fe4a-73d8-4c5e-8982-bec872fe1096.png");
+  background-image: url("images/hesperia/bg_1.png");
   background-size: cover;
   background-position: center;
   opacity: 0.5; /* adjust the value to your liking */
@@ -268,7 +282,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/shabalaya._energy_fluxes_and_magic_influences_in_the_cosmos_f_a6b7c150-5bd2-41d0-982d-29c619f639b1_1.png");
+  background-image: url("images/hesperia/bg_2.png");
   background-size: cover;
   background-position: center;
   opacity: 0.5; /* adjust the value to your liking */
@@ -322,7 +336,25 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/hesperia/bg_p4.png");
+  background-image: url("images/hesperia/bg_p5.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p6 .card-title {
+  position: relative;
+}
+
+.p6 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p6.png");
   background-size: cover;
   background-position: center;
   opacity: 0.5; /* adjust the value to your liking */
@@ -341,6 +373,151 @@ body {
   width: 100%;
   height: 100%;
   background-image: url("images/hesperia/bg_p7.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p8 .card-title {
+  position: relative;
+}
+
+.p8 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p8.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p8 .card-title {
+  position: relative;
+}
+
+.p8 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p8.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p9 .card-title {
+  position: relative;
+}
+
+.p9 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p9.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p10 .card-title {
+  position: relative;
+}
+
+.p10 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p10.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p11 .card-title {
+  position: relative;
+}
+
+.p11 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p11.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p12 .card-title {
+  position: relative;
+}
+
+.p12 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p12.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+.p13 .card-title {
+  position: relative;
+}
+
+.p13 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p13.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust the value to your liking */
+  z-index: -1;
+}
+
+
+.p14 .card-title {
+  position: relative;
+}
+
+.p14 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hesperia/bg_p14.png");
   background-size: cover;
   background-position: center;
   opacity: 0.5; /* adjust the value to your liking */
