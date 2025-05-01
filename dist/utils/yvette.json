@@ -71,13 +71,13 @@
         },
         "p19": {
             "titolo": "Promessa di Xeviri",
-            "abilita": "Quando sei tu a togliere la vita a una creatura, puoi chiedere alla Corte Fey di reclamarne lo spirito. Ciò che avverrà in seguito varia a seconda del bersaglio.<br><br>Ottieni accesso al seguente incantesimo:<br><br><b>Tormento di Xeviri</b><br><i>Incantesimo di 6° livello (Illusione/Enchantment)</i><br><b>Tempo di Lancio:</b> 1 azione<br><b>Gittata:</b> 18 metri<br><b>Componenti:</b> V, S, M (una lacrima di fata cristallizzata)<br><b>Durata:</b> Concentrazione, fino a 1 minuto",
+            "abilita": "Quando sei tu a togliere la vita a una creatura, puoi chiedere alla Corte Fey di reclamarne lo spirito. Ciò che avverrà in seguito varia a seconda del bersaglio.<br><br>Ottieni accesso al seguente incantesimo:<br><br><b>Tormento di Xeviri</b><br><i>Incantesimo di 6° livello (Illusione/Enchantment)</i><br><b>Tempo di Lancio:</b> 1 azione<br><b>Gittata:</b> 18 metri<br><b>Componenti:</b> V, S, M (una lacrima di fata cristallizzata)<br><b>Durata:</b> Concentrazione, fino a 1 minuto <br><br>Scegli una creatura entro gittata. Il suo corpo rimane nel piano materiale, ma la sua mente viene intrappolata in un sogno fatato distorto.<br><br>Il bersaglio deve effettuare un tiro salvezza su Saggezza. Se fallisce, subisce 6d10 danni psichici e rimane incapacitato fino alla fine del suo prossimo turno, perso in visioni fey incomprensibili.<br><br>Anche se supera il tiro salvezza, subisce comunque metà danni e le immagini persistono, costringendolo a compiere tutti gli attacchi e le prove di caratteristica con svantaggio fino alla fine del suo prossimo turno.<br><br>Se il bersaglio fallisce il tiro salvezza di 5 o più, resta intrappolato nella sua allucinazione e deve ripetere il tiro salvezza su Saggezza all'inizio di ogni suo turno per liberarsi.",
             "quote": "<br>“Ogni angolo, anfratto, nascondiglio che cercherai non potrà proteggerti dalla mia vendetta.”"
         },
         "p14": {
             "titolo": "Incendio Fatato",
             "abilita": "Hai accesso al Piano Elementale del Fuoco. Apprendi l'Ignan. Nei tuoi occhi, una fiamma brucia eternamente.",
-            "quote": "<br>“Vedo foglie Arse<br>Nel mio Nido<br>Di risa Sparse<br>Non più mi Fido.”<br>-Filastrocca della Corte Sayari"
+            "quote": "<br>“Foglie Arse,<br>Nel mio Nido.<br>Di risa Sparse,<br>Non più mi Fido.”<br>-Filastrocca della Corte Sayari"
         },
         "p15": {
             "titolo": "Divinazione Piretica",
@@ -86,7 +86,7 @@
         },
         "p17": {
             "titolo": "Oppressione Iridescente",
-            "abilita": "Le fiamme generate da te non si spengono mai completamente.<br><br>Sei in grado di aprire un portale all'interno di fiamme alte almeno 1m. Il portale conduce ad altre fiamme da te conosciute, purché siano vive e sufficientemente intense.<br><br>La CD per resistere ai tuoi incantesimi che infliggono danni da fuoco aumenta di +1.<br><br>Quando un bersaglio non supera un tiro salvezza che imponi, recuperi 2d8 punti vita, 2d12 se l'incantesimo infligge danni da fuoco.",
+            "abilita": "Le fiamme da te generate non si spengono mai completamente.<br><br>Sei in grado di aprire un portale all'interno di fiamme alte almeno 1m. Il portale conduce ad altre fiamme da te conosciute, purché siano vive e sufficientemente intense.<br><br>La CD per resistere ai tuoi incantesimi che infliggono danni da fuoco aumenta di +1.<br><br>Quando un bersaglio non supera un tiro salvezza che imponi, recuperi 2d8 punti vita, 2d12 se l'incantesimo infligge danni da fuoco.",
             "quote": "<br>“Ovunque andrai, terrò una brace accesa per te. Così, nelle fiamme che incontrerai, troverai il mio sorriso ad attenderti.”"
         },
         "p18": {

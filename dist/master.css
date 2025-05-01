@@ -2,209 +2,206 @@
   -webkit-animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 2.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
+
 .fade-in-line {
   -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 .skillsleft {
-    align-items: center;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    /*background-color: #1d242cde;*/
-    border-radius: 12px;
-    font-family: "Bona Nova SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 10px;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  }
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  /*background-color: #1d242cde;*/
+  border-radius: 12px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
 
-  .skillsleft h1 {
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  }
-  
-  .skillsleft h3 {
-    font-size: 40px;
-    font-family: "Bona Nova SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    position: relative
-  }
-  
-  .skillsleft h2 {
-    text-align: center;
-    font-family: "Bona Nova SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-  }
+.skillsleft h1 {
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
 
-  .forget {
-    position: absolute;
-    bottom: 80px;
-    left: 80px;
-    width: 100px;
-    height: 100px;
-  }
-  
-  .forget img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
+.skillsleft h3 {
+  font-size: 40px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  position: relative
+}
 
-  .back-link {
-    position: absolute;
-    bottom: 10%;
-    right: 4%;
-    width: 100px;
-    height: 100px;
-  }
+.skillsleft h2 {
+  text-align: center;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
 
-  .back-link img:hover {
-    cursor: pointer;
-    box-shadow: inset 2px 0 0 12px rgba(252, 244, 15, 0.85);
-    border-radius: 50%;
-  }
+.forget {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  width: 100px;
+  height: 100px;
+}
 
-  .back-link img {
-    width: 60%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-  
-  .forget span {
-    position: absolute; /* Change to absolute */
-    color: white;
-    font-family: "Bona Nova SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    left: 50%;
-    top: 49%;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  }
+.forget img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
-  #skills-container {
-    position: absolute;
-    top: 5%;
-    left: 80%;
-    padding: 20px;
-  }
+.back-link {
+  position: absolute;
+  bottom: 10%;
+  right: 4%;
+  width: 100px;
+  height: 100px;
+}
 
-  #skills-left{
-    color: white;
-    text-align: center;
-    font-family: "Bona Nova SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
-  }
+.back-link img:hover {
+  box-shadow: inset 2px 0 0 12px rgba(252, 244, 15, 0.85);
+  border-radius: 50%;
+}
 
-  #input-box {
-    position: absolute;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    font-family: "Bona Nova SC", serif;
-    font-weight: 400;
-    font-size: 15px;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
-    color: white;
-    left: 50%; /* Move it to the center */
-    transform: translateX(-50%); /* Move it back by half of its own width */
-    top: 70%;
-  }
+.back-link img {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
-  .card-foot span {
-    font-size: 16px;
-    font-family: 'EB Garamond';
-    color: rgba(223, 226, 207, 0.762);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    
-  }
+.forget span {
+  position: absolute;
+  /* Change to absolute */
+  color: white;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  left: 50%;
+  top: 49%;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
 
-  .card h3 {
-    padding: 7px; /* Add padding to give space around the text */
-    font-size: 18px;
-    font-family: "Bona Nova SC", serif;
-    color: #fffc3c;
-    font-weight: 400;
-    text-shadow:  1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0);
-    font-style: normal;
-    position: relative;
-    text-align: center;
-  }
+#skills-container {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  padding: 20px;
+}
 
-  .card {
-    width: 400px;
-    height: auto;
-    min-height: 100px;
-    background-color: rgba(19, 23, 27, 0.885) !important; /* Set the background color with opacity */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-size: contain; /* Adjust background image size */
-    position: absolute;
-    border-radius: 0px;
-    margin-left: 0px;
-  }
-  
-  
-  
-  .card-head img {
-    width: 100%;
-    height: auto;
-  }
-  
-  
-  
-  .card-foot {
-    padding: 8px;
-  }
+#skills-left {
+  color: white;
+  text-align: center;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
 
-  .quote {
-    display: block;
-    text-align: center !important;
-    font-style: italic;
-    color: rgb(199, 212, 232) !important;
-  }
+#input-box {
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  color: white;
+  left: 50%;
+  /* Move it to the center */
+  transform: translateX(-50%);
+  /* Move it back by half of its own width */
+  top: 70%;
+}
 
-  .particle {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
-                0 0 12px rgba(22, 93, 217, 0.6), 
-                0 0 16px rgba(51, 135, 196, 0.4);
-    border-radius: 50%;
-    pointer-events: none;
-    will-change: transform, opacity;
+.card-foot span {
+  font-size: 16px;
+  font-family: 'EB Garamond';
+  color: rgba(223, 226, 207, 0.762);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+}
+
+.card h3 {
+  padding: 7px;
+  /* Add padding to give space around the text */
+  font-size: 18px;
+  font-family: "Bona Nova SC", serif;
+  color: #fffc3c;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0);
+  font-style: normal;
+  position: relative;
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  min-height: 100px;
+  background-color: rgba(19, 23, 27, 0.885) !important;
+  /* Set the background color with opacity */
+  background-repeat: no-repeat;
+  /* Prevent background image from repeating */
+  background-size: contain;
+  /* Adjust background image size */
+  position: absolute;
+  border-radius: 0px;
+  margin-left: 0px;
+}
+
+
+
+.card-head img {
+  width: 100%;
+  height: auto;
+}
+.card-foot {
+  padding: 8px;
+}
+
+.quote {
+  display: block;
+  text-align: center !important;
+  font-style: italic;
+  color: rgb(199, 212, 232) !important;
 }
 
 .p13 {
@@ -245,39 +242,42 @@ li {
     0 0 40px rgba(22, 107, 139, 0.5),
     0 0 50px rgba(13, 64, 152, 0.2),
     0 0 80px rgba(25, 84, 245, 0.2);
-  cursor: pointer;
   background-size: 28px 28px;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 2;
   position: absolute;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0) !important; 
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) !important;
 }
 
 .point.clicked {
   border: 2px solid rgba(255, 255, 255, 1);
-  box-shadow: 0 0 200px rgb(255, 255, 255); /* Change to the desired glow effect */
-  transition: box-shadow 3s ease; /* Adjust the transition duration as needed */
+  box-shadow: 0 0 200px rgb(255, 255, 255);
+  /* Change to the desired glow effect */
+  transition: box-shadow 3s ease;
+  /* Adjust the transition duration as needed */
 }
 
 .hide {
   display: none;
   position: relative;
   top: 50%;
-  left: calc(100% + 20px); /* Place the card 20px to the right of the hovered element */
+  left: calc(100% + 20px);
+  /* Place the card 20px to the right of the hovered element */
   transform: translateY(-50%);
-  transition: left 0.3s ease-in-out; /* Ensure the card is above other elements */
+  transition: left 0.3s ease-in-out;
+  /* Ensure the card is above other elements */
 }
 
 .starting {
   box-shadow:
-    0 0 2px rgba(255,255,255,.5),
-    0 0 8px rgba(255,255,255,.5),
-    0 0 10px rgba(240,248,255,.5),
-    0 0 20px rgba(240,248,255,.5),
-    0 0 30px rgba(240,248,255,.5),
-    0 0 40px rgba(240,248,255,.5),
-    0 0 50px 28px rgba(240,248,255,.2),
-    0 0 80px 28px rgba(240,248,255,.2);
+    0 0 2px rgba(255, 255, 255, .5),
+    0 0 8px rgba(255, 255, 255, .5),
+    0 0 10px rgba(240, 248, 255, .5),
+    0 0 20px rgba(240, 248, 255, .5),
+    0 0 30px rgba(240, 248, 255, .5),
+    0 0 40px rgba(240, 248, 255, .5),
+    0 0 50px 28px rgba(240, 248, 255, .2),
+    0 0 80px 28px rgba(240, 248, 255, .2);
 }

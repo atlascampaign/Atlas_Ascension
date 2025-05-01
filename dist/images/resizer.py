@@ -44,8 +44,8 @@ def resize_images(input_folder, output_folder, new_width=None, new_height=None):
 
 if __name__ == "__main__":
     # Configuration
-    input_folder = "Atlas_Ascension\\dist\\images\\hesperia"  # Replace with your input folder path
-    output_folder = "Atlas_Ascension\\dist\\images\\hesperia"  # Replace with your output folder path
+    input_folder = "Atlas_Ascension\\dist\\images\\yvie"  # Replace with your input folder path
+    output_folder = "Atlas_Ascension\\dist\\images\\yvie"  # Replace with your output folder path
     
     # Choose ONE of these options:
     # Option 1: Set desired width (height will be calculated)

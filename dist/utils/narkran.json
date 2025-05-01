@@ -1,22 +1,17 @@
 {
   "p1": {
     "titolo": "Dualità dell'Equilibrio",
-    "abilita": "Effettuare un attacco in mischia ti pone in stato di <b>Grazia</b>, potenziando le tue capacità di supporto.<br>Lanciare abilità di supporto ti pone in stato di <b>Fervore</b>, potenziando i tuoi attacchi in mischia.<br><br><b>Grazia:</b> Concede un bonus di +1 al tiro per colpire a tutte le creature influenzate dalle tue capacità di supporto.<br><b>Fervore:</b> Concede 1d4 danni da forza aggiuntivi sui tuoi attacchi in mischia.<br><br>Ottieni le seguenti abilità di supporto:<br><br><b>Bagliore:</b> Con un'imposizione delle mani manifesti la tenue luce di Silderon attorno ad un alleato nel raggio di 9m. Questo recupera 2d8 punti ferita più il tuo modificatore di Carisma. Il Bagliore torna poi a te, concedendoti 1d4 danni radianti aggiuntivi sul tuo prossimo attacco in mischia.<br><br><b>Interdizione:</b> Il tuo spirito aleggia verso la posizione di un alleato nel raggio di 18m. Lo spirito è invisibile alle creature ostili e si manifesta nel momento in cui la creatura supportata viene attaccata effettuando un tiro per colpire. Puoi scegliere di manifestarti in una posizione adiacente a quella della creatura, subendo l'attacco al suo posto. Ottieni 2d8 punti ferita temporanei nel momento della manifestazione. Il tuo prossimo attacco in mischia ti permette di recuperare 1d6 punti ferita.",
-    "quote": ""
-  },
-  "p29": {
-    "titolo": "Pressione Inesorabile",
-    "abilita": "Ogniqualvolta utilizzi una <b>Punizione Divina</b>, applichi <b>Pressione</b> sul tuo bersaglio. Questo deve superare una prova di Carisma. Un tiro salvezza fallito comporta un malus di -1 ai tiri per colpire ed ai tiri salvezza su effetti magici.<br><br>Ottieni inoltre un bonus di +1 su tutti gli attacchi in mischia effettuati contro una creatura affetta da Pressione.",
-    "quote": ""
-  },
-  "p4": {
-    "titolo": "Punizione di Vanrad",
-    "abilita": "La tua <b>Punizione Divina</b> infligge danni <b>Necrotici</b> invece che Radianti. Il bersaglio deve superare un tiro salvezza su Costituzione o subire 2d6 danni necrotici all'inizio di ogni suo turno. All'inizio di ogni suo turno può rieffettuare il tiro salvezza per superare gli effetti di tale afflizione.<br><br>Ottieni un bonus caratteristica di +1 su Forza.",
+    "abilita": "Effettuare un attacco in mischia ti pone in stato di <b>Grazia</b>, potenziando le tue capacità di supporto.<br>Lanciare abilità di supporto ti pone in stato di <b>Fervore</b>, potenziando i tuoi attacchi in mischia.<br><br><b>Grazia</b> concede un bonus di +1 al tiro per colpire a tutte le creature influenzate dalle tue capacità di supporto.<br><b>Fervore</b> concede 1d4 danni da forza aggiuntivi sui tuoi attacchi in mischia.<br><br>Ottieni le seguenti abilità di supporto:<br><br><b>Bagliore:</b> Con un'imposizione delle mani manifesti la tenue luce di Silderon attorno ad un alleato nel raggio di 9m. Questo recupera 2d8 punti ferita più il tuo modificatore di Carisma. Il Bagliore torna poi a te, concedendoti 1d4 danni radianti aggiuntivi sul tuo prossimo attacco in mischia.<br><br><b>Interdizione:</b> Il tuo spirito aleggia verso la posizione di un alleato nel raggio di 18m. Lo spirito è invisibile alle creature ostili e si manifesta nel momento in cui la creatura supportata viene attaccata effettuando un tiro per colpire. Puoi scegliere di manifestarti in una posizione adiacente a quella della creatura, subendo l'attacco al suo posto. Ottieni 2d8 punti ferita temporanei nel momento della manifestazione. Il tuo prossimo attacco in mischia ti permette di recuperare 1d6 punti ferita.",
     "quote": ""
   },
   "p3": {
+    "titolo": "Punizione di Vanrad",
+    "abilita": "La tua Punizione Divina infligge danni Necrotici invece che Radianti. Il bersaglio deve superare un tiro salvezza su Costituzione o subire 2d6 danni necrotici all'inizio di ogni suo turno. All'inizio di ogni suo turno può rieffettuare il tiro salvezza per superare gli effetti di tale afflizione.<br><br>Ottieni un bonus caratteristica di +1 su Forza.",
+    "quote": ""
+  },
+  "p4": {
     "titolo": "Punizione di Thelian",
-    "abilita": "La tua <b>Punizione Divina</b> infligge danni da impatto invece che Radianti. I danni vengono calcolati normalmente ma permettendo un critico con un tiro pari o superiore a 18.<br><br>Ottieni un bonus caratteristica di +1 su Forza.",
+    "abilita": "La tua punizione divina infligge danni da impatto invece che Radianti. I danni vengono calcolati normalmente ma permettendo un critico con un tiro pari o superiore a 18.<br><br>Ottieni un bonus caratteristica di +1 su Forza.",
     "quote": ""
   },
   "p2": {
@@ -36,82 +31,82 @@
   },
   "p14": {
     "titolo": "Supporto: Guardia",
-    "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. Finché l'alleato in questione rimane entro 6m da te non può ricevere colpi critici. Qualora dovesse scendere sotto gli 0 punti vita, puoi concedere istantaneamente un numero di punti vita sufficiente a stabilizzarlo.",
+    "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. Finchè l'alleato in questione rimane entro 6m da te non può ricevere colpi critici. Qual'ora dovesse scendere sotto gli 0 punti vita, puoi concedere istantaneamente un numero di punti vita sufficiente a stabilizzarlo.",
     "quote": ""
   },
-  "p9": {
+  "p6": {
     "titolo": "Sapienza del Mezzo",
-    "abilita": "Il tuo modificatore di Saggezza contribuisce al numero di punti vita ottenuti allo stesso modo del tuo modificatore di Costituzione.",
+    "abilita": "Il tuo modificatore di Saggezza contribuisce al numero di punti vita ottenuti allo stesso modo del tuo modificatore di costituzione.",
     "quote": ""
   },
-  "p10": {
+  "p22": {
     "titolo": "Disciplina Sapiente",
-    "abilita": "Il tuo modificatore di Saggezza contribuisce alla tua Classe Armatura.",
+    "abilita": "Il tuo modificatore di Saggezza contribuisce alla tua CA.",
     "quote": ""
   },
-  "p11": {
+  "p16": {
     "titolo": "Grazia del Crocevia",
-    "abilita": "Il calore di un'anima meritata, non donata, è caro a chi lo necessita.<br><br>Tutte le creature alleate che terminano il proprio turno entro 3m da te recuperano 1d8 punti ferita all'inizio del loro turno successivo.",
+    "abilita": "Il calore di un'anima meritata, non donata, è caro a chi lo necessita.<br><br>Tutte le creature alleate che terminano il proprio turno entro 3m da te recuperano 1d8 punti ferita all'inizio dell loro turno successivo.",
     "quote": ""
   },
   "p12": {
     "titolo": "Fendenti Aurei",
-    "abilita": "Narsil era più di un eroe caduto. La sua luce vive attraverso il tuo respiro.<br><br>Le armi da te impugnate ottengono un addizionale modificatore di +1 e la seguente proprietà:<br><br>Gli attacchi da te effettuati infliggono 1d6 danni radianti aggiuntivi. Inoltre, essi si propagano oltre il tuo bersaglio, infliggendo 1d8 danni radianti a tutte le creature ostili in una linea di 6m oltre il bersaglio.",
+    "abilita": "Narsil era più di un eroe caduto. La sua luce vive attraverso il tuo respiro.<br><br>Le armi da te impugnate ottengono un addizionale modificatore di +1 e la seguente proprietà:<br><br>Gli attacchi da te effettuati infliggono 1d6 danni radianti aggiuntivi. Inoltre essi si propagano oltre il tuo bersaglio, infliggendo 1d8 danni radianti a tutte le creature ostili in una linea di 6m oltre il bersaglio.",
     "quote": ""
   },
-  "p13": {
+  "p11": {
     "titolo": "Armamenti N'Yctherici",
-    "abilita": "Rinnegare parte di ciò che sei è inutile. La forza abissale lasciata in eredità da Narsil può essere finalmente controllata.<br><br>Le armi che impugni emettono un'aura dalle tonalità nere e violacee, inoltre esse emettono un tenue ma eterno fumo.<br><br>Le armi da te impugnate ottengono un addizionale modificatore di +1 e la seguente proprietà:<br><br>Mentre si è in stato di <b>Fervore</b>, mettere a segno un colpo in mischia avendo dichiarato un secondo attacco ti permette di apparire alle spalle del successivo bersaglio, purché sia entro 9m dal primo.",
+    "abilita": "Rinnegare parte di ciò che sei è inutile. La forza abissale lasciata in eredità da Narsil può essere finalmente controllata:<br>Le armi che impugni emettono un'aura dalle tonalità nere e violacee, inoltre esse emettono un tenue ma eterno fumo.<br><br>Le armi da te impugnate ottengono un addizionale modificatore di +1 e la seguente proprietà:<br><br>Mentre si è in stato di Fervore mettere a segno un colpo in mischia avendo dichiarato un secondo attacco ti permette di apparire alle spalle del successivo bersaglio purchè sia entro 9m dal primo.",
     "quote": ""
   },
-  "p100": {
+  "p15": {
     "titolo": "Fardello del Punitore",
     "abilita": "Portarsi dentro un tale abisso richiede una forza disumana anche a chi ti sta attorno.<br><br>Le creature ostili che cominciano il proprio turno entro 3m da te subiscono 3d8 danni necrotici all'inizio del loro turno successivo.",
     "quote": ""
   },
-  "p15": {
+  "p20": {
     "titolo": "Silderon, Dio della Redenzione",
-    "abilita": "Quando combatti, la proiezione astrale di Silderon appare alle tue spalle, muovendosi esattamente come te.<br><br><b>Imposizione delle Mani</b> ottiene le proprietà di <b>Ristorare Superiore</b>.<br><br><b>Grazia</b> concede un bonus di +2.<br><b>Fervore</b> concede un bonus di +2.<br><br>Il tuo punteggio di Costituzione aumenta di 1.",
-    "quote": ""
-  },
-  "p16": {
-    "titolo": "Silderon, Dio del Riscatto",
-    "abilita": "Quando combatti, i tuoi occhi riflettono il piano abissale circostante. Le tue corna aumentano in grandezza ed estensione, oltre ad assumere un aspetto lucido e affilato.<br><br><b>Intimorire Infernale</b> può essere usato un numero di volte al giorno pari al tuo modificatore di Carisma. Infligge un numero di danni aggiuntivi pari al tuo livello da Paladino.<br><br><b>Grazia</b> concede un bonus di +2.<br><b>Fervore</b> concede un bonus di +2.<br><br>Il tuo punteggio di Costituzione aumenta di 1.",
+    "abilita": "Quando combatti, la proiezione astrale di Silderon appare alle tue spalle, muovendosi esattamente come te.<br><br>Imposizione delle mani ottiene le proprietà di Ristorare Superiore.<br>Grazia concede un bonus di +2.<br>Il dado bonus concesso da Fervore diventa 1d8.<br><br>Il tuo punteggio di Costituzione aumenta di 1.",
     "quote": ""
   },
   "p17": {
-    "titolo": "Morlag, Editto del Creatore",
-    "abilita": "Sei in grado di forgiare o rinforzare armi in <b>Vesperite</b>.<br><br>Le armi in Vesperite che forgi o rinforzi sono considerate <b>Vorpal</b> e infliggono danni non resistibili.",
+    "titolo": "Silderon, Dio del Riscatto",
+    "abilita": "Quando combatti, i tuoi occhi riflettono il piano abissale circostante. Le tue corna aumentano in grandezza ed estensione, oltre ad assumere un aspetto lucido e affilato.<br><br>Intimorire Infernale può essere usato un numero di volte al giorno pari al tuo modificatore di Carisma. Infligge un numero di danni aggiuntivi pari al tuo livello da Paladino.<br><br>Grazia concede un bonus di +2.<br>Il dado bonus concesso da Fervore diventa 1d8.<br><br>Il tuo punteggio di Costituzione aumenta di 1.",
     "quote": ""
   },
-  "p18": {
-    "titolo": "Zanras, Editto della Retribuzione",
-    "abilita": "Sei in grado di generare un lume dorato. Le creature che spendono del tempo attorno ad esso recuperano fiducia e speranza.<br><br>Utilizzare questa abilità presso un tempio di Silderon lo ricostituisce all'antica gloria.",
+  "p8": {
+    "titolo": "Morlag, Editto del Creatore",
+    "abilita": "Sei in grado di forgiare o rinforzare armi in Vesperite.<br>Le armi in Vesperite che forgi o rinforzi sono considerate Vorpal e infliggono danni non resistibili.",
     "quote": ""
   },
   "p19": {
-    "titolo": "Xary'q, Editto del Perduto",
-    "abilita": "Sei in grado di pattuire contratti che richiedono il consumo di un'altrui anima per essere sovrascritti.<br><br>L'effetto del patto varia a seconda del contraente.",
+    "titolo": "Zanras, Editto della Retribuzione",
+    "abilita": "Sei in grado di generare un lume dorato. Le creature che spendono del tempo attorno ad esso recuperano fiducia e speranza. Utilizzare questa abilità presso un tempio di Silderon lo ricostituisce all'antica gloria.",
     "quote": ""
   },
-  "p20": {
+  "p9": {
+    "titolo": "Xary'q, Editto del Perduto",
+    "abilita": "Sei in grado di pattuire contratti che richiedono il consumo di un'altrui anima per essere sovrascritti. L'effetto del patto varia a seconda del contraente.",
+    "quote": ""
+  },
+  "p18": {
     "titolo": "Yorus, Editto del Rinnegato",
-    "abilita": "Sei in grado di mettere tutto te stesso all'interno di un singolo fendente.<br><br>Non sai quali saranno i suoi effetti, seppur certamente distruttivi. Conosci solo il prezzo da pagare.",
+    "abilita": "Sei in grado di mettere tutto te stesso all'interno di un singolo fendente. Non sai quali saranno i suoi effetti, seppur certamente distruttivi. Conosci solo il prezzo da pagare.",
+    "quote": ""
+  },
+  "p10": {
+    "titolo": "Kverion, Piastra dell'Alba",
+    "abilita": "Come azione bonus ti è possibile evocare Kverion, Piastra dell'Alba. Questa armatura ti concede i seguenti benefici oltre a quelli del tuo attuale equipaggiamento:<br><br>- Sei immune ai danni radianti<br>- Tutte le creature che ti colpiscono subiscono 3d6 danni radianti<br>- La tua CA aumenta di +2<br>- Ogni volta che subisci danni fisici puoi assorbire 1D* di quei danni dove * è il numero del dado più piccolo facente parte dell'attacco subito. Puoi rilasciare come azione bonus l'energia raccolta per curare tutte le creature alleate nel raggio di 9m.",
     "quote": ""
   },
   "p21": {
-    "titolo": "Kverion, Piastra dell'Alba",
-    "abilita": "Come azione bonus ti è possibile evocare <b>Kverion, Piastra dell'Alba</b>. Questa armatura ti concede i seguenti benefici oltre a quelli del tuo attuale equipaggiamento:<br><br><ul><li>Sei immune ai danni radianti.</li><li>Tutte le creature che ti colpiscono subiscono 3d6 danni radianti.</li><li>La tua Classe Armatura aumenta di +2.</li><li>Ogni volta che subisci danni fisici puoi assorbire 1D*, dove * è il numero del dado più piccolo facente parte dell'attacco subito. Puoi rilasciare come azione bonus l'energia raccolta per curare tutte le creature alleate nel raggio di 9m.</li></ul>",
-    "quote": ""
-  },
-  "p22": {
     "titolo": "Saa'Qir, Abbraccio dell'Ombra",
-    "abilita": "Come azione bonus ti è possibile evocare <b>Saa'Qir, Abbraccio dell'Ombra</b>. Questa armatura ti concede i seguenti benefici oltre a quelli del tuo attuale equipaggiamento:<br><br><ul><li>Sei immune ai danni necrotici.</li><li>Tutte le creature che cominciano il proprio turno entro 3m da te subiscono 3d6 danni necrotici.</li><li>La tua Classe Armatura aumenta di +1.</li><li>Ogni volta che subisci danni magici puoi accantonare 1D*, dove * è il numero del dado più piccolo facente parte dell'attacco subito. Puoi rilasciare interamente i D accantonati quando mandi a segno un attacco in mischia. Puoi usare questa capacità una volta al giorno.</li></ul>",
+    "abilita": "Como azione bonus ti è possibile evocare Saa'Qir, Abbraccio dell'Ombra. Questa armatura ti concede i seguenti benefici olter a quelli del tuo attuale equipaggiamento:<br><br>- Sei immune ai danni necrotici<br>- Tutte le creature che cominciano il proprio turno entro 3m da te subiscono 3d6 danni necrotici<br>- La tua CA aumenta di +1<br>- Ogni volta che subisci danni magici puoi accantonare 1D* dove * è il numero del dado più piccolo facente parte dell'attacco subito. Puoi rilasciare interamente i D accantonati quando mandi a segno un attacco in mischia. Puoi usare qusta capacità una volta al giorno.",
     "quote": ""
   },
-  "p23": {
+  "p13": {
     "titolo": "Equilibrio Assoluto",
-    "abilita": "Come reazione, in seguito a dei danni subiti da te o da un alleato nel raggio di 9m, puoi ridistribuire i punti vita di tutte le creature alleate consenzienti nel raggio di 18m.<br><br>I punti vita vengono distribuiti utilizzando la media del totale.<br><br>Puoi usare questa capacità una volta per riposo lungo.",
+    "abilita": "Come reazione, in seguito a dei danni subiti da te o da un alleato nel raggio di 9m, puoi ridistribuire i punti vita di tutte le creature alleate consenzienti nel raggio di 18m. I punti vita vengono distribuiti utilizzando la media del totale.<br>Puoi usare questa capacità una volta per riposo lungo.",
     "quote": ""
   }
-  }
+}

@@ -20,6 +20,53 @@ function populateUnlockedPoints() {
   });
 }
 
+function stylePointElements() {
+  // Get all elements with class 'point'
+  const pointElements = document.querySelectorAll('.point:not(.locked)');
+  
+  // Iterate through each point element
+  pointElements.forEach(point => {
+    // Get the point's ID (e.g., 'p1' from class 'point p1')
+    const pointId = Array.from(point.classList)
+    .find(cls => cls.startsWith('p') && cls.length > 1 && !isNaN(cls.substring(1)));
+    
+    if (pointId) {
+      // Apply styles to the main point element
+      point.style.backgroundImage = `url('images/${character}/bg_${pointId}.png')`;
+      point.style.backgroundSize = 'cover';
+      
+      // Find the card title within this point
+      const cardTitle = point.querySelector('.card-title');
+      
+      if (cardTitle) {
+        // Apply styles to the card title
+        cardTitle.style.position = 'relative';
+        
+        // Create and style the pseudo-element
+        const style = document.createElement('style');
+        style.textContent = `
+          .${pointId} .card-title::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("images/${character}/bg_${pointId}.png");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: -1;
+          }
+        `;
+        
+        // Add the style to the document head
+        document.head.appendChild(style);
+      }
+    }
+  });
+}
+
 
 async function loadAbilities() {
   try {
@@ -36,6 +83,7 @@ populateUnlockedPoints();
 
 document.addEventListener("DOMContentLoaded", function () {
   loadAbilities();
+  stylePointElements();
 });
 
 const ascension = {"hesperia" : "Astromanzia",
@@ -258,6 +306,7 @@ points.forEach(point => {
           // Unlock points based on the map
           unlockPointsFromMap(this.classList[1]);
           populateUnlockedPoints();
+          stylePointElements();
   
           // Additional logic for when points are clicked
           var pointsClicked = document.querySelectorAll('.point.clicked').length;
