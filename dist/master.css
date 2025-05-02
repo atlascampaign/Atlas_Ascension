@@ -204,8 +204,10 @@
   color: rgb(199, 212, 232) !important;
 }
 
-.p13 {
-  border: 2px solid rgba(196, 199, 0, 0.8) !important;
+.p13.clicked {
+  border: 2px solid rgb(255, 255, 255);
+  outline: 2px solid rgb(255, 220, 62);
+  outline-offset: 0px; /* Adjust this to position the outline inside */
 }
 
 ul {
@@ -280,4 +282,18 @@ li {
     0 0 40px rgba(240, 248, 255, .5),
     0 0 50px 28px rgba(240, 248, 255, .2),
     0 0 80px 28px rgba(240, 248, 255, .2);
+}
+
+@keyframes energyFlow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -20; /* Adjust based on your desired speed */
+  }
+}
+
+.energy-line {
+  stroke-dasharray: 5, 5; /* Creates a dashed line pattern */
+  animation: energyFlow 1s linear infinite;
 }

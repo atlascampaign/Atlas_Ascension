@@ -74,6 +74,7 @@ async function loadAbilities() {
     abilityData = await response.json();
     populateUnlockedPoints();
     console.log(abilityData) // Store the JSON data
+    stylePointElements();
   } catch (error) {
     console.error('Error loading abilities:', error);
   }
@@ -85,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
   loadAbilities();
   stylePointElements();
 });
+
+stylePointElements();
 
 const ascension = {"hesperia" : "Astromanzia",
     "fedra" : "Primofulmine",
@@ -401,4 +404,89 @@ function createParticle(x, y) {
     setTimeout(() => {
         particle.remove();
     }, 1100);
+}
+
+function drawLines() {
+  const container = document.getElementById('container');
+  let svg = document.getElementById('linesSvg');
+
+  if (!svg) {
+    // If SVG element does not exist, create a new one
+    svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute('id', 'linesSvg');
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '100%');
+    container.appendChild(svg);
+  } else {
+    // Clear existing lines
+    while (svg.firstChild) {
+      svg.removeChild(svg.firstChild);
+    }
+  }
+
+  // Get all points
+  const points = document.querySelectorAll('.point');
+  const lines = [];
+  populateUnlockedPoints();
+  // Iterate through each point to determine connections
+  points.forEach(point => {
+    // Get the connections data attribute value
+    const connections = point.dataset.connections;
+    if (connections) {
+      // Split the connections string into an array of points
+      const connectedPoints = connections.split(',');
+
+      // Calculate coordinates of the current point
+      const rect1 = point.getBoundingClientRect();
+      const x1 = rect1.left + rect1.width / 2;
+      const y1 = rect1.top + rect1.height / 2;
+
+      // Iterate through connected points to draw lines
+      connectedPoints.forEach(connectedPointId => {
+        const connectedPoint = document.getElementById(connectedPointId.trim());
+        if (connectedPoint) {
+          // Calculate coordinates of the connected point
+          const rect2 = connectedPoint.getBoundingClientRect();
+          const x2 = rect2.left + rect2.width / 2;
+          const y2 = rect2.top + rect2.height / 2;
+
+          // Create a line element for the border
+          const lineBorder = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          lineBorder.setAttribute('x1', x1);
+          lineBorder.setAttribute('y1', y1);
+          lineBorder.setAttribute('x2', x2);
+          lineBorder.setAttribute('y2', y2);
+          lineBorder.setAttribute('stroke', 'rgba(22, 22, 22, 0.8)'); // Set the border color
+          lineBorder.setAttribute('stroke-width', '4'); // Set the border width
+          svg.appendChild(lineBorder);
+
+          // Create a line element for the fill
+          const lineFill = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          lineFill.setAttribute('x1', x1);
+          lineFill.setAttribute('y1', y1);
+          lineFill.setAttribute('x2', x2);
+          lineFill.setAttribute('y2', y2);
+
+          if (connectedPoint.classList.contains('clicked') && point.classList.contains('clicked')) {
+            lineFill.setAttribute('stroke', 'rgba(253, 88, 88, 0.8)');
+            lineFill.setAttribute('stroke-width', '4');
+            lineBorder.setAttribute('stroke-width', '6')
+          } else {
+            lineFill.setAttribute('stroke', 'rgba(6, 71, 99, 0.8)');
+            lineFill.setAttribute('stroke-width', '1');
+            lineFill.setAttribute('opacity', '0.3');
+          }
+
+          // Append the fill line to the SVG
+          svg.appendChild(lineFill);
+
+          // Push the line to the lines array (for future reference)
+          lines.push(lineFill);
+        }
+      });
+    }
+  });
+
+  // Update lines when window is resized
+  window.addEventListener('resize', drawLines);
 }

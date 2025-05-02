@@ -10,13 +10,13 @@ a,
 a:hover,
 a:active,
 a:visited {
-  cursor: url('images/yvie/yvie_c.png'), auto !important;
+  cursor: url('images/yvette/yvie_c.png'), auto !important;
 }
 
 body {
   background-image: url('shabalaya_fantasy_wallpaper_dnd_a_tree_with_leaves_in_all_color_f9691224-bee3-4010-ad97-0464e6e27ffa.png');
   background-size: cover;
-  cursor: url('images/yvie/yvie_c.png'), auto;
+  cursor: url('images/yvette/yvie_c.png'), auto;
 
   /* Center the background image horizontally and vertically */
   background-position: center;
@@ -26,7 +26,7 @@ body {
 }
 
 #container {
-  cursor: url('images/yvie/yvie_c.png'), auto;
+  cursor: url('images/yvette/yvie_c.png'), auto;
   width: 100%;
   height: 100vh;
   background-image: url('shabalaya_fantasy_wallpaper_dnd_a_tree_with_leaves_in_all_color_f9691224-bee3-4010-ad97-0464e6e27ffa.png');
@@ -145,16 +145,12 @@ animations
 
 
 .p1 {
-  background-image: url('images/yvie/bg_p1.png');
-  background-size: cover;
   top: 85%;
   left: 42%;
   transform: translate(-50%, -50%);
 }
 
 .p2 {
-  background-image: url('images/yvie/bg_p2.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 70%;
   left: 47%;
@@ -162,8 +158,6 @@ animations
 }
 
 .p3 {
-  background-image: url('images/yvie/bg_p3.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 55%;
   left: 45%;
@@ -171,8 +165,6 @@ animations
 }
 
 .p4 {
-  background-image: url('images/yvie/bg_p4.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 38%;
   left: 43%;
@@ -180,8 +172,6 @@ animations
 }
 
 .p5 {
-  background-image: url('images/yvie/bg_p5.png');
-  background-size: cover;
   background-color: #1d242c;
   /* Add this line to make the background image cover the circle */
   top: 59%;
@@ -190,8 +180,6 @@ animations
 }
 
 .p6 {
-  background-image: url('images/yvie/bg_p6.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 48%;
   left: 51%;
@@ -199,8 +187,6 @@ animations
 }
 
 .p7 {
-  background-image: url('images/yvie/bg_p7.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 37%;
@@ -209,8 +195,6 @@ animations
 }
 
 .p8 {
-  background-image: url('images/yvie/bg_p8.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
@@ -219,8 +203,6 @@ animations
 }
 
 .p9 {
-  background-image: url('images/yvie/bg_p9.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 24%;
@@ -229,8 +211,6 @@ animations
 }
 
 .p10 {
-  background-image: url('images/yvie/bg_p10.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 45%;
@@ -239,8 +219,6 @@ animations
 }
 
 .p11 {
-  background-image: url('images/yvie/bg_p11.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 46%;
@@ -249,8 +227,6 @@ animations
 }
 
 .p12 {
-  background-image: url('images/yvie/bg_p12.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 55%;
@@ -259,8 +235,6 @@ animations
 }
 
 .p13 {
-  background-image: url('images/yvie/bg_p13.png');
-  background-size: cover;
   background-color: #fcfdff;
   top: 22%;
   left: 48%;
@@ -268,8 +242,6 @@ animations
 }
 
 .p14 {
-  background-image: url('images/yvie/bg_p14.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 61%;
@@ -278,8 +250,6 @@ animations
 }
 
 .p15 {
-  background-image: url('images/yvie/bg_p15.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 42%;
@@ -288,8 +258,6 @@ animations
 }
 
 .p16 {
-  background-image: url('images/yvie/bg_p16.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 35%;
@@ -298,8 +266,6 @@ animations
 }
 
 .p17 {
-  background-image: url('images/yvie/bg_p17.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
@@ -308,8 +274,7 @@ animations
 }
 
 .p18 {
-  background-image: url('images/yvie/bg_p18_.png');
-  background-size: cover;
+  background-image: url('images/yvette/bg_p18_.png');
   background-color: #1d242c;
   box-shadow: none;
   top: 9%;
@@ -318,8 +283,6 @@ animations
 }
 
 .p19 {
-  background-image: url('images/yvie/bg_p19.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 9%;
@@ -328,8 +291,6 @@ animations
 }
 
 .p20 {
-  background-image: url('images/yvie/bg_p20.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 12%;
@@ -338,8 +299,6 @@ animations
 }
 
 .p21 {
-  background-image: url('images/yvie/bg_p21.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 50%;
@@ -348,431 +307,11 @@ animations
 }
 
 .p22 {
-  background-image: url('images/yvie/bg_p22.png');
-  background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
   top: 50%;
   right: 6%;
   transform: translate(-50%, -50%);
-}
-
-.p1 .card-title {
-  position: relative;
-}
-
-.p1 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p1.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p2 .card-title {
-  position: relative;
-}
-
-.p2 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p2.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p3 .card-title {
-  position: relative;
-}
-
-.p3 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p3.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p4 .card-title {
-  position: relative;
-}
-
-.p4 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p4.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p5 .card-title {
-  position: relative;
-}
-
-.p5 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p5.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p6 .card-title {
-  position: relative;
-}
-
-.p6 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p6.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-
-.p7 .card-title {
-  position: relative;
-}
-
-.p7 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p7.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p8 .card-title {
-  position: relative;
-}
-
-.p8 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p8.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p9 .card-title {
-  position: relative;
-}
-
-.p9 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p9.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p10 .card-title {
-  position: relative;
-}
-
-.p10 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p10.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p11 .card-title {
-  position: relative;
-}
-
-.p11 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p11.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-.p12 .card-title {
-  position: relative;
-}
-
-.p12 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p12.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p13 .card-title {
-  position: relative;
-}
-
-.p13 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p13.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p14 .card-title {
-  position: relative;
-}
-
-.p14 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p14.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p15 .card-title {
-  position: relative;
-}
-
-.p15 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p15.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p16 .card-title {
-  position: relative;
-}
-
-.p16 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p16.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p17 .card-title {
-  position: relative;
-}
-
-.p17 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p17.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p18 .card-title {
-  position: relative;
-}
-
-.p18 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p18.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p19 .card-title {
-  position: relative;
-}
-
-.p19 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p19.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p20 .card-title {
-  position: relative;
-}
-
-.p20 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p20.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p21 .card-title {
-  position: relative;
-}
-
-.p21 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p21.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
-}
-
-.p22 .card-title {
-  position: relative;
-}
-
-.p22 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/yvie/bg_p22.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
 }
 
 /*skills*/

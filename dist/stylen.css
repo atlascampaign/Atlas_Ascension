@@ -110,8 +110,6 @@ animations
 
 
 .p1 {
-  background-image: url('images/narkran/bg_p1.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 90%;
   left: 47.8%;
@@ -119,8 +117,6 @@ animations
 }
 
 .p2 {
-  background-image: url('images/icon1.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 78%;
   left: 28%;
@@ -128,8 +124,6 @@ animations
 }
 
 .p3 {
-  background-image: url('images/icon2.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 80%;
   left: 38%;
@@ -137,8 +131,6 @@ animations
 }
 
 .p4 {
-  background-image: url(https://inmyculture.com/icons/dnd-cunning-action-active.svg);
-  background-color: #1d242c;
   top: 80%;
   left: 58%;
   transform: translate(-50%, -50%);
@@ -210,7 +202,6 @@ animations
   transform: translate(-50%, -50%);
 }
 .p13 {
-  background-color: #fcfdff;
   top: 45%;
   left:48%;
   transform: translate(-50%, -50%);
