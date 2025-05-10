@@ -1,6 +1,141 @@
 let abilityData = {};
 let character = document.querySelector('body').id; // Declare character globally
 
+let skillPoints = 0;
+
+// Update skill points display
+function updateSkillPoints() {
+  document.querySelector('.skillsleft h3').textContent = skillPoints;
+}
+
+// Load initial data from Supabase
+async function initializeCharacterState() {
+  const { data, error } = await client
+    .from('points')
+    .select('available, unlocked')
+    .eq('player', character)
+    .single();
+
+  if (error) {
+    console.error('Failed to fetch character state:', error.message);
+    return;
+  }
+
+  // Set skill points
+  skillPoints = data.available || 0;
+  updateSkillPoints();
+
+  // Unlock points in the UI based on loaded data
+  const unlockedData = data.unlocked || {};
+  document.querySelectorAll('.point').forEach(point => {
+    const pointClass = [...point.classList].find(cls => /^p\d+$/.test(cls));
+    if (pointClass && unlockedData[pointClass]) {
+      point.classList.remove('locked');
+      point.classList.add('clicked'); // Optional if already used
+
+      // NEW: Trigger unlocking of dependent points
+      unlockPointsFromMap(pointClass);
+      stylePointElements();
+    }
+  });
+
+  console.log("Character state initialized for:", character);
+  drawLines(); // Ensure lines are drawn after initial state is loaded
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initializeCharacterState();
+
+  // Optional: manually add points by clicking on the counter
+  document.querySelector('.skillsleft h3').addEventListener('click', function () {
+    skillPoints++;
+    updateSkillPoints();
+  });
+});
+
+
+const supabaseUrl = 'https://jiysxporffwzhmrrpatg.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImppeXN4cG9yZmZ3emhtcnJwYXRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY2MzY3NjEsImV4cCI6MjA2MjIxMjc2MX0.wetVVcVsxQYC4l1hcASJUOL7pcfarDBo5MuXZTy1EuU';
+const client = supabase.createClient(supabaseUrl, supabaseKey);
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await client.auth.getSession();
+  await loadSkillPoints(); // 👈 Load from DB
+  await loadUnlockedFromSupabase();
+});
+
+async function testFetchAll() {
+  const { data, error } = await client
+    .from('points')       // Replace with your table name
+    .select('*');         // Select all columns
+
+  if (error) {
+    console.error('Fetch error:', error.message);
+  } else {
+    console.log('Data:', data);
+  }
+}
+
+testFetchAll();
+
+const characterLineStyles = {
+  narkran: {
+    fill: 'rgba(253, 88, 88, 0.8)',     // reddish
+    border: 'rgba(22, 22, 22, 0.8)',
+    clickedBorderWidth: 6,
+    clickedFillWidth: 4,
+    defaultFill: 'rgba(6, 71, 99, 0.8)',
+    defaultWidth: 1,
+    defaultOpacity: 0.3
+  },
+  hesperia: {
+    fill: 'rgb(255, 255, 255)',
+    border: 'rgba(22, 22, 22, 0.8)',
+    clickedBorderWidth: 6,
+    clickedFillWidth: 4,
+    defaultFill: 'rgba(6, 71, 99, 0.8)',
+    defaultWidth: 1,
+    defaultOpacity: 0.3
+  },
+  yvette: {
+    fill: 'rgb(212, 62, 62)',
+    border: 'rgba(22, 22, 22, 0.8)',
+    clickedBorderWidth: 6,
+    clickedFillWidth: 4,
+    defaultFill: 'rgba(6, 71, 99, 0.8)',
+    defaultWidth: 1,
+    defaultOpacity: 0.3
+  },
+  fedra: {
+    fill: 'rgb(112, 195, 201)',
+    border: 'rgba(22, 22, 22, 0.8)',
+    clickedBorderWidth: 6,
+    clickedFillWidth: 4,
+    defaultFill: 'rgba(6, 71, 99, 0.8)',
+    defaultWidth: 1,
+    defaultOpacity: 0.3
+  },
+  erevan: {
+    fill: 'rgb(51, 141, 66)',
+    border: 'rgba(22, 22, 22, 0.8)',
+    clickedBorderWidth: 6,
+    clickedFillWidth: 4,
+    defaultFill: 'rgba(6, 71, 99, 0.8)',
+    defaultWidth: 1,
+    defaultOpacity: 0.3
+  },
+  raziel: {
+    fill: 'rgb(233, 167, 247)',
+    border: 'rgba(22, 22, 22, 0.8)',
+    clickedBorderWidth: 6,
+    clickedFillWidth: 4,
+    defaultFill: 'rgba(6, 71, 99, 0.8)',
+    defaultWidth: 1,
+    defaultOpacity: 0.3
+  }
+}
+
+
 function populateUnlockedPoints() {
   document.querySelectorAll('.point').forEach(point => {
     if (!point.classList.contains('locked')) { // Only target non-locked points
@@ -23,25 +158,25 @@ function populateUnlockedPoints() {
 function stylePointElements() {
   // Get all elements with class 'point'
   const pointElements = document.querySelectorAll('.point:not(.locked)');
-  
+
   // Iterate through each point element
   pointElements.forEach(point => {
     // Get the point's ID (e.g., 'p1' from class 'point p1')
     const pointId = Array.from(point.classList)
-    .find(cls => cls.startsWith('p') && cls.length > 1 && !isNaN(cls.substring(1)));
-    
+      .find(cls => cls.startsWith('p') && cls.length > 1 && !isNaN(cls.substring(1)));
+
     if (pointId) {
       // Apply styles to the main point element
       point.style.backgroundImage = `url('images/${character}/bg_${pointId}.png')`;
       point.style.backgroundSize = 'cover';
-      
+
       // Find the card title within this point
       const cardTitle = point.querySelector('.card-title');
-      
+
       if (cardTitle) {
         // Apply styles to the card title
         cardTitle.style.position = 'relative';
-        
+
         // Create and style the pseudo-element
         const style = document.createElement('style');
         style.textContent = `
@@ -56,10 +191,10 @@ function stylePointElements() {
             background-size: cover;
             background-position: center;
             opacity: 0.5;
-            z-index: -1;
+            z-index: 0;
           }
         `;
-        
+
         // Add the style to the document head
         document.head.appendChild(style);
       }
@@ -89,53 +224,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 stylePointElements();
 
-const ascension = {"hesperia" : "Astromanzia",
-    "fedra" : "Primofulmine",
-    "erevan" : "Campione del Fato",
-    "narkran" : "Sentinella dell'Equilibrio",
-    "yvette" : "Driade Iridescente"}
+const ascension = {
+  "hesperia": "Astromanzia",
+  "fedra": "Primofulmine",
+  "erevan": "Campione del Fato",
+  "narkran": "Sentinella dell'Equilibrio",
+  "yvette": "Driade Iridescente",
+  "raziel": "Sacredote Cinereo"
+}
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize the skill points available
+  skillPoints = parseInt(document.querySelector('.skillsleft h3').textContent);
 
-// Initial memories object
-const initialMemories = {
-    "hesperia": ["Azor'halun", "Teulos Avair", "Kalvas Astraiel", "Saeryn Lavaion", "Tyr'faelys", "Lumis Yoraan", "Onsaeru Luxian", "Yorion Ostraia", "Daelis Teunar"],
-    "narkran" : ["Nel mezzo la via","Tra le dita la sabbia","Nel vento la dimora","Nel cuore il coraggio","Nella mente il giusto","Nel pugno la giustizia","Sulle gambe il sogno","Negli occhi la fermezza","Sopra di noi la fede"]
-};
-
-function updateSkillPoints() {
-    document.querySelector('.skillsleft h3').textContent = skillPoints;
-    sessionStorage.setItem('skillPoints', skillPoints);
-  }
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    // Initialize the skill points available
-    skillPoints = parseInt(document.querySelector('.skillsleft h3').textContent);
-  
-    // Function to update the display of skill points
-  
-  
-    // Increment skill points when clicking on the skillsleft element
-
-  
-    // Check if there's any data in the local storage
-    var retrievedData = getUnlockedDataFromLocalstorage();
-    console.log('HAAAAAAAAAAAAAAAAAAAAAAAAAAA', retrievedData);
-  
-    // If local storage is empty, initialize with a default JSON structure
-    if (!retrievedData || retrievedData.length === 0) {
-      var defaultData = [{ id: "", maps: "", skillpoints: 0 }];
-      saveUnlockedDataToLocalstorage(defaultData);
-    }
-    else {
-      var mapss = retrievedData.map(function(item) {
-        return item.maps;
-      });
-      console.log(mapss);
-      mapss.forEach(point => unlockPointsFromMap(point));
-  
-      
-    }
-  });
+});
 
 const container = document.getElementById('container');
 
@@ -160,57 +262,68 @@ skillsContainer.appendChild(skillsLeftDiv);
 skillsContainer.appendChild(inputBoxWrapper);
 container.appendChild(skillsContainer);
 
-// Store memories in sessionStorage if not already present
-if (!sessionStorage.getItem('memories')) {
-    sessionStorage.setItem('memories', JSON.stringify(initialMemories));
-}
-
-// Retrieve memories from sessionStorage
-let memories = JSON.parse(sessionStorage.getItem('memories'));
-
-// Retrieve the current player character (pc) from the body ID
-const pc = document.querySelector('body').id;
-
 // Set the ascension description in the UI
-const desc = ascension[pc];
+const desc = ascension[character];
 document.querySelector('.skillsleft h1').textContent = desc;
 
-// Add event listener for input box
-inputBox.addEventListener('keydown', (event) => {
-    // Check if the pressed key is Enter (key code 13)
-    if (event.key === 'Enter') {
-        const typedValue = event.target.value; // Keep the case sensitivity as is
-        console.log(memories[pc]);
+// TODO: CHANGE THIS PART TO A FUNCTION THAT ALLOWS TO USE POWER WORDS TO GAIN TALENT POINTS --------------------------------------------------------------------------------------
+inputBox.addEventListener('keydown', async (event) => {
+  if (event.key === 'Enter') {
+    const typedValue = event.target.value.trim(); // Trim input
+    if (!typedValue) return;
 
-        // Retrieve the correct memory list for the current character
-        if (memories[pc] && memories[pc].includes(typedValue)) {
-            const index = memories[pc].indexOf(typedValue);
-            memories[pc].splice(index, 1); // Remove the recovered memory from the list
+    // Step 1: Fetch the matching word for the current character (character)
+    const { data: truthEntry, error: fetchError } = await client
+      .from('truth')
+      .select('id, used')
+      .eq('player', character)
+      .eq('word', typedValue)
+      .maybeSingle();
 
-            // Update the sessionStorage with the modified memories
-            sessionStorage.setItem('memories', JSON.stringify(memories));
-
-            // Increment the global skillPoints variable
-            skillPoints++;
-
-            // Update the UI with the new skill points
-            updateSkillPoints();
-
-            // Save the unlocked data to localStorage
-            var unlockedData = gatherUnlockedData();
-            saveUnlockedDataToLocalstorage(unlockedData);
-
-            // Clear the input box after successful recovery
-            inputBox.value = '';
-
-            console.log(`Recovered memory: ${typedValue}. Skill points now: ${skillPoints}`);
-        } else {
-            console.log("Memory not found or already recovered.");
-        }
-
-        console.log("Updated Memories for " + pc + ": ", memories[pc]);
+    if (fetchError) {
+      console.error('Error fetching word from truth table:', fetchError.message);
+      return;
     }
+
+    if (!truthEntry) {
+      console.log("Memory not found.");
+      return;
+    }
+
+    if (truthEntry.used) {
+      console.log("Memory already recovered — no points awarded.");
+      return;
+    }
+
+    // Step 2: Mark the word as used
+    const { error: updateError } = await client
+      .from('truth')
+      .update({ used: true })
+      .eq('id', truthEntry.id);
+
+    if (updateError) {
+      console.error("Failed to mark memory as used:", updateError.message);
+      return;
+    }
+
+    // Step 3: Increment skill points in 'points' table
+    const { error: incrementError } = await client
+      .rpc('increment_available_points', { player_name: character });
+
+    if (incrementError) {
+      console.error("Failed to increment available points:", incrementError.message);
+      return;
+    }
+
+    // Step 4: Update local state/UI
+    skillPoints++;
+    updateSkillPoints();
+    inputBox.value = '';
+
+    console.log(`Recovered memory: ${typedValue}. Skill points now: ${skillPoints}`);
+  }
 });
+
 
 
 
@@ -268,146 +381,248 @@ baclinkDiv.appendChild(a);
 container.appendChild(forgetDiv);
 container.appendChild(baclinkDiv);
 
-document.querySelector('.forget').addEventListener('click', function() {
-    localStorage.removeItem('unlockedData');
-    sessionStorage.removeItem('memories');
-    console.log("Local storage cleared.");
-    location.reload();
-  });
+document.querySelector('.forget').addEventListener('click', async function () {
+  // Clear local/session storage
+  localStorage.removeItem('unlockedData');
+  sessionStorage.removeItem('memories');
+  console.log("Local storage cleared.");
+
+  // Fetch current unlocked state for this character
+  const { data, error: fetchError } = await client
+    .from('points')
+    .select('unlocked')
+    .eq('player', character)
+    .single();
+
+  if (fetchError) {
+    console.error('Error fetching current unlocked state:', fetchError.message);
+    return;
+  }
+
+  const currentUnlocked = data.unlocked || {};
+  const resetUnlocked = Object.fromEntries(
+    Object.keys(currentUnlocked).map(key => [key, false])
+  );
+
+  // Update the unlocked field with all false
+  const { error: updateError } = await client
+    .from('points')
+    .update({ unlocked: resetUnlocked })
+    .eq('player', character);
+
+  if (updateError) {
+    console.error('Failed to reset unlocked state:', updateError.message);
+  } else {
+    console.log('Unlocked state reset in database.');
+  }
+
+  location.reload();
+});
+
 
 const audio = new Audio('audio/unlock-point.mp3');
 const points = document.querySelectorAll('.point');
 
-points.forEach(point => {
-    point.addEventListener('click', function() {
-      // Check if the point is locked
-      if (!this.classList.contains('locked')) {
-        // Check if there are skill points available and if the point hasn't been clicked before
-        if (skillPoints > 0 && !this.classList.contains('clicked')) {
-          // Play the sound
-          if (!audio.paused) {
-            audio.pause();
-            audio.currentTime = 0.1;
-          }
-          console.log("master audio played");
-          audio.play();
-  
-          // Decrease the skill points available
-          skillPoints--;
-          // Update the display
-          updateSkillPoints();
-  
-          // Add classes to indicate that the point has been clicked and apply border
-          this.classList.add('clicked', 'bordered');
-          // Add a class to trigger the flash effect
-          this.classList.add('flash');
-          // Remove the class after a delay to reset the effect
-          setTimeout(() => {
-            this.classList.remove('flash');
-          }, 500); // Adjust the duration as needed
-  
-          // Unlock points based on the map
-          unlockPointsFromMap(this.classList[1]);
-          populateUnlockedPoints();
-          stylePointElements();
-  
-          // Additional logic for when points are clicked
-          var pointsClicked = document.querySelectorAll('.point.clicked').length;
-          if (pointsClicked >= 8) {
-            unlockPoint('p13');
-          }
-  
-          console.log(pointsClicked);
-  
-          drawLines();
-          
-        } else {
-          // Display a message or perform any other action if no skill points are available
-          console.log("No skill points available or the point has been clicked before.");
-        }
-      } else {
-        // Display a message or perform any other action if the point is locked
-        console.log("This point is locked and cannot be clicked.");
-      }
-    });
-  });
+// Load skill points from client ---------------------------------------------------------------------------------------------------------------------------------------
 
-  function gatherUnlockedData() {
-    var unlockedElements = document.querySelectorAll('.clicked');
-    var unlockedData = [];
-    var skillPointsElement = document.querySelector('.skillsleft h3');
-    var skillPoints = skillPointsElement ? parseInt(skillPointsElement.textContent) : 0;
-  
-    unlockedElements.forEach(function(element) {
-      var id = element.getAttribute('id');
-      var map = element.getAttribute('class').split(' ')[1];
-      console.log("HERE",map);
-  
-      // Construct an object for each unlocked element
-      var unlockedItem = {
-        id: id,
-        maps: map,
-        skillpoints: skillPoints // Add more properties as needed
-      };
-  
-      // Push the object to the array
-      unlockedData.push(unlockedItem);
-    });
-  return unlockedData;
+async function loadUnlockedFromSupabase() {
+  const { data, error } = await client
+    .from('points')
+    .select('unlocked')
+    .eq('player', character)   // Filter by the current player
+    .single();
+
+  if (error) {
+    console.error('Error fetching unlocked points:', error.message);
+    return;
+  }
+
+// Assuming 'data.unlocked' is the JSONB object with point states
+  const unlockedData = data.unlocked;
+
+  // Iterate over all points and "click" the ones that are unlocked
+  document.querySelectorAll('.point').forEach(point => {
+    const pointClass = [...point.classList].find(cls => /^p\d+$/.test(cls)); // Find class matching "pX"
+    if (pointClass && unlockedData[pointClass]) {
+      if (unlockedData[pointClass] === true) {
+        point.classList.remove('locked');
+        point.classList.add('clicked'); // Simulate a click for styling
+        // Note: We don't call unlockPointsFromMap here because it will be called
+        // in initializeCharacterState after the initial load.
+      } else {
+        point.classList.add('locked');
+      }
+    }
+  });
+}
+
+
+// Instead of requiring a user ID, fetch a default/shared row
+async function loadSkillPoints() {
+  const { data, error } = await client
+    .from('points')
+    .select('available')
+    .eq('player', character)
+    .single();
+
+  if (error) {
+    console.error("Error fetching skill points:", error.message);
+    return;
+  }
+
+  skillPoints = data.available;
+  updateSkillPoints();
+}
+
+async function decrementSkillPoints() {
+  const { data, error } = await client
+    .from('points')
+    .update({ available: skillPoints })
+    .eq('player', character);
+
+  if (error) {
+    console.error("Error updating skill points:", error.message);
+  }
+}
+
+points.forEach(point => {
+  point.addEventListener('click', async function () {
+    if (!this.classList.contains('locked')) {
+      if (skillPoints > 0 && !this.classList.contains('clicked')) {
+        if (!audio.paused) {
+          audio.pause();
+          audio.currentTime = 0.1;
+        }
+        console.log("master audio played");
+        audio.play();
+
+        skillPoints--;
+        await decrementSkillPoints();
+        updateSkillPoints();
+
+        this.classList.add('clicked', 'bordered', 'flash');
+        setTimeout(() => {
+          this.classList.remove('flash');
+        }, 500);
+
+        const clickedPointClass = [...this.classList].find(cls => /^p\d+$/.test(cls));
+        if (clickedPointClass) {
+          unlockPointsFromMap(clickedPointClass);
+        }
+        populateUnlockedPoints();
+        stylePointElements();
+
+        var pointsClicked = document.querySelectorAll('.point.clicked').length;
+        if (pointsClicked >= 8) {
+          unlockPoint('p13');
+        }
+
+        console.log(pointsClicked);
+        drawLines();
+
+        // Get the point class name (e.g., "p1", "p2", etc.)
+        const pointClass = [...this.classList].find(cls => /^p\d+$/.test(cls));
+
+        // Update the unlocked JSONB in the database
+        if (pointClass) {
+          await updateUnlockedPointInDatabase(pointClass, true);
+        }
+
+      } else {
+        console.log("No skill points available or the point has been clicked before.");
+      }
+    } else {
+      console.log("This point is locked and cannot be clicked.");
+    }
+  });
+});
+
+// Function to update the unlocked points in the database
+async function updateUnlockedPointInDatabase(pointClass, unlockedStatus) {
+  // Retrieve the current unlocked JSONB data from the database
+  const { data, error } = await client
+    .from('points')
+    .select('unlocked')
+    .eq('player', character)   // Filter by the current player
+    .single();
+
+  if (error) {
+    console.error('Error fetching unlocked points:', error.message);
+    return;
+  }
+
+  // Assuming the 'unlocked' field is a JSONB object and we're modifying it
+  const unlockedData = data.unlocked || {};
+
+  // Set the point's status to true (unlocked)
+  unlockedData[pointClass] = true;
+
+  // Update the JSONB column in the database
+  const { updateError } = await client
+    .from('points')
+    .update({ unlocked: unlockedData })
+    .eq('player', character);   // Ensure you're updating the correct player's data
+
+  if (updateError) {
+    console.error('Error updating unlocked points:', updateError.message);
+  } else {
+    console.log(`Point ${pointClass} updated to unlocked.`);
+  }
 }
 
 let lastParticleTime = 0; // Tracks the last time a particle was created
 const particleCooldown = 50; // Time in milliseconds between particles
 
 document.addEventListener("mousemove", function (e) {
-    const now = Date.now();
-    if (now - lastParticleTime > particleCooldown) {
-        createParticle(e.pageX, e.pageY);
-        lastParticleTime = now;
-    }
+  const now = Date.now();
+  if (now - lastParticleTime > particleCooldown) {
+    createParticle(e.pageX, e.pageY);
+    lastParticleTime = now;
+  }
 });
 
 function createParticle(x, y) {
-    const particle = document.createElement("div");
-    particle.classList.add("particle");
+  const particle = document.createElement("div");
+  particle.classList.add("particle");
 
-    document.body.appendChild(particle);
+  document.body.appendChild(particle);
 
-    // Set initial position
-    particle.style.left = `${x}px`;
-    particle.style.top = `${y}px`;
+  // Set initial position
+  particle.style.left = `${x}px`;
+  particle.style.top = `${y}px`;
 
-    // Random size
-    const size = Math.random() + 1; // Random size between 6px and 14px
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
+  // Random size
+  const size = Math.random() + 1; // Random size between 6px and 14px
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
 
-    // Random movement direction
-    const angle = Math.random() * 2 * Math.PI; // Random angle (0 to 360 degrees in radians)
-    const distance = Math.random() * 25 + 10; // Moves between 10px and 35px
-    const xMove = distance * Math.cos(angle);
-    const yMove = distance * Math.sin(angle);
+  // Random movement direction
+  const angle = Math.random() * 2 * Math.PI; // Random angle (0 to 360 degrees in radians)
+  const distance = Math.random() * 25 + 10; // Moves between 10px and 35px
+  const xMove = distance * Math.cos(angle);
+  const yMove = distance * Math.sin(angle);
 
-    // Apply animation (slower, more random movement)
-    particle.animate(
-        [
-            { transform: `translate(0, 0)`, opacity: 1 },
-            { transform: `translate(${xMove}px, ${yMove}px)`, opacity: 0 }
-        ],
-        {
-            duration: 1200 + Math.random() * 500, // 1.2s - 1.7s for slower fade-out
-            easing: "ease-out"
-        }
-    );
+  // Apply animation (slower, more random movement)
+  particle.animate(
+    [
+      { transform: `translate(0, 0)`, opacity: 1 },
+      { transform: `translate(${xMove}px, ${yMove}px)`, opacity: 0 }
+    ],
+    {
+      duration: 1200 + Math.random() * 500, // 1.2s - 1.7s for slower fade-out
+      easing: "ease-out"
+    }
+  );
 
-    // Remove particle after animation
-    setTimeout(() => {
-        particle.remove();
-    }, 1100);
+  // Remove particle after animation
+  setTimeout(() => {
+    particle.remove();
+  }, 1100);
 }
 
 function drawLines() {
   const container = document.getElementById('container');
+  const style = characterLineStyles[character] || characterLineStyles['hesperia']; // default fallback
   let svg = document.getElementById('linesSvg');
 
   if (!svg) {
@@ -468,14 +683,15 @@ function drawLines() {
           lineFill.setAttribute('y2', y2);
 
           if (connectedPoint.classList.contains('clicked') && point.classList.contains('clicked')) {
-            lineFill.setAttribute('stroke', 'rgba(253, 88, 88, 0.8)');
-            lineFill.setAttribute('stroke-width', '4');
-            lineBorder.setAttribute('stroke-width', '6')
+            lineFill.setAttribute('stroke', style.fill);
+            lineFill.setAttribute('stroke-width', style.clickedFillWidth);
+            lineBorder.setAttribute('stroke-width', style.clickedBorderWidth);
           } else {
-            lineFill.setAttribute('stroke', 'rgba(6, 71, 99, 0.8)');
-            lineFill.setAttribute('stroke-width', '1');
-            lineFill.setAttribute('opacity', '0.3');
+            lineFill.setAttribute('stroke', style.defaultFill);
+            lineFill.setAttribute('stroke-width', style.defaultWidth);
+            lineFill.setAttribute('opacity', style.defaultOpacity);
           }
+
 
           // Append the fill line to the SVG
           svg.appendChild(lineFill);

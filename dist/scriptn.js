@@ -58,7 +58,6 @@ const unlockmap = {
     }
   });
 
-let skillPoints;
 
 console.log(character);
 
@@ -298,14 +297,4 @@ function unlockElementsFromData(data) {
     }
   });
 };
-
-function loadSkillPoints(data) {
-  if (data.length > 0 && data[0].hasOwnProperty('skillpoints')) {
-      var skillPoints = data[0].skillpoints;
-      document.querySelector('.skillsleft h3').textContent = skillPoints.toString();
-  } else {
-      data = { id: "", maps: "", skillpoints: 0 };
-      document.querySelector('.skillsleft h3').textContent = "0"; // or handle as needed
-  }
-}
 

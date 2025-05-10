@@ -171,6 +171,13 @@
   transform: translate(-50%, -50%);
 }
 
+.p1:hover .hide {
+  left: calc(100% + 20px); /* to the right */
+  top: -210px;              /* shift upward */
+  transform: none;         /* cancel any centering */
+}
+
+
 /*skills*/
 .hide {
   display: none;
@@ -205,5 +212,20 @@
   background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
   background-size: 24px 24px;
   box-shadow: none;
+}
+
+.particle {
+  position: absolute;
+  background-color: rgb(255, 255, 255); /* Pure bright red core */
+  box-shadow: 
+    0 0 5px rgb(210, 253, 255),  /* Bright red inner glow */
+    0 0 5px rgb(210, 253, 255),  /* Stronger red outer glow */
+    0 0 15px rgb(210, 253, 255),    /* Intense red bloom effect */
+    0 0 15px rgb(210, 253, 255), /* Larger fading red glow */
+    0 0 15px rgb(210, 253, 255), /* Extended soft glow */
+    0 0 15px rgb(210, 253, 255); /* Final fading glow */
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
 }
 

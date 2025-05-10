@@ -43,9 +43,10 @@ def resize_images(input_folder, output_folder, new_width=None, new_height=None):
                 print(f"Error processing {filename}: {str(e)}")
 
 if __name__ == "__main__":
+    print("Script started")
     # Configuration
-    input_folder = "Atlas_Ascension\\dist\\images\\narkran"  # Replace with your input folder path
-    output_folder = "Atlas_Ascension\\dist\\images\\narkran"  # Replace with your output folder path
+    input_folder = "Atlas_Ascension\\dist\\images\\fedra"  # Replace with your input folder path
+    output_folder = "Atlas_Ascension\\dist\\images\\fedra"  # Replace with your output folder path
     
     # Choose ONE of these options:
     # Option 1: Set desired width (height will be calculated)

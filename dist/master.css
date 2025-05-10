@@ -222,6 +222,10 @@ li {
   margin-top: 10px;
 }
 
+.point:hover {
+  z-index: 100 !important; /* Ensure hovered point appears above all others */
+}
+
 .locked {
   border: 2px solid rgba(206, 176, 91, 0.382);
   z-index: 1;
@@ -247,7 +251,7 @@ li {
   background-size: 28px 28px;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 0;
   position: absolute;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0) !important;
