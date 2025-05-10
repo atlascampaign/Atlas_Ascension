@@ -3,23 +3,22 @@
 <head>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <meta charset="UTF-8">
-  <title>Atlas - Ascensione di Yvette</title>
-  <link rel="icon" href="icologo.png" type="image/x-icon">
+  <title>Atlas - Ascension</title>
   <link rel="stylesheet" href="./master.css">
-  <link rel="stylesheet" href="./styley.css">
+  <link rel="stylesheet" href="./fedra.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Julius+Sans+One&family=Megrim&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
 </head>
-<body id="yvette">
-  <div id="container">  
+<body id = "fedra">
+  <div id="container">
     <div class="skillsleft">
       <h1></h1>
       <h2>Rimembranze</h2>
       <h3>0</h3>
     </div>
-    <div id="one" class="point p1 fade-in starting" data-connections="one, two">
+    <div id="one" class="point p1 fade-in" data-connections="one, two, three">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -32,7 +31,7 @@
         </div>
       </div>
     </div>  
-    <div id="two" class="point p2 fade-in locked" data-connections="two, three, five">
+    <div id="two" class="point p2 fade-in locked" data-connections="two, four">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -45,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div id="three" class="point p3 fade-in locked" data-connections="three, six">
+    <div id="three" class="point p3 fade-in locked" data-connections="three, four">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -58,7 +57,7 @@
         </div>
       </div>
     </div>
-    <div id="four" class="point p4 fade-in locked" data-connections="four, eight, ten">
+    <div id="four" class="point p4 fade-in locked">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -71,7 +70,7 @@
         </div>
       </div>
     </div>
-    <div id="five" class="point p5 fade-in locked" data-connections="five,six">
+    <div id="five" class="point p5 fade-in locked" data-connections="five,seven">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -84,7 +83,7 @@
         </div>
       </div>
     </div>    
-    <div id="six" class="point p6 fade-in locked" data-connections="six, four, seven">
+    <div id="six" class="point p6 fade-in locked" data-connections="six, eight">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -110,7 +109,7 @@
         </div>
       </div>
     </div>
-    <div id="eight" class="point p8 fade-in locked" data-connections="eight, nineteen, twenty">
+    <div id="eight" class="point p8 fade-in locked" data-connections="eight, ten, twelve">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -123,7 +122,7 @@
         </div>
       </div>
     </div>
-    <div id="nine" class="point p9 fade-in locked" data-connections="nine, seventeen, eighteen">
+    <div id="nine" class="point p9 fade-in locked" data-connections="nine, fourteen">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -136,7 +135,7 @@
         </div>
       </div>
     </div>
-    <div id="ten" class="point p10 fade-in locked" data-connections="ten, twelve, sixteen">
+    <div id="ten" class="point p10 fade-in locked" data-connections="ten, sixteen">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -149,20 +148,7 @@
         </div>
       </div>
     </div>
-    <div id="eleven" class="point p11 fade-in locked" data-connections="eleven, fourteen, fifteen">
-      <div class="card hide fade-in-line">
-        <div class="card-content">
-          <div class="card-title">
-            <h3></h3>
-          </div>
-          <div class="card-foot">
-            <span></span>
-            <span class="quote"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="twelve" class="point p12 fade-in locked" data-connections="">
+    <div id="eleven" class="point p11 fade-in locked" data-connections="eleven, fourteen">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -188,7 +174,7 @@
         </div>
       </div>
     </div>
-    <div id="fourteen" class="point p14 fade-in locked">
+    <div id="fourteen" class="point p14 fade-in locked" data-connections="fourteen, fifteen">
       <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
@@ -201,8 +187,8 @@
         </div>
       </div>
     </div>
-    <div id="fifteen" class="point p15 fade-in locked">
-            <div class="card hide fade-in-line">
+    <div id="fifteen" class="point p15 fade-in locked"  data-connections="fifteen, thirteen">
+      <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
             <h3></h3>
@@ -214,8 +200,8 @@
         </div>
       </div>
     </div>
-    <div id="sixteen" class="point p16 fade-in locked">
-            <div class="card hide fade-in-line">
+    <div id="sixteen" class="point p16 fade-in locked"  data-connections="sixteen, seventeen">
+      <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
             <h3></h3>
@@ -227,73 +213,8 @@
         </div>
       </div>
     </div>
-    <div id="seventeen" class="point p17 fade-in locked">
-            <div class="card hide fade-in-line">
-        <div class="card-content">
-          <div class="card-title">
-            <h3></h3>
-          </div>
-          <div class="card-foot">
-            <span></span>
-            <span class="quote"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="eighteen" class="point p18 fade-in locked">
-            <div class="card hide fade-in-line">
-        <div class="card-content">
-          <div class="card-title">
-            <h3></h3>
-          </div>
-          <div class="card-foot">
-            <span></span>
-            <span class="quote"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="nineteen" class="point p19 fade-in locked">
-            <div class="card hide fade-in-line">
-        <div class="card-content">
-          <div class="card-title">
-            <h3></h3>
-          </div>
-          <div class="card-foot">
-            <span></span>
-            <span class="quote"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="twenty" class="point p20 fade-in locked">
-            <div class="card hide fade-in-line">
-        <div class="card-content">
-          <div class="card-title">
-            <h3></h3>
-          </div>
-          <div class="card-foot">
-            <span></span>
-            <span class="quote"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="twentyone" class="point p21 fade-in locked">
-            <div class="card hide fade-in-line">
-        <div class="card-content">
-          <div class="card-title">
-            <h3></h3>
-          </div>
-          <div class="card-foot">
-            <span></span>
-            <span class="quote"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="twentytwo" class="point p22 fade-in locked">
-            <div class="card hide fade-in-line">
+    <div id="seventeen" class="point p17 fade-in locked"  data-connections="seventeen, thirteen">
+      <div class="card hide fade-in-line">
         <div class="card-content">
           <div class="card-title">
             <h3></h3>
@@ -307,11 +228,12 @@
     </div>
   </div>
 <!-- partial -->
+<script src="../src/FileSaver.js-master/dist/FileSaver.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/utils/Draggable.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src="./master.js"></script>
-<script src="./scripty.js"></script>
+<script src="./fedra.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
 </body>
 </html>

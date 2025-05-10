@@ -48,84 +48,35 @@ const unlockmap = {
     twenty: [],
     twentyone: ['eighteen'],
   };
-  
+
   const pointElements = document.querySelectorAll('.point');
-  pointElements.forEach(element => {
-    const pointId = element.id;
-    const connections = connectionsMap[pointId];
-    if (connections) {
-      element.setAttribute('data-connections', connections.join(', '));
-    }
-  });
-
-
-console.log(character);
+pointElements.forEach(element => {
+  const pointId = element.id;
+  const connections = connectionsMap[pointId];
+  if (connections) {
+    element.setAttribute('data-connections', connections.join(', '));
+  }
+});
 
 function unlockPointsFromMap(clickedPoint) {
   const unlockList = unlockmap[character][clickedPoint]; // Access the correct nested object
   if (unlockList) {
-    console.log("Unlocking points:", unlockList);
+    console.log("Unlocking points from map:", unlockList);
     unlockList.forEach(point => unlockPoint(point));
   } else {
     console.log("No unlock list found for clicked point:", clickedPoint);
   }
 }
 
-
-
-function updateSkillPoints() {
-  document.querySelector('.skillsleft h3').textContent = skillPoints;
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Initialize the skill points available
-  var retrievedData = getUnlockedDataFromLocalstorage();
-  skillPoints = retrievedData.length > 0 ? retrievedData[0].skillpoints : 0;
-  updateSkillPoints();
-
-  // Increment skill points when clicking on the skillsleft element
-  document.querySelector('.skillsleft h3').addEventListener('click', function() {
-    skillPoints++;
-    updateSkillPoints();
-  });
-
-  // Check if there's any data in the local storage
-  console.log('HAAAAAAAAAAAAAAAAAAAAAAAAAAA', retrievedData);
-
-  // If local storage is empty, initialize with a default JSON structure
-  if (!retrievedData || retrievedData.length === 0) {
-    var defaultData = [{ id: "", maps: "", skillpoints: 0 }];
-    saveUnlockedDataToLocalstorage(defaultData);
-  }
-  else {
-    var mapss = retrievedData.map(function(item) {
-      return item.maps;
-    });
-    console.log(mapss);
-    mapss.forEach(point => unlockPointsFromMap(point));
-  }
-});
-
+// The unlockPoint function should remain as master.js calls it.
+// Ensure it's consistent with the master.js version if you've made changes there.
 function unlockPoint(pointClass) {
   const point = document.querySelector(`.${pointClass}`);
   if (point) {
     point.classList.remove('locked');
-
-    populateUnlockedPoints();
-    // Redraw lines after unlocking the point
-    drawLines();
-
-    // Gather unlocked data and print JSON
-    var unlockedData = gatherUnlockedData();
-    console.log(JSON.stringify(unlockedData, null, 2));
-    saveUnlockedDataToLocalstorage(unlockedData);
+    // master.js handles drawing lines and saving data
   }
 }
-
-var retrievedData = getUnlockedDataFromLocalstorage();
-console.log(retrievedData);
-unlockElementsFromData(retrievedData);
-loadSkillPoints(retrievedData);
 
 function drawLines() {
   const container = document.getElementById('container');
@@ -225,76 +176,3 @@ function drawLines() {
 
 // Call drawLines initially to set up the lines
 drawLines();
-
-  
-document.addEventListener("DOMContentLoaded", function() {
-  const points = document.querySelectorAll('.point');
-
-  points.forEach(point => {
-    point.addEventListener('mouseenter', () => {
-      point.style.zIndex = '3'; // Set the z-index of the point to a higher value
-    });
-
-    point.addEventListener('mouseleave', () => {
-      point.style.zIndex = '1'; // Reset the z-index of the point
-    });
-  });
-});
-
-// Add click event listener to each .point element
-
-function gatherUnlockedData() {
-  var unlockedElements = document.querySelectorAll('.clicked');
-  var unlockedData = [];
-  var skillPointsElement = document.querySelector('.skillsleft h3');
-  var skillPoints = skillPointsElement ? parseInt(skillPointsElement.textContent) : 0;
-
-  unlockedElements.forEach(function(element) {
-    var id = element.getAttribute('id');
-    var map = element.getAttribute('class').split(' ')[1];
-    console.log("HERE",map);
-
-    // Construct an object for each unlocked element
-    var unlockedItem = {
-      id: id,
-      maps: map,
-      skillpoints: skillPoints // Add more properties as needed
-    };
-
-    // Push the object to the array
-    unlockedData.push(unlockedItem);
-  });
-
-
-
-  return unlockedData;
-}
-
-function saveUnlockedDataToLocalstorage(data) {
-  localStorage.setItem('unlockedData', JSON.stringify(data));
-}
-
-function getUnlockedDataFromLocalstorage() {
-  var data = localStorage.getItem('unlockedData');
-  return data ? JSON.parse(data) : [];
-}
-
-function unlockElementsFromData(data) {
-  // Loop through each item in the retrieved data
-  data.forEach(function(item) {
-    // Get the ID from the item
-    var id = item.id;
-
-    // Unlock the element with the corresponding ID
-    var element = document.getElementById(id);
-    if (element) {
-      element.classList.remove('locked');
-      element.classList.add('clicked');
-
-      // Additional unlocking logic based on the map can go here
-
-      drawLines();
-    }
-  });
-};
-

@@ -9,8 +9,15 @@
 #container {
   width: 100%;
   height: 100vh;
-  background: url('https://cdn.midjourney.com/605bb012-2a92-4c05-8d3b-7368376ca598/0_0.png') no-repeat center center;
+  background: url('../images/shabalaya._dnd_fantasy_wallpaper_a_armored_individual_is_standi_2c7c04bb-8d1d-4f2d-bc57-7818e8ca63e6.png') no-repeat center center;
   background-size: cover;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative; /* Contain absolute elements */
 }
 
 
@@ -66,9 +73,7 @@ animations
 /*
  * skill points left
  */
-/*
-* points
-*/
+
 
 .point {
   height: 50px;
@@ -99,8 +104,6 @@ animations
 }
 
 .starting {
-  height: 60px;
-  width: 60px;
   box-shadow:
     0 0 2px rgba(255,255,255,.5),
     0 0 8px rgba(255,255,255,.5),
@@ -114,25 +117,20 @@ animations
 
 
 .p1 {
-  background-image: url('images/starting_hesperia.png');
-  background-size: cover;
+  background-color: #1d242c;
   top: 90%;
   left: 47.8%;
   transform: translate(-50%, -50%);
 }
 
 .p2 {
-  background-image: url('images/icon1.png');
-  background-size: cover;
   background-color: #1d242c;
-  top: 75%;
-  left: 48%;
+  top: 78%;
+  left: 28%;
   transform: translate(-50%, -50%);
 }
 
 .p3 {
-  background-image: url('images/icon2.png');
-  background-size: cover;
   background-color: #1d242c;
   top: 80%;
   left: 38%;
@@ -140,7 +138,6 @@ animations
 }
 
 .p4 {
-  background-image: url(https://inmyculture.com/icons/dnd-cunning-action-active.svg);
   background-color: #1d242c;
   top: 80%;
   left: 58%;
@@ -192,8 +189,8 @@ animations
 .p10 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 9%;
-  left: 30%;
+  top: 43%;
+  left: 38%;
   transform: translate(-50%, -50%);
 }
 
@@ -213,8 +210,7 @@ animations
   transform: translate(-50%, -50%);
 }
 .p13 {
-  background-color: #fcfdff;
-  top: 22%;
+  top: 45%;
   left:48%;
   transform: translate(-50%, -50%);
 }
@@ -222,15 +218,15 @@ animations
 .p14 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 60%;
-  left: 74%;
+  top: 78%;
+  left: 68%;
   transform: translate(-50%, -50%);
 }
 
 .p15 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 44%;
+  top: 42%;
   left: 79%;
   transform: translate(-50%, -50%);
 }
@@ -238,7 +234,7 @@ animations
 .p16 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 44%;
+  top: 42%;
   left: 17%;
   transform: translate(-50%, -50%);
 }
@@ -247,14 +243,14 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
-  left: 73%;
+  left: 71%;
   transform: translate(-50%, -50%);
 }
 
 .p18 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 9%;
+  top: 59%;
   left: 53%;
   transform: translate(-50%, -50%);
 }
@@ -262,7 +258,7 @@ animations
 .p19 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 9%;
+  top: 59%;
   left: 43%;
   transform: translate(-50%, -50%);
 }
@@ -271,16 +267,43 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
-  left: 23%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 
 .p21 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 9%;
-  left: 66%;
+  top: 43%;
+  left: 58%;
   transform: translate(-50%, -50%);
+}
+
+.p22 {
+  background-color: #1d242c;
+  box-shadow: none;
+  top: 60%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+}
+
+.p1 .card-title {
+  position: relative;
+}
+
+.p1 .card-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/narkran/bg_p1.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  /* adjust the value to your liking */
+  z-index: -1;
 }
 
 /*skills*/
@@ -315,57 +338,6 @@ animations
   /* Add any additional styles as needed */
 }
 
-
-
-.card-head img {
-  width: 100%;
-  height: auto;
-}
-
-.card h3 {
-  padding: 7px; /* Add padding to give space around the text */
-  margin: 15px auto 0; /* Adjust margin to center vertically and add space at the top */
-  font-size: 18px;
-  font-family: "Jacques Francois", serif;
-  color: #d34d4d;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  text-align: center; /* Center the text horizontally */
-}
-
-.card-foot {
-  padding: 8px;
-}
-
-.card-foot span {
-  font-size: 16px;
-  font-family: 'EB Garamond';
-  color: rgba(157, 231, 237, 0.762);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  text-rendering: optimizeLegibility;
-  
-}
-
-.top-svg {
-  position: absolute;
-  width: 350px;
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  top: -20px;
-  left:-5px;
-  overflow:unset; /* Adjust the top position as needed */
-}
-
-.bottom-svg {
-  background-repeat: no-repeat; /* Check if the path to the SVG is correct */
-  bottom: -11px;
- 
-  position: absolute;
-  width: 340px; /* Adjust the bottom position as needed */
-}
-
 /*media quaries*/
 @media (max-width: 720px) {
   body {
@@ -392,9 +364,26 @@ background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
   box-shadow: none;
 }
 
+
+
 /* Specific rule for starting points */
 .starting:hover .hide {
   left: 50%;
-  top: -30px; /* Place the card 20px above the hovered element */
+  top: -10px; /* Place the card 20px above the hovered element */
   transform: translate(-50%, -100%);
+}
+
+.particle {
+  position: absolute;
+  background-color: rgb(255, 255, 255); /* Pure bright red core */
+  box-shadow: 
+    0 0 5px rgb(119, 0, 216),  /* Bright red inner glow */
+    0 0 5px rgb(119, 0, 216),  /* Stronger red outer glow */
+    0 0 15px rgb(119, 0, 216),    /* Intense red bloom effect */
+    0 0 15px rgb(119, 0, 216), /* Larger fading red glow */
+    0 0 15px rgb(119, 0, 216), /* Extended soft glow */
+    0 0 15px rgb(119, 0, 216); /* Final fading glow */
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
 }

@@ -9,8 +9,10 @@
 #container {
   width: 100%;
   height: 100vh;
-  background: url('images/shabalaya._dnd_fantasy_wallpaper_a_armored_individual_is_standi_2c7c04bb-8d1d-4f2d-bc57-7818e8ca63e6.png') no-repeat center center;
+  background: url('../images/base.png') no-repeat center center;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -66,7 +68,9 @@ animations
 /*
  * skill points left
  */
-
+/*
+* points
+*/
 
 .point {
   height: 50px;
@@ -98,32 +102,36 @@ animations
 
 .starting {
   box-shadow:
-    0 0 2px rgba(255,255,255,.5),
-    0 0 8px rgba(255,255,255,.5),
-    0 0 10px rgba(240,248,255,.5),
-    0 0 20px rgba(240,248,255,.5),
-    0 0 30px rgba(240,248,255,.5),
-    0 0 40px rgba(240,248,255,.5),
-    0 0 50px 28px rgba(240,248,255,.2),
-    0 0 80px 28px rgba(240,248,255,.2);
+    0 0 2px rgba(255, 255, 255, .5),
+    0 0 8px rgba(255, 255, 255, .5),
+    0 0 10px rgba(240, 248, 255, .5),
+    0 0 20px rgba(240, 248, 255, .5),
+    0 0 30px rgba(240, 248, 255, .5),
+    0 0 40px rgba(240, 248, 255, .5),
+    0 0 50px 28px rgba(240, 248, 255, .2),
+    0 0 80px 28px rgba(240, 248, 255, .2);
 }
 
-
 .p1 {
-  background-color: #1d242c;
+  background-image: url('images/starting_hesperia.png');
+  background-size: cover;
   top: 90%;
-  left: 47.8%;
+  left: 48%;
   transform: translate(-50%, -50%);
 }
 
 .p2 {
+  background-image: url('images/icon1.png');
+  background-size: cover;
   background-color: #1d242c;
-  top: 78%;
-  left: 28%;
+  top: 75%;
+  left: 48%;
   transform: translate(-50%, -50%);
 }
 
 .p3 {
+  background-image: url('images/icon2.png');
+  background-size: cover;
   background-color: #1d242c;
   top: 80%;
   left: 38%;
@@ -131,6 +139,7 @@ animations
 }
 
 .p4 {
+  background-image: url(https://inmyculture.com/icons/dnd-cunning-action-active.svg);
   background-color: #1d242c;
   top: 80%;
   left: 58%;
@@ -182,8 +191,8 @@ animations
 .p10 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 43%;
-  left: 38%;
+  top: 9%;
+  left: 30%;
   transform: translate(-50%, -50%);
 }
 
@@ -203,7 +212,8 @@ animations
   transform: translate(-50%, -50%);
 }
 .p13 {
-  top: 45%;
+  background-color: #fcfdff;
+  top: 22%;
   left:48%;
   transform: translate(-50%, -50%);
 }
@@ -211,15 +221,15 @@ animations
 .p14 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 78%;
-  left: 68%;
+  top: 60%;
+  left: 74%;
   transform: translate(-50%, -50%);
 }
 
 .p15 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 42%;
+  top: 44%;
   left: 79%;
   transform: translate(-50%, -50%);
 }
@@ -227,7 +237,7 @@ animations
 .p16 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 42%;
+  top: 44%;
   left: 17%;
   transform: translate(-50%, -50%);
 }
@@ -236,14 +246,14 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
-  left: 71%;
+  left: 73%;
   transform: translate(-50%, -50%);
 }
 
 .p18 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 59%;
+  top: 9%;
   left: 53%;
   transform: translate(-50%, -50%);
 }
@@ -251,7 +261,7 @@ animations
 .p19 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 59%;
+  top: 9%;
   left: 43%;
   transform: translate(-50%, -50%);
 }
@@ -260,43 +270,16 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
-  left: 25%;
+  left: 23%;
   transform: translate(-50%, -50%);
 }
 
 .p21 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 43%;
-  left: 58%;
+  top: 9%;
+  left: 66%;
   transform: translate(-50%, -50%);
-}
-
-.p22 {
-  background-color: #1d242c;
-  box-shadow: none;
-  top: 60%;
-  left: 74%;
-  transform: translate(-50%, -50%);
-}
-
-.p1 .card-title {
-  position: relative;
-}
-
-.p1 .card-title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/narkran/bg_p1.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  /* adjust the value to your liking */
-  z-index: -1;
 }
 
 /*skills*/
@@ -319,16 +302,53 @@ animations
 }
 
 .card {
-  width: 340px;
+  width: 400px;
   height: auto;
   min-height: 100px;
-  background-color: rgba(19, 23, 27, 1); /* Set the background color with opacity */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  background-size: contain; /* Adjust background image size */
-  position: relative;
+  background-color: rgba(19, 23, 27, 0.885);
+  /* Set the background color with opacity */
+  background-repeat: no-repeat;
+  /* Prevent background image from repeating */
+  background-size: contain;
+  /* Adjust background image size */
+  position: absolute;
   border-radius: 0px;
-  margin-left: 0px; /* Increase the z-index to ensure the card is above other elements */
-  /* Add any additional styles as needed */
+  margin-left: 0px;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  /* Bigger to make them pop */
+  height: 10px;
+  background: radial-gradient(circle,
+      rgb(3, 88, 0) 50%,
+      /* Large white-hot center */
+      rgba(0, 109, 0, 0.9) 80%,
+      /* Bright red outer glow */
+      rgba(0, 102, 17, 0.8) 100%);
+  /* Deep red edge */
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+  filter: brightness(200);
+  /* Super bright */
+  mix-blend-mode: screen;
+  /* Ensures white shines through */
+
+  box-shadow:
+    0 0 15px rgb(0, 117, 25),
+    /* Strong white glow */
+    0 0 30px rgb(3, 116, 9),
+    /* Bright red outer glow */
+    0 0 40px rgba(51, 104, 50, 0.9),
+    /* Even stronger red */
+    0 0 50px rgba(19, 82, 0, 0.8);
+  /* Deep red aura */
+}
+
+.particle {
+  animation: fireflyGlow 0.8s infinite alternate ease-in-out;
 }
 
 /*media quaries*/
@@ -357,26 +377,9 @@ background-image: url(https://inmyculture.com/icons/dnd-padlock.svg);
   box-shadow: none;
 }
 
-
-
 /* Specific rule for starting points */
 .starting:hover .hide {
   left: 50%;
-  top: -10px; /* Place the card 20px above the hovered element */
+  top: -30px; /* Place the card 20px above the hovered element */
   transform: translate(-50%, -100%);
-}
-
-.particle {
-  position: absolute;
-  background-color: rgb(255, 255, 255); /* Pure bright red core */
-  box-shadow: 
-    0 0 5px rgb(119, 0, 216),  /* Bright red inner glow */
-    0 0 5px rgb(119, 0, 216),  /* Stronger red outer glow */
-    0 0 15px rgb(119, 0, 216),    /* Intense red bloom effect */
-    0 0 15px rgb(119, 0, 216), /* Larger fading red glow */
-    0 0 15px rgb(119, 0, 216), /* Extended soft glow */
-    0 0 15px rgb(119, 0, 216); /* Final fading glow */
-  border-radius: 50%;
-  pointer-events: none;
-  will-change: transform, opacity;
 }

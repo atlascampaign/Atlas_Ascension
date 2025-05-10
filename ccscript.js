@@ -3,11 +3,11 @@ jQuery(document).ready(function() {
 
     // Define page URLs for each ccicon ID
     var ccIconData = {
-        "fireseed": { pageURL: "./dist/yvette.html" },
-        "naboar": { pageURL: "./dist/erevan.html" },
-        "storm": { pageURL: "./dist/fedra.html" },
-        "winged": { pageURL: "./dist/hesperia.html" },
-        "balance": { pageURL: "./dist/narkran.html"}
+        "fireseed": { pageURL: "./dist/pcs/yvette.html" },
+        "naboar": { pageURL: "./dist/pcs/erevan.html" },
+        "storm": { pageURL: "./dist/pcs/fedra.html" },
+        "winged": { pageURL: "./dist/pcs/hesperia.html" },
+        "balance": { pageURL: "./dist/pcs/narkran.html"}
     };
 
     // Iterate over each ccicon element

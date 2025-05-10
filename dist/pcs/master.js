@@ -3,6 +3,10 @@ let character = document.querySelector('body').id; // Declare character globally
 
 let skillPoints = 0;
 
+document.body.addEventListener('touchmove', (e) => {
+  if (window.scrollY <= 0) e.preventDefault();
+}, { passive: false });
+
 // Update skill points display
 function updateSkillPoints() {
   document.querySelector('.skillsleft h3').textContent = skillPoints;
@@ -167,7 +171,7 @@ function stylePointElements() {
 
     if (pointId) {
       // Apply styles to the main point element
-      point.style.backgroundImage = `url('images/${character}/bg_${pointId}.png')`;
+      point.style.backgroundImage = `url('../images/${character}/bg_${pointId}.png')`;
       point.style.backgroundSize = 'cover';
 
       // Find the card title within this point
@@ -187,7 +191,7 @@ function stylePointElements() {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("images/${character}/bg_${pointId}.png");
+            background-image: url("../images/${character}/bg_${pointId}.png");
             background-size: cover;
             background-position: center;
             opacity: 0.5;
@@ -205,7 +209,7 @@ function stylePointElements() {
 
 async function loadAbilities() {
   try {
-    const response = await fetch(`utils/${character}.json`);
+    const response = await fetch(`../utils/${character}.json`);
     abilityData = await response.json();
     populateUnlockedPoints();
     console.log(abilityData) // Store the JSON data
@@ -227,7 +231,7 @@ stylePointElements();
 const ascension = {
   "hesperia": "Astromanzia",
   "fedra": "Primofulmine",
-  "erevan": "Campione del Fato",
+  "erevan": "Circolo della Vanità",
   "narkran": "Sentinella dell'Equilibrio",
   "yvette": "Driade Iridescente",
   "raziel": "Sacredote Cinereo"
@@ -357,10 +361,10 @@ const baclinkDiv = document.createElement('div');
 baclinkDiv.className = 'back-link';
 
 const a = document.createElement('a');
-a.href = '../index.html';
+a.href = '../../index.html';
 
 const backImg = document.createElement('img');
-backImg.src = 'images/ccorb.png';
+backImg.src = '../images/ccorb.png';
 
 a.appendChild(backImg);
 
@@ -371,7 +375,7 @@ const span = document.createElement('span');
 span.textContent = 'Oblio';
 
 const img = document.createElement('img');
-img.src = 'images/oblivion.png';
+img.src = '../images/oblivion.png';
 
 forgetDiv.appendChild(span);
 forgetDiv.appendChild(img);
@@ -420,7 +424,7 @@ document.querySelector('.forget').addEventListener('click', async function () {
 });
 
 
-const audio = new Audio('audio/unlock-point.mp3');
+const audio = new Audio('../audio/unlock-point.mp3');
 const points = document.querySelectorAll('.point');
 
 // Load skill points from client ---------------------------------------------------------------------------------------------------------------------------------------
@@ -571,7 +575,7 @@ async function updateUnlockedPointInDatabase(pointClass, unlockedStatus) {
 }
 
 let lastParticleTime = 0; // Tracks the last time a particle was created
-const particleCooldown = 50; // Time in milliseconds between particles
+const particleCooldown = 25; // Time in milliseconds between particles
 
 document.addEventListener("mousemove", function (e) {
   const now = Date.now();

@@ -8,6 +8,19 @@
   animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative; /* Contain absolute elements */
+}
+
+body {
+  overflow: hidden !important; /* Blocks all scrolling */
+  height: 100vh !important; /* Locks to viewport height */
+  position: relative !important; /* Contains absolute children */
+}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -129,7 +142,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0), 1px 1px 2px rgb(0, 0, 0);
 }
 
 #input-box {
@@ -286,18 +299,4 @@ li {
     0 0 40px rgba(240, 248, 255, .5),
     0 0 50px 28px rgba(240, 248, 255, .2),
     0 0 80px 28px rgba(240, 248, 255, .2);
-}
-
-@keyframes energyFlow {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: -20; /* Adjust based on your desired speed */
-  }
-}
-
-.energy-line {
-  stroke-dasharray: 5, 5; /* Creates a dashed line pattern */
-  animation: energyFlow 1s linear infinite;
 }

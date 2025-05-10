@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url('images/shabalaya_winged_star_in_the_cosmos_--ar_169_bc384867-e5bc-4c87-8674-51d745ffb920.png');
+  background-image: url('../images/shabalaya_winged_star_in_the_cosmos_--ar_169_bc384867-e5bc-4c87-8674-51d745ffb920.png');
   background-size: cover;
 
   /* Center the background image horizontally and vertically */
@@ -21,7 +21,7 @@ body {
 #container {
   width: 100%;
   height: 100vh;
-  /**/background-image: url('images/shabalaya_winged_star_in_the_cosmos_--ar_169_bc384867-e5bc-4c87-8674-51d745ffb920.png');
+  /**/background-image: url('../images/shabalaya_winged_star_in_the_cosmos_--ar_169_bc384867-e5bc-4c87-8674-51d745ffb920.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@ body {
 
 
 .p1 {
-  background-image: url('images/hesperia/bg_p1.png');
+  background-image: url('../images/hesperia/bg_p1.png');
   background-size: cover;
   top: 85%;
   left: 48%;
@@ -62,7 +62,7 @@ body {
 }
 
 .p2 {
-  background-image: url('images/hesperia/bg_p2.png');
+  background-image: url('../images/hesperia/bg_p2.png');
   background-size: cover;
   background-color: #1d242c;
   top: 72%;
@@ -71,7 +71,7 @@ body {
 }
 
 .p3 {
-  background-image: url('images/hesperia/bg_p3.png');
+  background-image: url('../images/hesperia/bg_p3.png');
   background-size: cover;
   background-color: #1d242c;
   top: 59%;
@@ -80,7 +80,7 @@ body {
 }
 
 .p4 {
-  background-image: url('images/hesperia/bg_p4.png');
+  background-image: url('../images/hesperia/bg_p4.png');
   background-size: cover;
   background-color: #1d242c;
   top:40%;
@@ -89,7 +89,7 @@ body {
 }
 
 .p5 {
-  background-image: url('images/hesperia/bg_p5.png');
+  background-image: url('../images/hesperia/bg_p5.png');
   background-size: cover;
   background-color: #1d242c; /* Add this line to make the background image cover the circle */
   top: 59%;
@@ -98,7 +98,7 @@ body {
 }
 
 .p6 {
-  background-image: url('images/hesperia/bg_p6.png');
+  background-image: url('../images/hesperia/bg_p6.png');
   background-size: cover;
   background-color: #1d242c;
   top: 50%;
@@ -107,7 +107,7 @@ body {
 }
 
 .p7 {
-  background-image: url('images/hesperia/bg_p7.png');
+  background-image: url('../images/hesperia/bg_p7.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -117,7 +117,7 @@ body {
 }
 
 .p8 {
-  background-image: url('images/hesperia/bg_p8.png');
+  background-image: url('../images/hesperia/bg_p8.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -127,7 +127,7 @@ body {
 }
 
 .p9 {
-  background-image: url('images/hesperia/bg_p9.png');
+  background-image: url('../images/hesperia/bg_p9.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -137,7 +137,7 @@ body {
 }
 
 .p10 {
-  background-image: url('images/hesperia/bg_p10.png');
+  background-image: url('../images/hesperia/bg_p10.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -147,7 +147,7 @@ body {
 }
 
 .p11 {
-  background-image: url('images/hesperia/bg_p11.png');
+  background-image: url('../images/hesperia/bg_p11.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -157,7 +157,7 @@ body {
 }
 
 .p12 {
-  background-image: url('images/hesperia/bg_p12.png');
+  background-image: url('../images/hesperia/bg_p12.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -166,7 +166,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .p13 {
-  background-image: url('images/hesperia/bg_p13.png');
+  background-image: url('../images/hesperia/bg_p13.png');
   background-size: cover;
   background-color: #fcfdff;
   top: 35%;
@@ -175,7 +175,7 @@ body {
 }
 
 .p14 {
-  background-image: url('images/hesperia/bg_p14.png');
+  background-image: url('../images/hesperia/bg_p14.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -185,7 +185,7 @@ body {
 }
 
 .p15 {
-  background-image: url('images/hesperia/bg_p15.png');
+  background-image: url('../images/hesperia/bg_p15.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
@@ -195,7 +195,7 @@ body {
 }
 
 .p16 {
-  background-image: url('images/hesperia/bg_p16.png');
+  background-image: url('../images/hesperia/bg_p16.png');
   background-size: cover;
   background-color: #1d242c;
   box-shadow: none;
