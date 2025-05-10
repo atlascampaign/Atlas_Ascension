@@ -6,6 +6,9 @@ def resize_images(input_folder, output_folder, new_width=None, new_height=None):
     Resize images while maintaining aspect ratio.
     Specify either new_width or new_height (not both).
     """
+
+    print("Current working directory:", os.getcwd())
+    print("Absolute input path:", os.path.abspath(input_folder))
     # Create output folder if it doesn't exist
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -45,8 +48,8 @@ def resize_images(input_folder, output_folder, new_width=None, new_height=None):
 if __name__ == "__main__":
     print("Script started")
     # Configuration
-    input_folder = "Atlas_Ascension\\dist\\images\\fedra"  # Replace with your input folder path
-    output_folder = "Atlas_Ascension\\dist\\images\\fedra"  # Replace with your output folder path
+    input_folder = "dist\\images\\fedra"  # Replace with your input folder path
+    output_folder = "dist\\images\\fedra"  # Replace with your output folder path
     
     # Choose ONE of these options:
     # Option 1: Set desired width (height will be calculated)
