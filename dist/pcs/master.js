@@ -265,7 +265,7 @@ const ascension = {
   "erevan": "Circolo della Vanità",
   "narkran": "Sentinella dell'Equilibrio",
   "yvette": "Driade Iridescente",
-  "raziel": "Sacredote Cinereo"
+  "raziel": "Sacerdote Cinereo"
 }
 
 document.addEventListener("DOMContentLoaded", function () {
