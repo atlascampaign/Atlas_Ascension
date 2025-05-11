@@ -3,7 +3,7 @@ document.body.insertAdjacentHTML('afterbegin', `
   <div id="loading-screen">
     <div class="loading-content">
       <div class="loading-spinner"></div>
-      <p>Loading memories...</p>
+      <p>Rintraccio ricordi...</p>
     </div>
   </div>
 `);
