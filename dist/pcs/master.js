@@ -1,6 +1,6 @@
 let abilityData = {};
 let character = document.querySelector('body').id; // Declare character globally
-
+console.log(character)
 let skillPoints = 0;
 
 document.body.addEventListener('touchmove', (e) => {
