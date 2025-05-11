@@ -5,19 +5,19 @@
       "quote": "<br><br>“A me gli occhi! Lasciate che vi distragga solo per un momento dalle vostre miserabili vite!”<br>-Diedris, Arci Giullare Occulto"
     },
     "p2": {
-      "titolo": "Portanza dei Venti",
-      "abilita": "Quando attacchi il Vento accompagna I tuoi attacchi. Ottieni una portata aggiuntiva di 1.5m su tutti gli attacchi in mischia.",
-      "quote": "<br>“I tagli sul viso sono un vanto per le ragazze del Nord. Non sono sfregi, ma la prova che il loro cuore è tenuto al caldo, non sferzato dalla furia dei venti.”"
+      "titolo": "Maestro d'improvvisazione",
+      "abilita": "Sei competente nell'utilizzo di qualsiasi arma. Nelle tue mani un'arma non perfetta è considerata tale, ottenendo un bonus di +1 a danno e tiro per colpire. <br><br>Mandare a segno un colpo utilizzando un'arma improvvisata non marziale garantisce 1d4 di ispirazione a tutti gli alleati nel raggio di 9m, 1d6 se il colpo effettuato è critico.",
+      "quote": "<br>“Oh mio caro, non è lo strumento, ma l'artigiano!”<br>-Un modesto anonimo"
     },
     "p3": {
-      "titolo": "Barriera Statica",
-      "abilita": "Dopo aver effettuato un attacco in mischia andato a segno, l'energia statica da esso generata crea un campo magnetico che disturba gli attacchi nemici. Fino al tuo turno successivo ottieni un bonus di +1 alla CA.",
-      "quote": "<br>“Nelle nebbia Orvald non vedeva niente. Tuttavia, neanche la dozzina di Giganti che lo circondava aveva modo di vederlo.”"
+      "titolo": "Presenza Ispirante",
+      "abilita":"Fin tanto che possiedi un punto Ego gli alleati nel raggio di 18m non possono effettuare fallimenti ciritici. Un tiro equivalente ad 1 va rilanciato. Questa abilità consuma il punto Ego.",
+      "quote": "<br>“A che serve sentirsi un Dio, se non c'è nessuno a venerarti?”"
     },
     "p4": {
-      "titolo": "Gelo Persistente",
-      "abilita": "Colpire un bersaglio con un attacco in mischia aggiunge +1 al bonus per colpire con successivi attacchi in mischia fino alla fine del tuo prossimo turno. Questo effetto non è cumulativo",
-      "quote": "<br>“Disciplina, Ilfryd. Punta il tuo obiettivo e non deviare per nulla al mondo, neanche se ti dovesse cascare il cielo addosso.”"
+      "titolo": "Amante del rischio",
+      "abilita": "Puoi decidere di subire un malus di -4 al tiro per colpire una volta per turno. Se lo fai e l'attacco va a segno, ottieni un punto Ego.<br><br>I colpi così sferrati infliggono un dado aggiuntivo pari al tuo dado di Ispirazione Bardica.",
+      "quote": "<br>“Il rischio è alla base del successo, proprio come la fortuna ed il denaro. E la frode.”"
     },
     "p5": {
       "titolo": "Sferzata del Vespro",

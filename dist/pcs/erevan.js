@@ -1,3 +1,5 @@
+let character = document.querySelector('body').id;
+
 const unlockmap = {
   erevan: {
     "p1": ["p2", "p3","p4"],

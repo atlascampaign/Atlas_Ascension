@@ -113,7 +113,7 @@ animations
 }
 
 .p1 {
-  background-image: url('images/starting_hesperia.png');
+  background-image: url('');
   background-size: cover;
   top: 90%;
   left: 48%;
@@ -121,7 +121,7 @@ animations
 }
 
 .p2 {
-  background-image: url('images/icon1.png');
+  background-image: url('');
   background-size: cover;
   background-color: #1d242c;
   top: 75%;
@@ -130,7 +130,7 @@ animations
 }
 
 .p3 {
-  background-image: url('images/icon2.png');
+  background-image: url('');
   background-size: cover;
   background-color: #1d242c;
   top: 80%;
@@ -139,7 +139,7 @@ animations
 }
 
 .p4 {
-  background-image: url(https://inmyculture.com/icons/dnd-cunning-action-active.svg);
+  background-image: url('');
   background-color: #1d242c;
   top: 80%;
   left: 58%;
@@ -147,7 +147,7 @@ animations
 }
 
 .p5 {
-  background-image: url('images/icon1.png');
+  background-image: url('');
   background-size: cover;
   background-color: #1d242c; /* Add this line to make the background image cover the circle */
   top: 65%;
@@ -156,7 +156,7 @@ animations
 }
 
 .p6 {
-  background-image: url('images/icon1.png');
+  background-image: url('');
   background-size: cover;
   background-color: #1d242c;
   top: 60%;

@@ -145,7 +145,7 @@ animations
 }
 
 .p5 {
-  background-image: url('images/icon1.png');
+  background-image: url('');
   background-size: cover;
   background-color: #1d242c; /* Add this line to make the background image cover the circle */
   top: 65%;
@@ -154,7 +154,7 @@ animations
 }
 
 .p6 {
-  background-image: url('images/icon1.png');
+  background-image: url('');
   background-size: cover;
   background-color: #1d242c;
   top: 60%;

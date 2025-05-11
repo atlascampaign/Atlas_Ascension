@@ -1,3 +1,33 @@
+// Show loading screen immediately
+document.body.insertAdjacentHTML('afterbegin', `
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p>Loading memories...</p>
+    </div>
+  </div>
+`);
+
+// Function to hide loading screen
+function hideLoadingScreen() {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    loadingScreen.style.opacity = '0';
+    setTimeout(() => {
+      loadingScreen.remove();
+    }, 500); // Match this with the CSS transition duration
+  }
+}
+
+// Wait for all critical assets to load
+window.addEventListener('load', function() {
+  // Additional delay to ensure everything is ready (optional)
+  setTimeout(hideLoadingScreen, 500);
+});
+
+// Fallback in case the load event doesn't fire
+setTimeout(hideLoadingScreen, 10000); // 10 second timeout as last resort
+
 let abilityData = {};
 let character = document.querySelector('body').id; // Declare character globally
 console.log(character)
@@ -11,6 +41,7 @@ document.body.addEventListener('touchmove', (e) => {
 function updateSkillPoints() {
   document.querySelector('.skillsleft h3').textContent = skillPoints;
 }
+
 
 // Load initial data from Supabase
 async function initializeCharacterState() {
