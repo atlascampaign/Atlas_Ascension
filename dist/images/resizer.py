@@ -48,8 +48,8 @@ def resize_images(input_folder, output_folder, new_width=None, new_height=None):
 if __name__ == "__main__":
     print("Script started")
     # Configuration
-    input_folder = "dist\\images\\erevan"  # Replace with your input folder path
-    output_folder = "dist\\images\\erevan"  # Replace with your output folder path
+    input_folder = "dist\\images\\raziel"  # Replace with your input folder path
+    output_folder = "dist\\images\\raziel"  # Replace with your output folder path
     
     # Choose ONE of these options:
     # Option 1: Set desired width (height will be calculated)

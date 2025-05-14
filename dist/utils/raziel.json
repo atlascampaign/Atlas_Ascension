@@ -1,0 +1,112 @@
+{
+  "p1": {
+    "titolo": "Memoria della morte",
+    "abilita": "Ottieni la capacità <b><i>Richiama Ricordo</i></b>:<br><br>Come azione bonus puoi manifestare la presenza di Damiel alle tue spalle, ottenendo la capacità di lanciare i seguenti incantesimi:<ul><li><strong>2nd Level:</strong><ul><li>Wither and Bloom</li><li>Summon Undead</li></ul></li><li><strong>4th Level:</strong><ul><li>Blight</li><li>Spirit of Death</li></ul></li><li><strong>5th Level:</strong><ul><li>Danse Macabre</li><li>Negative Energy Flood</li></ul></li><li><strong>6th Level:</strong><ul><li>Circle of Death</li><li>Soul Cage</li></ul></li></ul>",
+    "quote": "<br>“Abbiamo idee diverse, Raziel. Ma ti ringrazio per aver camminato al mio fianco per questi sentieri così tetri.”<br>-Damiel, Sognatore di Alterni Destini"
+  },
+  "p3": {
+    "titolo": "Oltretomba: Elisei",
+    "abilita": "Ottieni accesso alla forza di una figura perita e la quale anima è custodita negli Elisei. L'effetto varia a seconda dell'anima con cui si entra in contatto.",
+    "quote": "<br>“”"
+  },
+  "p4": {
+    "titolo": "Oltretomba: Elisei",
+    "abilita": "Ottieni accesso alla forza di una figura perita e la quale anima è custodita negli Elisei.<br><br>L'effetto varia a seconda dell'anima con cui si entra in contatto.",
+    "quote": "<br>“Eterna primavera. Campi coltivati. Una brezza estiva sotto un dolce e tiepido sole. Non fa per me.”<br>-Rolvor, La Guglia"
+  },
+  "p2": {
+    "titolo": "Supporto: Ferocia",
+    "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. L'alleato ottiene -2 al tiro per colpire. I colpi andati a segno mentre si è affetti da questo Supporto infliggono un danni radianti bonus pari al proprio livello.",
+    "quote": "<br>“”"
+  },
+  "p5": {
+    "titolo": "Oltretomba: Nove Inferi",
+    "abilita": "Ottieni accesso alla forza di una figura perita e la quale anima è custodita nei Nove Inferi.<br><br>L'effetto varia a seconda dell'anima con cui si entra in contatto.",
+    "quote": "<br>“Prima o poi finirete i diavoli da mandare al macello sotto i colpi del mio archibugio. Aspetterò.”<br>-Yorus, il Dannato"
+  },
+  "p7": {
+    "titolo": "Supporto: Lascito",
+    "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. Puoi decidere di subire 3d8 danni necrotici. Se lo fai, l'alleato può decidere di spendere 3d8 per infliggere danni aggiuntivi dopo aver messo a segno un attacco in mischia o un incantesimo che richieda un tiro per colpire.",
+    "quote": "<br>“”"
+  },
+  "p14": {
+    "titolo": "Supporto: Guardia",
+    "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. Finchè l'alleato in questione rimane entro 6m da te non può ricevere colpi critici. Qual'ora dovesse scendere sotto gli 0 punti vita, puoi concedere istantaneamente un numero di punti vita sufficiente a stabilizzarlo.",
+    "quote": "<br>“”"
+  },
+  "p6": {
+    "titolo": "Sapienza del Mezzo",
+    "abilita": "Il tuo modificatore di Saggezza contribuisce al numero di punti vita ottenuti allo stesso modo del tuo modificatore di costituzione.",
+    "quote": "<br>“”"
+  },
+  "p22": {
+    "titolo": "Disciplina Sapiente",
+    "abilita": "Il tuo modificatore di Saggezza contribuisce alla tua CA.",
+    "quote": "<br>“”"
+  },
+  "p16": {
+    "titolo": "Grazia del Crocevia",
+    "abilita": "Il calore di un'anima meritata, non donata, è caro a chi lo necessita.<br><br>Tutte le creature alleate che terminano il proprio turno entro 3m da te recuperano 1d8 punti ferita all'inizio dell loro turno successivo.",
+    "quote": "<br>“”"
+  },
+  "p12": {
+    "titolo": "Fendenti Aurei",
+    "abilita": "Narsil era più di un eroe caduto. La sua luce vive attraverso il tuo respiro.<br><br>Le armi da te impugnate ottengono un addizionale modificatore di +1 e la seguente proprietà:<br><br>Gli attacchi da te effettuati infliggono 1d6 danni radianti aggiuntivi. Inoltre essi si propagano oltre il tuo bersaglio, infliggendo 1d8 danni radianti a tutte le creature ostili in una linea di 6m oltre il bersaglio.",
+    "quote": "<br>“”"
+  },
+  "p11": {
+    "titolo": "Armamenti N'Yctherici",
+    "abilita": "Rinnegare parte di ciò che sei è inutile. La forza abissale lasciata in eredità da Narsil può essere finalmente controllata:<br>Le armi che impugni emettono un'aura dalle tonalità nere e violacee, inoltre esse emettono un tenue ma eterno fumo.<br><br>Le armi da te impugnate ottengono un addizionale modificatore di +1 e la seguente proprietà:<br><br>Mentre si è in stato di Fervore mettere a segno un colpo in mischia avendo dichiarato un secondo attacco ti permette di apparire alle spalle del successivo bersaglio purchè sia entro 9m dal primo.",
+    "quote": "<br>“”"
+  },
+  "p15": {
+    "titolo": "Fardello del Punitore",
+    "abilita": "Portarsi dentro un tale abisso richiede una forza disumana anche a chi ti sta attorno.<br><br>Le creature ostili che cominciano il proprio turno entro 3m da te subiscono 3d8 danni necrotici all'inizio del loro turno successivo.",
+    "quote": "<br>“”"
+  },
+  "p20": {
+    "titolo": "Silderon, Dio della Redenzione",
+    "abilita": "Quando combatti, la proiezione astrale di Silderon appare alle tue spalle, muovendosi esattamente come te.<br><br>Imposizione delle mani ottiene le proprietà di Ristorare Superiore.<br>Grazia concede un bonus di +2.<br>Il dado bonus concesso da Fervore diventa 1d8.<br><br>Il tuo punteggio di Costituzione aumenta di 1.",
+    "quote": "<br>“”"
+  },
+  "p17": {
+    "titolo": "Silderon, Dio del Riscatto",
+    "abilita": "Quando combatti, i tuoi occhi riflettono il piano abissale circostante. Le tue corna aumentano in grandezza ed estensione, oltre ad assumere un aspetto lucido e affilato.<br><br>Intimorire Infernale può essere usato un numero di volte al giorno pari al tuo modificatore di Carisma. Infligge un numero di danni aggiuntivi pari al tuo livello da Paladino.<br><br>Grazia concede un bonus di +2.<br>Il dado bonus concesso da Fervore diventa 1d8.<br><br>Il tuo punteggio di Costituzione aumenta di 1.",
+    "quote": "<br>“”"
+  },
+  "p8": {
+    "titolo": "Morlag, Editto del Creatore",
+    "abilita": "Sei in grado di forgiare o rinforzare armi in Vesperite.<br>Le armi in Vesperite che forgi o rinforzi sono considerate Vorpal e infliggono danni non resistibili.",
+    "quote": "<br>“”"
+  },
+  "p19": {
+    "titolo": "Zanras, Editto della Retribuzione",
+    "abilita": "Sei in grado di generare un lume dorato. Le creature che spendono del tempo attorno ad esso recuperano fiducia e speranza. Utilizzare questa abilità presso un tempio di Silderon lo ricostituisce all'antica gloria.",
+    "quote": "<br>“”"
+  },
+  "p9": {
+    "titolo": "Xary'q, Editto del Perduto",
+    "abilita": "Sei in grado di pattuire contratti che richiedono il consumo di un'altrui anima per essere sovrascritti. L'effetto del patto varia a seconda del contraente.",
+    "quote": "<br>“”"
+  },
+  "p18": {
+    "titolo": "Yorus, Editto del Rinnegato",
+    "abilita": "Sei in grado di mettere tutto te stesso all'interno di un singolo fendente. Non sai quali saranno i suoi effetti, seppur certamente distruttivi. Conosci solo il prezzo da pagare.",
+    "quote": "<br>“”"
+  },
+  "p10": {
+    "titolo": "Kverion, Piastra dell'Alba",
+    "abilita": "Come azione bonus ti è possibile evocare Kverion, Piastra dell'Alba. Questa armatura ti concede i seguenti benefici oltre a quelli del tuo attuale equipaggiamento:<br><br>- Sei immune ai danni radianti<br>- Tutte le creature che ti colpiscono subiscono 3d6 danni radianti<br>- La tua CA aumenta di +2<br>- Ogni volta che subisci danni fisici puoi assorbire 1D* di quei danni dove * è il numero del dado più piccolo facente parte dell'attacco subito. Puoi rilasciare come azione bonus l'energia raccolta per curare tutte le creature alleate nel raggio di 9m.",
+    "quote": "<br>“”"
+  },
+  "p21": {
+    "titolo": "Saa'Qir, Abbraccio dell'Ombra",
+    "abilita": "Como azione bonus ti è possibile evocare Saa'Qir, Abbraccio dell'Ombra. Questa armatura ti concede i seguenti benefici olter a quelli del tuo attuale equipaggiamento:<br><br>- Sei immune ai danni necrotici<br>- Tutte le creature che cominciano il proprio turno entro 3m da te subiscono 3d6 danni necrotici<br>- La tua CA aumenta di +1<br>- Ogni volta che subisci danni magici puoi accantonare 1D* dove * è il numero del dado più piccolo facente parte dell'attacco subito. Puoi rilasciare interamente i D accantonati quando mandi a segno un attacco in mischia. Puoi usare qusta capacità una volta al giorno.",
+    "quote": "<br>“”"
+  },
+  "p13": {
+    "titolo": "Equilibrio Assoluto",
+    "abilita": "Come reazione, in seguito a dei danni subiti da te o da un alleato nel raggio di 9m, puoi ridistribuire i punti vita di tutte le creature alleate consenzienti nel raggio di 18m. I punti vita vengono distribuiti utilizzando la media del totale.<br>Puoi usare questa capacità una volta per riposo lungo.",
+    "quote": "<br>“”"
+  }
+}

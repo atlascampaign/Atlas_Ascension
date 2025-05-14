@@ -562,9 +562,9 @@ body {
 
 .particle {
   position: absolute;
-  background-color: rgb(145, 212, 237); /* Pure bright red core */
+  background-color: rgb(255, 208, 0); /* Pure bright red core */
   box-shadow: 
-    0 0 15px rgb(224, 215, 215),  /* Bright red inner glow */
+    0 0 15px rgb(255, 239, 15),  /* Bright red inner glow */
     0 0 30px rgb(162, 183, 229),  /* Stronger red outer glow */
     0 0 45px rgb(112, 170, 211),    /* Intense red bloom effect */
     0 0 60px rgba(99, 172, 235, 0.8), /* Larger fading red glow */

@@ -10,13 +10,13 @@ a,
 a:hover,
 a:active,
 a:visited {
-  cursor: url('../images/yvette/yvie_c.png'), auto !important;
+  cursor: url('../images/raziel/raziel_c.png'), auto !important;
 }
 
 body {
   background-image: url('../images/shabalaya._a_giant_pallid_rose_flower_seen_from_above_in_a_da_2d6ce5e5-8355-4264-af61-0bf4de6e78e9_1.png');
   background-size: cover;
-  cursor: url('../images/yvette/yvie_c.png'), auto;
+  cursor: url('../images/raziel/raziel_c.png'), auto;
 
   /* Center the background image horizontally and vertically */
   background-position: center;
@@ -26,7 +26,7 @@ body {
 }
 
 #container {
-  cursor: url('../images/yvette/yvie_c.png'), auto;
+  cursor: url('../images/raziel/raziel_c.png'), auto;
   width: 100%;
   height: 100vh;
   background-image: url('shabalaya_fantasy_wallpaper_dnd_a_tree_with_leaves_in_all_color_f9691224-bee3-4010-ad97-0464e6e27ffa.png');
@@ -146,28 +146,28 @@ animations
 
 .p1 {
   top: 90%;
-  left: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
 
 .p2 {
   background-color: #1d242c;
   top: 50%;
-  left: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
 
 .p3 {
   background-color: #1d242c;
   top: 70%;
-  left: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
 
 .p4 {
   background-color: #1d242c;
   top: 80%;
-  left: 40%;
+  left: 39%;
   transform: translate(-50%, -50%);
 }
 
@@ -175,14 +175,14 @@ animations
   background-color: #1d242c;
   /* Add this line to make the background image cover the circle */
   top: 80%;
-  left: 60%;
+  left: 59%;
   transform: translate(-50%, -50%);
 }
 
 .p6 {
   background-color: #1d242c;
   top: 60%;
-  left: 40%;
+  left: 39%;
   transform: translate(-50%, -50%);
 }
 
@@ -190,7 +190,7 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 60%;
-  left: 60%;
+  left: 59%;
   transform: translate(-50%, -50%);
 }
 
@@ -198,7 +198,7 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
-  left: 37%;
+  left: 36%;
   transform: translate(-50%, -50%);
 }
 
@@ -206,14 +206,14 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 24%;
-  left: 59%;
+  left: 58%;
   transform: translate(-50%, -50%);
 }
 
 .p10 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 45%;
+  top: 43%;
   left: 36%;
   transform: translate(-50%, -50%);
 }
@@ -221,47 +221,47 @@ animations
 .p11 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 46%;
-  left: 64%;
+  top: 43%;
+  left: 62%;
   transform: translate(-50%, -50%);
 }
 
 .p12 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 55%;
-  left: 28%;
+  top: 8%;
+  left: 38%;
   transform: translate(-50%, -50%);
 }
 
 .p13 {
   background-color: #fcfdff;
   top: 22%;
-  left: 48%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
 
 .p14 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 61%;
-  left: 73%;
+  top: 36%;
+  left: 59%;
   transform: translate(-50%, -50%);
 }
 
 .p15 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 42%;
-  left: 81%;
+  top: 8%;
+  left: 60%;
   transform: translate(-50%, -50%);
 }
 
 .p16 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 35%;
-  left: 17%;
+  top: 25%;
+  left: 31%;
   transform: translate(-50%, -50%);
 }
 
@@ -269,7 +269,7 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 25%;
-  left: 73%;
+  left: 67%;
   transform: translate(-50%, -50%);
 }
 
@@ -277,16 +277,16 @@ animations
   background-image: url('images/yvette/bg_p18_.png');
   background-color: #1d242c;
   box-shadow: none;
-  top: 9%;
-  left: 55%;
+  top: 5%;
+  left: 57%;
   transform: translate(-50%, -50%);
 }
 
 .p19 {
   background-color: #1d242c;
   box-shadow: none;
-  top: 9%;
-  left: 43%;
+  top: 5%;
+  left: 41%;
   transform: translate(-50%, -50%);
 }
 
@@ -294,7 +294,7 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 12%;
-  left: 20%;
+  left: 19%;
   transform: translate(-50%, -50%);
 }
 
@@ -302,7 +302,7 @@ animations
   background-color: #1d242c;
   box-shadow: none;
   top: 50%;
-  left: 6%;
+  left: 5%;
   transform: translate(-50%, -50%);
 }
 

@@ -124,7 +124,7 @@ const characterLineStyles = {
     defaultOpacity: 0.3
   },
   hesperia: {
-    fill: 'rgb(255, 255, 255)',
+    fill: 'rgb(255, 196, 1)',
     border: 'rgba(22, 22, 22, 0.8)',
     clickedBorderWidth: 6,
     clickedFillWidth: 4,
@@ -160,7 +160,7 @@ const characterLineStyles = {
     defaultOpacity: 0.3
   },
   raziel: {
-    fill: 'rgb(233, 167, 247)',
+    fill: 'rgb(228, 228, 228)',
     border: 'rgba(22, 22, 22, 0.8)',
     clickedBorderWidth: 6,
     clickedFillWidth: 4,
@@ -741,3 +741,178 @@ function drawLines() {
   // Update lines when window is resized
   window.addEventListener('resize', drawLines);
 }
+
+// 1. Create and style the PDF button
+function createPdfButton() {
+  const pdfBtn = document.createElement('button');
+  pdfBtn.id = 'generatePdfBtn';
+  pdfBtn.className = 'pdf-button';
+  pdfBtn.textContent = 'Export Abilities to PDF';
+  
+  // Position at bottom right (adjust as needed)
+  pdfBtn.style.position = 'fixed';
+  pdfBtn.style.bottom = '20px';
+  pdfBtn.style.right = '20px';
+  pdfBtn.style.padding = '10px 20px';
+  pdfBtn.style.backgroundColor = '#4a4e56';
+  pdfBtn.style.color = 'blanchedalmond';
+  pdfBtn.style.border = '1px solid #f1eeac';
+  pdfBtn.style.borderRadius = '5px';
+  pdfBtn.style.fontFamily = '"Jacques Francois", serif';
+  pdfBtn.style.cursor = 'pointer';
+  pdfBtn.style.zIndex = '100';
+  pdfBtn.style.transition = 'all 0.3s ease';
+  
+  // Hover effect
+  pdfBtn.addEventListener('mouseenter', () => {
+    pdfBtn.style.backgroundColor = '#5a5e66';
+    pdfBtn.style.transform = 'scale(1.05)';
+  });
+  pdfBtn.addEventListener('mouseleave', () => {
+    pdfBtn.style.backgroundColor = '#4a4e56';
+    pdfBtn.style.transform = 'scale(1)';
+  });
+  
+  // Add to container (or document.body)
+  document.getElementById('container').appendChild(pdfBtn);
+  
+  // Add click handler
+  pdfBtn.addEventListener('click', generateAbilitiesPDF);
+}
+
+// 2. PDF Generation Function
+function generateAbilitiesPDF() {
+  try {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF();
+    const pageHeight = pdf.internal.pageSize.height;
+    const margin = 30;
+
+    // Function to clean and normalize text
+    const cleanText = (html) => {
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      let text = div.textContent || div.innerText || '';
+      text = text.replace(/"/g, '');
+      return text;
+    };
+
+    // Get unlocked abilities
+    const unlockedAbilities = [];
+    document.querySelectorAll('.point.clicked').forEach(point => {
+      const pointClass = [...point.classList].find(cls => /^p\d+$/.test(cls));
+      if (pointClass && abilityData[pointClass]) {
+        unlockedAbilities.push({
+          ...abilityData[pointClass],
+          abilita: cleanText(abilityData[pointClass].abilita),
+          quote: cleanText(abilityData[pointClass].quote)
+        });
+      }
+    });
+
+    // PDF Styling
+    const titleFont = "Jacques Francois";
+    const bodyFont = "EB Garamond";
+    const titleColor = "#4a4e56";
+    const textColor = "#333333";
+    const accentColor = "#8b7355";
+
+    // Cover Page
+    pdf.setFont(titleFont);
+    pdf.setTextColor(titleColor);
+    pdf.setFontSize(28);
+    pdf.text(character.charAt(0).toUpperCase() + character.slice(1), 105, 50, { align: 'center' });
+    pdf.setFontSize(16);
+    pdf.text(ascension[character], 105, 60, { align: 'center' });
+
+    let yPosition = 90;
+
+    // Add abilities as a single flow
+    unlockedAbilities.forEach((ability, index) => {
+      const pageWidth = pdf.internal.pageSize.getWidth() - 2 * margin;
+
+      // Ability Title
+      pdf.setFont(titleFont);
+      pdf.setTextColor(titleColor);
+      pdf.setFontSize(16);
+      const titleLines = pdf.splitTextToSize(ability.titolo, pageWidth);
+      titleLines.forEach(line => {
+        if (yPosition + 7 > pageHeight - 30) { // Check before adding each line
+          pdf.addPage();
+          yPosition = margin;
+        }
+        pdf.text(line, margin, yPosition);
+        yPosition += 7;
+      });
+      yPosition += 5; // Space after title
+
+      // Ability Description
+      pdf.setFont(bodyFont);
+      pdf.setTextColor(textColor);
+      pdf.setFontSize(11);
+      const descLines = ability.abilita.split('\n');
+      descLines.forEach(line => {
+        if (line.trim() === '') return;
+        const splitLines = pdf.splitTextToSize(line, pageWidth);
+        splitLines.forEach(splitLine => {
+          if (yPosition + 6 > pageHeight - 30) { // Check before adding each line
+            pdf.addPage();
+            yPosition = margin;
+          }
+          pdf.text(splitLine, margin, yPosition);
+          yPosition += 6;
+        });
+      });
+      yPosition += 10; // Space after description
+
+      // Quote
+      pdf.setFont(bodyFont, 'italic');
+      pdf.setTextColor(accentColor);
+      pdf.setFontSize(10);
+      const quoteText = `"${ability.quote}"`;
+      const quoteLines = pdf.splitTextToSize(quoteText, pageWidth);
+      quoteLines.forEach(line => {
+        if (yPosition + 6 > pageHeight - 30) { // Check before adding each line
+          pdf.addPage();
+          yPosition = margin;
+        }
+        pdf.text(line, margin, yPosition);
+        yPosition += 6;
+      });
+      yPosition += 15; // Space after quote
+
+      // Divider
+      if (index < unlockedAbilities.length - 1) {
+        if (yPosition + 1 > pageHeight - 30) { // Check before adding divider
+          pdf.addPage();
+          yPosition = margin;
+        }
+        pdf.setDrawColor(200, 200, 200);
+        pdf.line(margin, yPosition, pageWidth + margin, yPosition);
+        yPosition += 15;
+      }
+    });
+
+    // Watermark
+    pdf.setFontSize(10);
+    pdf.setTextColor(200, 200, 200);
+    pdf.text("Generato dal tuo DM che ti vuole tanto bene.", 105, pageHeight - 15, { align: 'center' });
+
+    // Save PDF
+    pdf.save(`${character}_abilita_sbloccate.pdf`);
+
+  } catch (error) {
+    console.error("Errore nella generazione del PDF:", error);
+    alert("Si è verificato un errore durante la generazione del PDF. Riprova.");
+  }
+}
+
+// 3. Initialize the button when DOM is ready
+document.addEventListener("DOMContentLoaded", function() {
+  createPdfButton();
+  
+  // Load jsPDF in advance (optional)
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+  document.head.appendChild(script);
+});

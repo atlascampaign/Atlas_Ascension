@@ -12,71 +12,71 @@
     "p3": {
       "titolo": "Singolarità Controllata",
       "abilita": "Si ottiene accesso al seguente incantesimo:\n\n<b>Singolarità Controllata</b>\nLivello: III\nTempo di lancio: 1 Azione\nGittata: 18m\nComponenti: V, S\nDurata: 1 minuto, Concentrazione\n\nSi produce nel punto indicato una singolarità cosmica. Questa prende la forma di un buco nero che occupa un'area di 1,5m che imprime forti influenze gravitazionali per chi si trova nel suo raggio di azione.\nTutte le creature presenti entro 9m dalla singolarità devono effettuare un tiro salvezza su Costituzione. In caso di fallimento, le creature vengono spostate di 3m verso il centro della singolarità.\nLa singolarità e il suo raggio d'azione sono da considerarsi terreno difficile.\nLe creature che cominciano il proprio turno all'interno del raggio di azione devono effettuare nuovamente il tiro o subirne gli effetti.\nLe creature che cominciano il proprio turno adiacenti alla singolarità subiscono 2d6 danni da forza e non devono effettuare alcun tiro salvezza.\n\nLanciare questo incantesimo a livelli superiori al 3° aumenta i danni inflitti di 1d6, fino ad un massimo di 6d6 al 7° livello.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p5": {
       "titolo": "Anelli Planetari",
       "abilita": "Si ottiene accesso al seguente incantesimo:\n\n<b>Anelli Planetari</b>\nLivello: III\nTempo di lancio: 1 Azione\nGittata: 36m\nComponenti: V\nDurata: 1 minuto, Concentrazione\n\nLa creatura bersaglio viene circondata da un anello formato da detriti cosmici che orbita attorno ad essa. Fino a che l'anello è attivo, la creatura ottiene un bonus di +1 alla CA e resistenza ai danni taglienti.\nLa creatura incantata può spendere uno dei 3 anelli che orbitano attorno a lei con un'azione bonus, recuperando 1d6 punti ferita più il modificatore da incantatore dell'autore dell'incantesimo.\nAlternativamente è possibile spendere fino a 3 anelli come azione bonus per scagliarli verso il proprio bersaglio. In questo caso si effettua un tiro per colpire utilizzando il proprio modificatore di competenza + il modificatore da incantatore dell'autore dell'incantesimo.\nOgni anello speso in questo modo infligge 1d6 danni radianti + 1.\n\nLanciare questo incantesimo a livelli superiori al 3° aumenta i danni inflitti e i punti ferita recuperati di 1d6.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p15": {
       "titolo": "Luce di Beralien",
       "abilita": "Ogniqualvolta spendi un punto stregoneria te o una creatura alleata entro 9m recuperate 1d4 punti ferita.\nSe una creatura alleata nel raggio di 9m da te scende sotto la metà dei propri punti vita, recuperi un punto stregoneria. Questo effetto può verificarsi una volta per turno.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p6": {
       "titolo": "Orbita Gemella",
       "abilita": "Ogniqualvolta tu o un alleato nell'arco di 18m infliggete un colpo critico recuperi un numero di punti stregoneria pari al bonus di competenza di chi ha effettuato tale colpo.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p16": {
       "titolo": "Buio di Ungwarth",
       "abilita": "Scegli una creatura alleata. Fino al prossimo riposo lungo, se la creatura scende a 0 punti vita, questa recupera un numero di punti vita uguale al tuo livello da Stregone più il tuo modificatore di Carisma. Recuperi un numero di punti stregoneria uguale al tuo modificatore di Carisma. Puoi usare questa abilità una volta per riposo lungo.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p4": {
       "titolo": "Detonazione Lucente",
       "abilita": "Come azione, puoi spendere 4 punti stregoneria e uno slot di 5° livello o superiore per costringere una creatura nemica ad effettuare un tiro salvezza su Costituzione.\nIn caso di fallimento, la creatura subisce 10d6 + 10 danni radianti ed è accecata fino alla fine del suo prossimo turno.\nInoltre, tutti gli attacchi in mischia andati a segno sulla creatura fino all'inizio del tuo prossimo turno causano 1d6 danni aggiuntivi di tipo Radiante.\nUn tiro salvezza riuscito dimezza il danno e non acceca il bersaglio, ma permette comunque di infliggere danni aggiuntivi nel turno successivo.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p7": {
       "titolo": "Risveglio Lucente",
       "abilita": "Come azione, puoi spendere 4 punti stregoneria e uno slot di 5° livello o superiore. Se lo fai, scegli una creatura alleata e consenziente nel raggio di 18m. Fino alla fine del tuo prossimo turno la creatura ottiene i seguenti benefici:\n\nDelle ali dorate fuoriescono dal suo dorso, garantendo una velocità in volo pari a 9m.\nI loro attacchi in mischia infliggono 4d6 danni aggiuntivi Radianti.\nOttiene resistenza ai danni Radianti e Necrotici.\n\nUna creatura che supera un tiro salvezza su Saggezza con CD 20 o infligge un colpo critico trasferisce l'effetto di questa abilità ad una creatura alleata nell'arco di 9m, scelta casualmente.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p8": {
       "titolo": "Azorius, la Stella Fredda",
       "abilita": "La tua Rivelazione Celestiale cambia forma. Le ali da essa prodotte assumono uno spettro cromatico dai colori freddi, divenendo più ampie.\nLa tua velocità in volo aumenta a 18m e il tuo incantesimo Scudo si applica ora ad una creatura aggiuntiva per livello ulteriore al primo con il quale lo lanci.\nTutte le creature alleate nel raggio di 9m ottengono un bonus al tiro per colpire di +1 finché la Rivelazione è attiva",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p9": {
       "titolo": "Zasorel, la Stella Buia",
       "abilita": "La tua Rivelazione Celestiale cambia forma. Le ali da essa prodotte diventano quattro e assumono uno spettro cromatico dai toni scuri, emanando una tenue aura fumosa. La tua velocità in volo aumenta a 18m e i danni aggiuntivi che infliggi grazie alla Rivelazione diventano uguali al tuo livello.\nTutte le creature alleate nel raggio di 9m ottengono un bonus al tiro per colpire di +1 finché la Rivelazione è attiva.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p10": {
       "titolo": "Visione Radiante",
       "abilita": "Rivelazione Celestiale è utilizzabile due volte per riposo lungo e utilizzandola tutte le creature ostili nel raggio di 9m subiscono 3d6 danni da Freddo più un numero di danni Radianti pari al proprio livello.\nA volte ti è possibile vedere i lasciti spirituali che aleggiano ancora il piano materiale.\nInoltre, i tuoi occhi assumono le sembianze di un cielo stellato, con al centro Azorius, la Stella Fredda.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p11": {
       "titolo": "Abbraccio del Vuoto",
       "abilita": "Rivelazione Celestiale è utilizzabile due volte per riposo lungo e utilizzandola si recuperano 3d6 punti ferita più un numero di punti ferita pari al proprio livello.\nOsservando il cielo stellato notturno ti è immediatamente evidente la tua posizione su Atlas.\nInoltre, i tuoi occhi assumono le sembianze di un cielo stellato, con al centro Zasorel, la Stella Buia.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p12": {
       "titolo": "Premura di Vesztral",
       "abilita": "Ottieni un talento di Metamagia aggiuntivo a tua scelta.\nOgniqualvolta utilizzi i tuoi punti stregoneria entri in possesso di una stella in miniatura che orbita attorno a te. Ogni 3 punti stregoneria utilizzati originano una singola stella. Ogni stella così generata può essere spesa per evitare 2d6 danni subiti o curare per la stessa quantità te o un alleato nel raggio di 9m. Puoi utilizzare questa abilità come reazione. Puoi utilizzare più stelle in una singola reazione.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p14": {
       "titolo": "Coraggio di Eara",
       "abilita": "Ottieni un talento di Metamagia aggiuntivo a tua scelta.\nUtilizzare i tuoi punti stregoneria ti permette di entrare in possesso di una stella in miniatura che orbita attorno a te. Ogni 3 punti stregoneria utilizzati originano una singola stella. Ogni stella così generata può essere spesa per infliggere 2d6 danni Radianti aggiuntivi quando lanci un incantesimo che richiede un tiro per colpire. Qualsiasi creatura ostile cominci il proprio turno entro 3m da te subisce 2d6 danni Radianti.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     },
     "p13": {
       "titolo": "Ali del Vero",
       "abilita": "Ottieni nuovamente le tue ali, perdute a causa del Sesto, migliaia di anni fa.\nRivelazione Celestiale è attiva costantemente.\nAssumi la forma di un Avatar di Secraalis, brillando della luce di una stella. La tua forma può essere cambiata in quella nativa in qualsiasi momento.\nOgni incantesimo che lanci va trattato come fosse lanciato di 1 livello superiore. I tuoi incantesimi di 9° livello non possono essere contrastati se non da un'Azione Leggendaria.",
-      "quote": "<br>"
+      "quote": "<br>“”"
     }
   }

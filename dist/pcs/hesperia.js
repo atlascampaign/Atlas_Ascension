@@ -1,23 +1,3 @@
-const unlockmap = {
-  hesperia: {
-    "p1": ["p2"],
-    "p2": ["p5","p3"],
-    "p3": ["p15","p6"],
-    "p4": ["p8","p9"],
-    "p5": ["p6","p16"],
-    "p6": ["p4","p7"],
-    "p7": ["p8","p9"],
-    "p8": ["p10"],
-    "p9": ["p11"],
-    "p10": ["p12"],
-    "p11": ["p14"],
-    "p12": ["p13"],
-    "p14": ["p13"],
-    "p15": ["p4"],
-    "p16": ["p7"],
-  }
-};
-
 const connectionsMap = {
   one: ['two'],
   two: ['five','three'],
@@ -41,6 +21,28 @@ const connectionsMap = {
   // Add more mappings as needed
 };
 
+const unlockmap = {
+  hesperia: {
+    "p1": ["p2"],
+    "p2": ["p5","p3"],
+    "p3": ["p15","p6"],
+    "p4": ["p8","p9"],
+    "p5": ["p6","p16"],
+    "p6": ["p4","p7"],
+    "p7": ["p8","p9"],
+    "p8": ["p10"],
+    "p9": ["p11"],
+    "p10": ["p12"],
+    "p11": ["p14"],
+    "p12": ["p13"],
+    "p14": ["p13"],
+    "p15": ["p4"],
+    "p16": ["p7"],
+  }
+};
+
+
+
 const pointElements = document.querySelectorAll('.point');
 pointElements.forEach(element => {
   const pointId = element.id;
@@ -51,6 +53,7 @@ pointElements.forEach(element => {
 });
 
 function unlockPointsFromMap(clickedPoint) {
+  console.log('here is', character)
   const unlockList = unlockmap[character][clickedPoint]; // Access the correct nested object
   if (unlockList) {
     console.log("Unlocking points from map:", unlockList);

@@ -1,6 +1,6 @@
 const connectionsMap = {
   one: ["five", "four"],
-  two: [""],
+  two: ["eleven","ten"],
   three: ["six", "seven"],
   four: ["three"],
   five: ["three"],
@@ -8,14 +8,14 @@ const connectionsMap = {
   seven: ["two"],
   eight: ["nineteen", "twenty"],
   nine: ["seventeen", "eighteen"],
-  ten: ["twelve", "sixteen"],
-  eleven: ["fourteen", "fifteen"],
+  ten: ["sixteen"],
+  eleven: ["seventeen"],
   twelve: [],
   thirteen: [],
   fourteen: [],
   fifteen: [],
-  sixteen: [],
-  seventeen: [],
+  sixteen: ["nineteen"],
+  seventeen: ["eighteen"],
   eighteen: [],
   nineteen: [],
   twenty: []
@@ -23,7 +23,7 @@ const connectionsMap = {
 
 const unlockmap = {
   raziel : {
-  "p1": ["p5"],
+  "p1": ["p5","p4"],
   "p2": ["p4"],
   "p3": ["p6"],
   "p4": ["p8", "p10"],
