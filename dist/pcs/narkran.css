@@ -6,18 +6,32 @@
   box-sizing: border-box;
 }
 
-#container {
-  width: 100%;
-  height: 100vh;
-  background: url('../images/shabalaya._dnd_fantasy_wallpaper_a_armored_individual_is_standi_2c7c04bb-8d1d-4f2d-bc57-7818e8ca63e6.png') no-repeat center center;
-  background-size: cover;
+a,
+a:hover,
+a:active,
+a:visited {
+  cursor: url('../images/narkran/narkran_c_s.png'), auto !important;
 }
 
-html, body {
-  height: 100%;
+body {
+  background-image: url('../images/shabalaya._dnd_fantasy_wallpaper_a_armored_individual_is_standi_2c7c04bb-8d1d-4f2d-bc57-7818e8ca63e6.png');
+  background-size: cover;
+  cursor: url('../images/narkran/narkran_c_s.png'), auto;
+
+  /* Center the background image horizontally and vertically */
+  background-position: center;
+
+  /* Optionally, set background repeat to no-repeat to prevent image from repeating */
+  background-repeat: no-repeat;
+}
+
+#container {
+  cursor: url('../images/narkran/narkran_c_s.png'), auto;
   width: 100%;
-  overflow-x: hidden;
-  position: relative; /* Contain absolute elements */
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -88,7 +102,6 @@ animations
     0 0 40px rgba(22, 107, 139, 0.5),
     0 0 50px rgba(13, 64, 152, 0.2),
     0 0 80px rgba(25, 84, 245, 0.2);
-  cursor: pointer;
   background-size: 28px 28px;
   background-position: center;
   background-repeat: no-repeat;

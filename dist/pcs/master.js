@@ -56,6 +56,7 @@ async function initializeCharacterState() {
     return;
   }
 
+  console.log("Data:", data)
   // Set skill points
   skillPoints = data.available || 0;
   updateSkillPoints();
@@ -512,7 +513,7 @@ async function loadSkillPoints() {
 async function decrementSkillPoints() {
   const { data, error } = await client
     .from('points')
-    .update({ available: skillPoints })
+    .update({ available: available-1 })
     .eq('player', character);
 
   if (error) {
@@ -523,7 +524,14 @@ async function decrementSkillPoints() {
 points.forEach(point => {
   point.addEventListener('click', async function () {
     if (!this.classList.contains('locked')) {
-      if (skillPoints > 0 && !this.classList.contains('clicked')) {
+      // Check if the point has already been clicked BEFORE trying to spend a point
+      if (this.classList.contains('clicked')) {
+        console.log("This point has already been clicked before.");
+        return; // Exit if already clicked
+      }
+
+      // Check if skill points are available
+      if (skillPoints > 0) {
         if (!audio.paused) {
           audio.pause();
           audio.currentTime = 0.1;
@@ -531,40 +539,48 @@ points.forEach(point => {
         console.log("master audio played");
         audio.play();
 
-        skillPoints--;
-        await decrementSkillPoints();
-        updateSkillPoints();
+        // Call the RPC function to decrement points in the database
+        const { error: rpcError } = await client.rpc('decrement_available_points', {
+          player_name: character // Ensure 'character' variable is correctly scoped and has the player's name
+        });
 
-        this.classList.add('clicked', 'bordered', 'flash');
-        setTimeout(() => {
-          this.classList.remove('flash');
-        }, 500);
+        if (rpcError) {
+          console.error("Failed to decrement skill points in DB via RPC:", rpcError.message);
+          // Optional: alert the user or provide UI feedback about the error
+          // Do NOT proceed to decrement local skillPoints or update UI as if spent
+        } else {
+          // RPC call was successful, now update local state and UI
+          skillPoints--; // Decrement local skillPoints variable
+          updateSkillPoints(); // Update the UI to reflect the new skillPoints count
 
-        const clickedPointClass = [...this.classList].find(cls => /^p\d+$/.test(cls));
-        if (clickedPointClass) {
-          unlockPointsFromMap(clickedPointClass);
+          this.classList.add('clicked', 'bordered', 'flash');
+          setTimeout(() => {
+            this.classList.remove('flash');
+          }, 500);
+
+          const clickedPointClass = [...this.classList].find(cls => /^p\d+$/.test(cls));
+          if (clickedPointClass) {
+            unlockPointsFromMap(clickedPointClass);
+          }
+          populateUnlockedPoints(); // Consider if this needs to be called or if UI updates cover it
+          stylePointElements();   // Consider if this needs to be called
+
+          var pointsClicked = document.querySelectorAll('.point.clicked').length;
+          if (pointsClicked >= 8) {
+            unlockPoint('p13'); // Ensure unlockPoint logic is sound
+          }
+
+          console.log("Points clicked count:", pointsClicked);
+          drawLines();
+
+          // Update the unlocked JSONB in the database for this point
+          if (clickedPointClass) {
+            await updateUnlockedPointInDatabase(clickedPointClass, true);
+          }
+          console.log(`Skill point spent. ${skillPoints} remaining. Point ${clickedPointClass || ''} unlocked.`);
         }
-        populateUnlockedPoints();
-        stylePointElements();
-
-        var pointsClicked = document.querySelectorAll('.point.clicked').length;
-        if (pointsClicked >= 8) {
-          unlockPoint('p13');
-        }
-
-        console.log(pointsClicked);
-        drawLines();
-
-        // Get the point class name (e.g., "p1", "p2", etc.)
-        const pointClass = [...this.classList].find(cls => /^p\d+$/.test(cls));
-
-        // Update the unlocked JSONB in the database
-        if (pointClass) {
-          await updateUnlockedPointInDatabase(pointClass, true);
-        }
-
       } else {
-        console.log("No skill points available or the point has been clicked before.");
+        console.log("No skill points available.");
       }
     } else {
       console.log("This point is locked and cannot be clicked.");

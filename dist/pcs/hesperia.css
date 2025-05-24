@@ -6,9 +6,17 @@
   box-sizing: border-box;
 }
 
+a,
+a:hover,
+a:active,
+a:visited {
+  cursor: url('../images/hesperia/hesperia_c.png'), auto !important;
+}
+
 body {
   background-image: url('../images/shabalaya_winged_star_in_the_cosmos_--ar_169_bc384867-e5bc-4c87-8674-51d745ffb920.png');
   background-size: cover;
+  cursor: url('../images/hesperia/hesperia_c.png'), auto;
 
   /* Center the background image horizontally and vertically */
   background-position: center;
@@ -19,6 +27,7 @@ body {
 
 
 #container {
+  cursor: url('../images/hesperia/hesperia_c.png'), auto;
   width: 100%;
   height: 100vh;
   /**/background-image: url('../images/shabalaya_winged_star_in_the_cosmos_--ar_169_bc384867-e5bc-4c87-8674-51d745ffb920.png');
