@@ -2,13 +2,8 @@ name: Supabase Ping
 
 on:
   schedule:
-    # Runs every day at 2:00 AM UTC. Adjust as needed.
-    # Cron syntax: minute hour day(month) month day(week)
-    # For example, '0 8 * * 1-5' would run at 8 AM UTC on weekdays.
-    # '0 0 */3 * *' would run every 3 days at midnight UTC.
-    # Supabase pauses after 7 days, so once every 1-5 days is plenty.
-    - cron: '0 2 */3 * *' # Runs at 02:00 UTC on every 3rd day of the month.
-  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+    - cron: '0 2 */3 * *' # Runs at 02:00 UTC on every 3 days.
+  workflow_dispatch:
 
 jobs:
   ping_supabase:
@@ -16,9 +11,6 @@ jobs:
     steps:
       - name: Ping Supabase Project
         run: |
-          # Replace 'your_table_name' with a table you want to query (e.g., 'points')
-          # This example reads the first row from 'your_table_name'.
-          # Ensure this table is readable by your anon key.
           curl -X GET \
             "${{ secrets.SUPABASE_URL }}/rest/v1/points?select=id&limit=1" \
             -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
