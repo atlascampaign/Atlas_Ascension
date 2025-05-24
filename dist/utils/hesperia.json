@@ -2,12 +2,12 @@
     "p1": {
       "titolo": "Astromanzia",
       "abilita": "Tutti i danni magici che infliggi diventano Radianti. I tuoi incantesimi ignorano potenziali resistenze ed immunità a questo tipo di danno.",
-      "quote": "<br>“Dicono che la magia origini dal cuore del pianeta. Eppure, in una notte stellata, non ho mai visto qualcuno camminare a testa bassa.” -Vesztral, Oracolo della Città Alata"
+      "quote": "<br>“Dicono che la magia origini dal cuore del pianeta. Eppure, in una notte stellata, non ho mai visto qualcuno camminare a testa bassa.”<br>-Vesztral, Oracolo della Città Alata"
     },
     "p2": {
       "titolo": "Influenza Astrale",
       "abilita": "Una volta per turno è possibile utilizzare la propria azione bonus per ottenere benefici per se' e per i propri compagni. L'utilizzo di queste proprietà comporta il consumo di punti Stregoneria. Come azione bonus è possibile utilizzare un punto stregoneria per concedere vantaggio su un tiro per colpire a se o ad un alleato nel raggio di 9m. I colpi andati a segno utilizzando questa capacità infliggono 1d6 danni radianti aggiuntivi.",
-      "quote": "<br>“A te, che come una luna risiedi nella mia orbita, io offro me stesso. Così che la nostra gravità si unisca, lasciandoci in eternità danzare.” -Tradizionale rito matrimoniale Secraaliano"
+      "quote": "<br>“A te, che come una luna risiedi nella mia orbita, io offro me stesso. Così che la nostra gravità si unisca, lasciandoci in eternità danzare.”<br>-Tradizionale rito matrimoniale Secraaliano"
     },
     "p3": {
       "titolo": "Singolarità Controllata",
