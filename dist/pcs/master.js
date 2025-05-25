@@ -31,7 +31,7 @@ setTimeout(hideLoadingScreen, 10000); // 10 second timeout as last resort
 let abilityData = {};
 let character = document.querySelector('body').id; // Declare character globally
 console.log(character)
-let skillPoints = 0;
+let skillPoints
 
 document.body.addEventListener('touchmove', (e) => {
   if (window.scrollY <= 0) e.preventDefault();
@@ -451,6 +451,24 @@ document.querySelector('.forget').addEventListener('click', async function () {
   } else {
     console.log('Unlocked state reset in database.');
   }
+
+  const { count, error } = await client
+  .from('truth')
+  .select('*', { count: 'exact' }) // The key part for counting
+  .eq('player', character)         // The 'where' clause for the player
+  .eq('used', true);
+
+  if (error) {
+  console.error('Error fetching used memory count:', error.message);
+  // Optionally, alert the user or handle the UI state
+  return;
+  }
+
+  const { data: updatedPointsData, error: availableError } = await client
+  .from('points')
+  .update({ available: count }) // Set the 'available' column to the count
+  .eq('player', character)                  // For the current character
+  .select(); 
 
   location.reload();
 });
