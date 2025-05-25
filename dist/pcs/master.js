@@ -83,10 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeCharacterState();
 
   // Optional: manually add points by clicking on the counter
-  document.querySelector('.skillsleft h3').addEventListener('click', function () {
-    skillPoints++;
-    updateSkillPoints();
-  });
+//  document.querySelector('.skillsleft h3').addEventListener('click', function () {
+//    skillPoints++;
+//    updateSkillPoints();
+//  });
 });
 
 
