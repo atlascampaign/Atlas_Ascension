@@ -38,7 +38,7 @@ jQuery(document).ready(function() {
         "storm": { pageURL: "./dist/pcs/fedra.html" },
         "winged": { pageURL: "./dist/pcs/hesperia.html" },
         "balance": { pageURL: "./dist/pcs/narkran.html"},
-        "cinder": { pageURL: "./dist/pcs/raziel.html"}
+ //       "cinder": { pageURL: "./dist/pcs/raziel.html"}
     };
 
     // Iterate over each ccicon element
