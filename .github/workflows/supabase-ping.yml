@@ -2,7 +2,8 @@ name: Supabase Ping
 
 on:
   schedule:
-    - cron: '0 2 */3 * *' # Runs at 02:00 UTC on every 3 days.
+    # Esegue ogni giorno alle 02:00 UTC. Molto più sicuro!
+    - cron: '0 2 * * *' 
   workflow_dispatch:
 
 jobs:
@@ -11,7 +12,7 @@ jobs:
     steps:
       - name: Ping Supabase Project
         run: |
-          curl -X GET \
+          curl -f -X GET \
             "${{ secrets.SUPABASE_URL }}/rest/v1/points?select=id&limit=1" \
             -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
             -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
