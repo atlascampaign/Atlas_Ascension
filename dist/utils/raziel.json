@@ -5,9 +5,9 @@
     "quote": "<br>“Abbiamo idee diverse, Raziel. Ma ti ringrazio per aver camminato al mio fianco per questi sentieri così tetri.”<br>-Damiel, Sognatore di Alterni Destini"
   },
   "p3": {
-    "titolo": "Oltretomba: Elisei",
-    "abilita": "Ottieni accesso alla forza di una figura perita e la quale anima è custodita negli Elisei. L'effetto varia a seconda dell'anima con cui si entra in contatto.",
-    "quote": "<br>“”"
+    "titolo": "Sempremorte",
+    "abilita": "Non hai bisogno di cadaveri per rianimare morti. Hai a disposizione 3 slot si Sempremorte da utilizzare per riposo lungo.<br><br>Quando usi un incantesimo che necessita della presenza di un cadavere da consumare, puoi invece spendere uno slot di Sempremorte al posto di utilizzare un corpo.<br><br>Il tuo punteggio di Saggezza aumenta di +1.",
+    "quote": "<br>“Il problema è che più comprendiamo della morte e meno questa ci abbandona. Non è un'amicizia piacevole, ma certamente la più fedele che incontrerai.”"
   },
   "p4": {
     "titolo": "Oltretomba: Elisei",
@@ -20,7 +20,7 @@
     "quote": "<br>“”"
   },
   "p5": {
-    "titolo": "Oltretomba: Nove Inferi",
+    "titolo": "Oltretomba: Inferi",
     "abilita": "Ottieni accesso alla forza di una figura perita e la quale anima è custodita nei Nove Inferi.<br><br>L'effetto varia a seconda dell'anima con cui si entra in contatto.",
     "quote": "<br>“Prima o poi finirete i diavoli da mandare al macello sotto i colpi del mio archibugio. Aspetterò.”<br>-Yorus, il Dannato"
   },

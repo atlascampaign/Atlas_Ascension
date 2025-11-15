@@ -6,12 +6,12 @@
     },
     "p2": {
       "titolo": "Maestro d'improvvisazione",
-      "abilita": "Sei competente nell'utilizzo di qualsiasi arma. Nelle tue mani un'arma non perfetta è considerata tale, ottenendo un bonus di +1 a danno e tiro per colpire. <br><br>Mandare a segno un colpo utilizzando un'arma improvvisata non marziale garantisce 1d4 di ispirazione a tutti gli alleati nel raggio di 9m, 1d6 se il colpo effettuato è critico.",
+      "abilita": "Sei competente nell'utilizzo di qualsiasi arma. Nelle tue mani un'arma non perfetta è considerata tale, ottenendo un bonus di +1 a danno e tiro per colpire. <br><br>Mandare a segno un colpo utilizzando un'arma improvvisata non marziale garantisce 1d4 di ispirazione a tutti gli alleati nel raggio di 3m, 1d6 se il colpo effettuato è critico.",
       "quote": "<br>“Oh mio caro, non è lo strumento, ma l'artigiano!”<br>-Un modesto anonimo"
     },
     "p3": {
       "titolo": "Presenza Ispirante",
-      "abilita":"Fin tanto che possiedi un punto Ego gli alleati nel raggio di 18m non possono effettuare fallimenti ciritici. Un tiro equivalente ad 1 va rilanciato. Questa abilità consuma il punto Ego.",
+      "abilita":"Fin tanto che possiedi un punto Ego gli alleati nel raggio di 3m non possono effettuare fallimenti ciritici. Un tiro equivalente ad 1 va rilanciato. Questa abilità consuma il punto Ego.",
       "quote": "<br>“A che serve sentirsi un Dio, se non c'è nessuno a venerarti?”"
     },
     "p4": {
@@ -20,9 +20,9 @@
       "quote": "<br>“Il rischio è alla base del successo, proprio come la fortuna ed il denaro. E la frode.”"
     },
     "p5": {
-      "titolo": "Sferzata del Vespro",
-      "abilita": "La tua velocità aumenta di 3m. Quando si effettua un attacco in mischia dopo aver percorso almeno 9m, una serie di fulmini colpiscono I nemici adiacenti al percorso scelto. Il percorso deve essere seguito in modo tale che tra il bersaglio ed il punto di partenza distino un minimo di 6m. I fulmini che si abbattono infliggono 2d6 danni da tuono ad ogni nemico colpito. Un tiro salvezza su Destrezza dimezza il danno subito.",
-      "quote": "<br>“Il vento è sottovalutato dagli uomini del sud: le sue sferzate sono un ferreo educatore per chi dimora oltre le montagne.”"
+      "titolo": "Carisma Umiliante",
+      "abilita": "Le creature ostili effettuano un fallimento critico anche con un 2 se entro 3m da te. Gli attacchi di opportunità conseguenti andati a segno sono considerati critici con un 19.",
+      "quote": "<br>“Si mise a ridere. La folla si ammutolì e nell'aria rimasero solo i suoni dei singhiozzi del suo avversario e del suo crudele ghigno.”"
     },
     "p6": {
       "titolo": "Carezza dell'Alba",
@@ -35,9 +35,9 @@
       "quote": "<br>“Eppure, nelle timide notti estive, sembra quasi possibile ascoltare il suono di metalli che impattano tra loro. Se in quella prigione ghiacciata c'è ancora qualcosa, per le Alte Cime, stanne alla larga.”"
     },
     "p7": {
-      "titolo": "Scarica Rinvigorente",
-      "abilita": "Il beneficio \"<b>Colpo Divino</b>\" passa da garantire un bonus di 1d6 ad un bonus di 1d4. Oltre ai danni aggiuntivi scaturiti da questa abilità, si può scegliere di curare un alleato nel raggio di 9m per un punteggio uguale a quello generato dal d4 più il proprio modificatore di saggezza. Il bonus diventa 1d6 al livello 12° e 1d8 al livello 17°.",
-      "quote": "<br>“Il freddo non può nulla contro chi le fiamme le porta dentro.”<br>- Joturm, Custode del primo Calore"
+      "titolo": "Araldo del Rischio",
+      "abilita": "Puoi scegliere di ricevere un malus di -6 alla CA piuttosto che il normale -3 usando <b>Schivata Carismatica<b>. Fino alla fine del prossimo turno ogniqualvolta un nemico ti manca con un tiro per colpire, oltre a guadagnare un punto Ego, un alleato nel raggio di 6m puù usare la propria reazione per effettuare un atacco in mischia o a distanza.",
+      "quote": "<br>“Una volta eliminato il concetto di limite, anche questi scompaiono. Sono dunque mai esistiti?”<br>- Serenya, Fendente Errante"
     },
     "p16": {
       "titolo": "Forza del Fulmine",
