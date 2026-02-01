@@ -15,6 +15,13 @@ def resize_images(input_folder, output_folder, new_width=None, new_height=None):
     
     # Process each image in the input folder
     for filename in os.listdir(input_folder):
+        
+        # --- MODIFICA: Salta i file che finiscono con "c.png" ---
+        if filename.lower().endswith("c.png"):
+            print(f"Skipping excluded file: {filename}")
+            continue
+        # --------------------------------------------------------
+
         if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
             try:
                 # Open the image
@@ -48,8 +55,8 @@ def resize_images(input_folder, output_folder, new_width=None, new_height=None):
 if __name__ == "__main__":
     print("Script started")
     # Configuration
-    input_folder = "dist\\images\\raziel"  # Replace with your input folder path
-    output_folder = "dist\\images\\raziel"  # Replace with your output folder path
+    input_folder = "dist\\images\\erevan"  # Replace with your input folder path
+    output_folder = "dist\\images\\erevan"  # Replace with your output folder path
     
     # Choose ONE of these options:
     # Option 1: Set desired width (height will be calculated)

@@ -25,9 +25,9 @@
     "quote": "<br>“Prima o poi finirete i diavoli da mandare al macello sotto i colpi del mio archibugio. Aspetterò.”<br>-Yorus, il Dannato"
   },
   "p7": {
-    "titolo": "Supporto: Lascito",
-    "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. Puoi decidere di subire 3d8 danni necrotici. Se lo fai, l'alleato può decidere di spendere 3d8 per infliggere danni aggiuntivi dopo aver messo a segno un attacco in mischia o un incantesimo che richieda un tiro per colpire.",
-    "quote": "<br>“”"
+    "titolo": "Morte Prematura",
+    "abilita": "Quando i tuoi servitori non morti colpiscono una creatura ostile con meno del 10% dei punti vita rimanenti, tira un d20. Tiri superiori o uguali a 15 la rendono istantaneamente un tuo servitore se lo desideri e se la creatura è al più grande.",
+    "quote": "<br>“Ho avuto modo di comprendere che il timore innato che abbiamo nei confronti della morte è illusorio. Quando ci avviciniamo ad essa spesso si tramuta in un ossessivo amore.<br>-Damiel”"
   },
   "p14": {
     "titolo": "Supporto: Guardia",
@@ -35,9 +35,9 @@
     "quote": "<br>“”"
   },
   "p6": {
-    "titolo": "Sapienza del Mezzo",
-    "abilita": "Il tuo modificatore di Saggezza contribuisce al numero di punti vita ottenuti allo stesso modo del tuo modificatore di costituzione.",
-    "quote": "<br>“”"
+    "titolo": "Servitù Immonda",
+    "abilita": "Quando lanci un incantesimo il quale effetto è quello di riportare in vita una creatura come non morta puoi invece decidere di sfruttare i suoi resti per potenziare le tue difese.<br><br>Per ogni non morto che altrimenti entrerebbe sotto il tuo controllo, guadagni invece un bonus di +1 alla CA, fino ad un limite di +3.",
+    "quote": "<br>“Che il mio sacrificio non sia invano. Rendete i miei resti la più formidabile delle armi.”"
   },
   "p22": {
     "titolo": "Disciplina Sapiente",

@@ -17,12 +17,12 @@
   "p2": {
     "titolo": "Supporto: Ferocia",
     "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. L'alleato ottiene -2 al tiro per colpire. I colpi andati a segno mentre si è affetti da questo Supporto infliggono un danni radianti bonus pari al proprio livello.",
-    "quote": "<br>“”"
+    "quote": "<br>“Sei debole. Per questo non sarai mai ciò che Rommor cerca.” <br>-Silblis, Araldo Abissale"
   },
   "p5": {
     "titolo": "Supporto: Stasi",
     "abilita": "Concedi ad un alleato nel raggio di 6m parte del potere ereditato da Silderon. Il movimento dell'alleato è dimezzato. Ottiene +2 alla classe armatura.",
-    "quote": "<br>“”"
+    "quote": "<br>“A volte, quello che un uomo può fare, si limita a sopportare ciò che ha attorno.”"
   },
   "p7": {
     "titolo": "Supporto: Lascito",
@@ -37,12 +37,12 @@
   "p6": {
     "titolo": "Sapienza del Mezzo",
     "abilita": "Il tuo modificatore di Saggezza contribuisce al numero di punti vita ottenuti allo stesso modo del tuo modificatore di costituzione.",
-    "quote": "<br>“”"
+    "quote": "<br>“Non eccedere Narkran. Non essere avido. Forse, quello che non sappiamo, lo troveremo restando sul sentiero che seguiamo.”<br>-Rommor, Avanguardia della Bilancia"
   },
   "p22": {
     "titolo": "Disciplina Sapiente",
     "abilita": "Il tuo modificatore di Saggezza contribuisce alla tua CA.",
-    "quote": "<br>“”"
+    "quote": "<br>“Vedi, incubo: purtroppo non posso concedermi di morire oggi.<br>-Narsil”"
   },
   "p16": {
     "titolo": "Grazia del Crocevia",

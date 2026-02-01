@@ -25,9 +25,9 @@
       "quote": "<br>“Si mise a ridere. La folla si ammutolì e nell'aria rimasero solo i suoni dei singhiozzi del suo avversario e del suo crudele ghigno.”"
     },
     "p6": {
-      "titolo": "Carezza dell'Alba",
-      "abilita": "La tua velocità aumenta di 3m. Quando si effettua un attacco in mischia dopo aver percorso almeno 9m, un tiepido vento abbraccia tutti gli alleati adiacenti al percorso seguito. Questi vengono curati di 1d6 + il proprio modificatore da incantatore. I punti vita ripristinati aumentano a 2d6 all livello 11° e a 3d6 al livello 17°.",
-      "quote": "<br>“Quando l'ultimo gigante lasciò la Morhvall, il sole baciò I popoli del nord, che a lungo avevano anelato il suo tepore.”"
+      "titolo": "Bestia da Palcoscenico",
+      "abilita": "Quando non c'è alcun alleato nel raggio di 3 metri da te ottieni un bonus alla CA e al tiro per colpire di +2.",
+      "quote": "<br>Quando Nerid scese nell'arena, tutto lo fissavano ridendo. A fine scontro, molti piangevano."
     },
     "p8": {
       "titolo": "Catalizzatore Tonante",
@@ -36,7 +36,7 @@
     },
     "p7": {
       "titolo": "Araldo del Rischio",
-      "abilita": "Puoi scegliere di ricevere un malus di -6 alla CA piuttosto che il normale -3 usando <b>Schivata Carismatica<b>. Fino alla fine del prossimo turno ogniqualvolta un nemico ti manca con un tiro per colpire, oltre a guadagnare un punto Ego, un alleato nel raggio di 6m puù usare la propria reazione per effettuare un atacco in mischia o a distanza.",
+      "abilita": "Puoi scegliere di ricevere un malus di -6 alla CA piuttosto che il normale -3 usando <b>Schivata Carismatica<b>. Fino alla fine del prossimo turno ogniqualvolta un nemico ti manca con un tiro per colpire, oltre a guadagnare un punto Ego, un alleato nel raggio di 6m può usare la propria reazione per effettuare un atacco in mischia o a distanza.",
       "quote": "<br>“Una volta eliminato il concetto di limite, anche questi scompaiono. Sono dunque mai esistiti?”<br>- Serenya, Fendente Errante"
     },
     "p16": {
@@ -50,9 +50,9 @@
       "quote": "<br>“Non permetterò che prendiate la mia terra, qui risiede ogni cosa per cui vivo, la mia casa, la mia famiglia e la mia forza. Cadrà la montagna, prima di me!”<br>- Brynhilde, La Valanga"
     },
     "p11": {
-      "titolo": "Sapienza del Vento",
-      "abilita": "Il tuo punteggio di Saggezza aumenta di 2. Il punteggio massimo raggiungibile per questa caratteristica diventa 22. L'incantesimo Cura Ferite viene sostituito da Imposizione delle Mani. Questo cura 2d6 per livello più il proprio bonus di Saggezza.",
-      "quote": "<br>“Scoprirai che il vento non è che una carezza data da chi ci ama da lontano.” - Durmondt, Druido delle Selve Nascoste"
+      "titolo": "Cercafortuna",
+      "abilita": "Scegli una creatura nel raggio di 9m. Finchè quella creatura è in vita essendoti ostile, ogniqualvolta una creatura nel raggio di 9m da te manda a segno un colpo critico, il tuo threshold per mandarne a segno uno diminuisce di -1.",
+      "quote": "<br>“Un vero artigiano non si inventa poi granchè. Ruba. Quale miglior modo di prendere ispirazione?”<br>- Veliis, arciartigiano delle Falde Maaqariane."
     },
     "p15": {
       "titolo": "Occhio del Ciclone",
@@ -65,9 +65,9 @@
       "quote": "<br>“Li ho visti, Gallag. Non immagini quale sacrificio hanno dovuto compiere. Se sono qui, ora, dinanzi a queste porte con voi, è perchè non posso voltarmi davanti alla loro grandezza. Quando lei arriverà, io ci sarò.”<br>- Eda Zinrea Aliri, Voce del Vero"
     },
     "p14": {
-      "titolo": "Apparizione abbagliante",
-      "abilita": "I danni radianti causati da creature alleate affliggono quelle ostili. Ti è possibile materializzarti in forma di tuono in uno spazio entro 3m da queste creature ogniqualvolta dichiari un attacco in mischia nei loro confronti e ti trovi a meno di 18m da loro. Mandare a segno un colpo in questo modo causa 2d8 danni radianti aggiuntivi e consuma l'afflizione.",
-      "quote": "<br>“Vai! Non c'è tempo! Per lei, per loro, lo tratterrò quanto basta.”<br>- Eara, Guardiana Eterna di Secraalis"
+      "titolo": "Fascino del Pericolo",
+      "abilita": "Ogniqualvolta subisci danno da taglio, contundente o da forza, puoi scegliere di subire 2d8 danni aggiuntivi dello stesso tipo. Se lo fai, il tuo prossimo attacco infligge 2d8 danni aggiuntivi dello stesso tipo.",
+      "quote": "<br>“Il dolore è parte della crescita. Chi lo ripudia non sboccerà mai realmente”<br>-Serenya, Lama Errante"
     },
     "p10": {
       "titolo": "Ali Tonanti",
@@ -78,5 +78,10 @@
       "titolo": "Investitura della Tempesta",
       "abilita": "Si ottiene accesso all'incantesimo Investitura della Tempesta:",
       "quote": "<br>“Perdonami, Ayden. Devo farlo. So che puoi comprendere. Qualcuno deve brandire la Tempesta, e se non lo farò io, chi?”<br>- Ilfryd, La Scrutatrice"
+    },
+    "p12": {
+      "titolo": "Testa Calda",
+      "abilita": "Quando metti a segno un critico, entri in uno stato di euforia.<br>Durante il tuo turno successivo il tuo movimento raddoppia e ottieni un attacco aggiuntivo.",
+      "quote": "<br>“Il problema dell'ebbrezza, mio caro, è proprio questo: uno pensa di star danzando abilmente lungo il suo limite e poco dopo ci si sveglia nel fango sul ciglio della strada.”<br>- Saggio anonimo"
     }
   }
