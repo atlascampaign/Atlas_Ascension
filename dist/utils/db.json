@@ -1,0 +1,404 @@
+{
+ "points": {
+  "erevan": {
+   "available": 1,
+   "unlocked": {
+    "p1": true,
+    "p2": true,
+    "p3": false,
+    "p4": false,
+    "p5": false,
+    "p6": false,
+    "p7": false,
+    "p8": false,
+    "p9": false,
+    "p10": false,
+    "p11": false,
+    "p12": false,
+    "p14": false,
+    "p15": false,
+    "p16": false,
+    "p17": false,
+    "p20": false,
+    "p21": false
+   }
+  },
+  "fedra": {
+   "available": 1,
+   "unlocked": {
+    "p1": true,
+    "p2": true,
+    "p3": false,
+    "p4": false,
+    "p5": false,
+    "p6": false,
+    "p7": false,
+    "p8": false,
+    "p9": false,
+    "p10": false,
+    "p11": false,
+    "p12": false,
+    "p14": false,
+    "p15": false,
+    "p16": false,
+    "p17": false
+   }
+  },
+  "hesperia": {
+   "available": 1,
+   "unlocked": {
+    "p1": true,
+    "p2": true,
+    "p3": false,
+    "p4": false,
+    "p5": false,
+    "p6": false,
+    "p7": false,
+    "p8": false,
+    "p9": false,
+    "p10": false,
+    "p11": false,
+    "p12": false,
+    "p13": false,
+    "p14": false,
+    "p15": false,
+    "p16": false
+   }
+  },
+  "narkran": {
+   "available": 1,
+   "unlocked": {
+    "p1": true,
+    "p2": false,
+    "p3": true,
+    "p4": false,
+    "p5": false,
+    "p6": false,
+    "p7": false,
+    "p8": false,
+    "p9": false,
+    "p10": false,
+    "p11": false,
+    "p12": false,
+    "p14": false,
+    "p15": false,
+    "p16": false,
+    "p17": false,
+    "p18": false,
+    "p19": false,
+    "p20": false,
+    "p21": false,
+    "p22": false
+   }
+  },
+  "raziel": {
+   "available": 0,
+   "unlocked": {
+    "p1": true,
+    "p3": true,
+    "p4": true,
+    "p5": false,
+    "p6": false,
+    "p7": false
+   }
+  },
+  "yvette": {
+   "available": 1,
+   "unlocked": {
+    "p1": true,
+    "p2": true,
+    "p3": false,
+    "p4": false,
+    "p5": false,
+    "p6": false,
+    "p7": false,
+    "p8": false,
+    "p9": false,
+    "p10": false,
+    "p11": false,
+    "p12": false,
+    "p14": false,
+    "p15": false,
+    "p16": false,
+    "p17": false,
+    "p18": false,
+    "p19": false,
+    "p20": false,
+    "p21": false,
+    "p22": false
+   }
+  }
+ },
+ "truth": {
+  "t1": {
+   "player": "hesperia",
+   "hash": "5376fc5ff8424a06b17fd77200be8dad79071e2016016a721d5f7b6afb438ade",
+   "used": true
+  },
+  "t2": {
+   "player": "hesperia",
+   "hash": "c0a4c75b7d29a4a9a2919b5d0ecf5f48420ab4d28c185cc6097656b94cf3aaaf",
+   "used": true
+  },
+  "t3": {
+   "player": "hesperia",
+   "hash": "0996a83f1eafba8a5887932342411b8383c95dfb9af1ef0bc71c1b83e69e4b39",
+   "used": true
+  },
+  "t4": {
+   "player": "hesperia",
+   "hash": "d97fd7a3ba8729e90ab085e1f4b75b1a64edd3b864b9e9e9f211724845d4d97d",
+   "used": false
+  },
+  "t5": {
+   "player": "hesperia",
+   "hash": "147a9412ac85f688741c7b01a1088e9b9603e31592ada454f9dda0ae38337834",
+   "used": false
+  },
+  "t6": {
+   "player": "hesperia",
+   "hash": "4c9eddd9ef4f29b82aa82d9f6386a22895c09cf38697acf12c79b8ef306e837a",
+   "used": false
+  },
+  "t7": {
+   "player": "hesperia",
+   "hash": "d2bd84eacccc4dc2d8a0cf14ec5b2165bc9970391b49ed7d85513b531474d96b",
+   "used": false
+  },
+  "t8": {
+   "player": "hesperia",
+   "hash": "571a3e05b0bc8189fd7ee7e096981581548e2f81a92b51acb6beb12dd79392e3",
+   "used": false
+  },
+  "t9": {
+   "player": "hesperia",
+   "hash": "913dd9f0872e1972038d5e5e9ac394cd0744530faba0e7adf7c7efbf63c786bf",
+   "used": false
+  },
+  "t10": {
+   "player": "narkran",
+   "hash": "112efba939927ee2a5c86c0655416047afbfe04076aeaee561cc73f63037396c",
+   "used": true
+  },
+  "t11": {
+   "player": "narkran",
+   "hash": "6daa617d0d825cba09812000d33071ec4b324090f0fb8469f4ca1bf1196c6aec",
+   "used": true
+  },
+  "t12": {
+   "player": "narkran",
+   "hash": "751f91952dcadc28f569d7905fdbb2653cf704c3a1a2f7a4e5f9bfc826e66a1b",
+   "used": true
+  },
+  "t13": {
+   "player": "narkran",
+   "hash": "2a7a5cd6b8e05490f1642d03d3c09d2333a779a5f602d3a493da5684f8f3202a",
+   "used": false
+  },
+  "t14": {
+   "player": "narkran",
+   "hash": "7e5865265563e1c9e579acebcc083882e0c76ef2476002d770ef490529117d5f",
+   "used": false
+  },
+  "t15": {
+   "player": "narkran",
+   "hash": "d8bf341d2b5708661d8efa5d38b677762bde95a739b76e9de0ca110a6b64dec8",
+   "used": false
+  },
+  "t16": {
+   "player": "narkran",
+   "hash": "0022a88d796e744f3bc0c9a8ff29df16a7af90d465bf4a4deddd06b29ce57c65",
+   "used": false
+  },
+  "t17": {
+   "player": "narkran",
+   "hash": "8ce56111f3427123f8e33a5b60a46a0549e3ca60558453ecb47ed5d65d10077e",
+   "used": false
+  },
+  "t18": {
+   "player": "narkran",
+   "hash": "eed2433c05ab58c7f498fcb90238dd871cc0abe233f24fc1baf25474945b1ea0",
+   "used": false
+  },
+  "t19": {
+   "player": "fedra",
+   "hash": "ceca70b95e66732dd6f082bd3ed97f5f67198a271a0109df37f62bed33f5a411",
+   "used": true
+  },
+  "t20": {
+   "player": "fedra",
+   "hash": "e5411de65873aa4f84110d7ccfa02c2060cafe07dce31666de0cf33107ac6ac3",
+   "used": true
+  },
+  "t21": {
+   "player": "fedra",
+   "hash": "dc39919edbacd8c2bd6d7271b07b59dd8ec0c410529dd3d5ac84b25209a32e86",
+   "used": true
+  },
+  "t22": {
+   "player": "fedra",
+   "hash": "23bda71cd94d6f0b42639ba5033c6547121ee71c19fa4a28322c4e422e9724e7",
+   "used": false
+  },
+  "t23": {
+   "player": "fedra",
+   "hash": "5aec7708fa13c1b371676c457520e882dc30077cbd70f419c9a8800fe165f206",
+   "used": false
+  },
+  "t24": {
+   "player": "fedra",
+   "hash": "e3c0d748dd51655a39a1bb351df97583544aaba3d1f3241e5df5162a4f7df85c",
+   "used": false
+  },
+  "t25": {
+   "player": "fedra",
+   "hash": "261f0c6e20e5557e0a3d6b086be6da5083a103e927204d94037769685b180559",
+   "used": false
+  },
+  "t26": {
+   "player": "fedra",
+   "hash": "af530b928d987a010f39b9eda4c28071f64a8cbad6cd435e3ef4dfd5273fba1e",
+   "used": false
+  },
+  "t27": {
+   "player": "fedra",
+   "hash": "7dabbea86d0155372332373cd34e72f0895a295d4e5f5eaea7dbb43245828073",
+   "used": false
+  },
+  "t28": {
+   "player": "yvette",
+   "hash": "bc183367922ddb13c57d64771f5f69e725f9c4a70537f19e25bd0f43840e302a",
+   "used": true
+  },
+  "t29": {
+   "player": "yvette",
+   "hash": "0dab19a7dd40517ae695fac369d62285ebe95896db36b7ab4e8b2b9d2415e333",
+   "used": true
+  },
+  "t30": {
+   "player": "yvette",
+   "hash": "75c66f57b6cfaf52cf8fb24437e1c36b577b06a819fef6ed83516911373cd9e4",
+   "used": true
+  },
+  "t31": {
+   "player": "yvette",
+   "hash": "5d092b86e20b8c25c02c9d79b033ad9ec87b0c64d64ad535b28827b62bcc7360",
+   "used": false
+  },
+  "t32": {
+   "player": "yvette",
+   "hash": "f33186873e9aa2b0c1de6d553a9f40eb39eff4cc652b8fbecdf5c5582ad68c31",
+   "used": false
+  },
+  "t33": {
+   "player": "yvette",
+   "hash": "aecbde01f07541f0a2c1acc9d36e0e92e2f9aa60ab8a612091ea73e4022795e1",
+   "used": false
+  },
+  "t34": {
+   "player": "yvette",
+   "hash": "4d044ab8e048067fdcbfebf0cad08dc58b7d4a8722fac6f7f6d7101592b8400a",
+   "used": false
+  },
+  "t35": {
+   "player": "yvette",
+   "hash": "8477bf91be1a1597a58839b3ead223d8673680f88cede9dd482b7d13736c4838",
+   "used": false
+  },
+  "t36": {
+   "player": "yvette",
+   "hash": "46118661c83ec30fe08f1e355586cdddb1cbe793598e00b382cb46aca9474121",
+   "used": false
+  },
+  "t37": {
+   "player": "raziel",
+   "hash": "efebd7f1af34342aa3012d3e7e7a1b40275969bdb5b10ce00aae6a709b915ea9",
+   "used": true
+  },
+  "t38": {
+   "player": "raziel",
+   "hash": "d4d898f71bdc1d46fb335e8c78bdd9ae68d860fa7f0463ce614871fd14f54849",
+   "used": true
+  },
+  "t39": {
+   "player": "raziel",
+   "hash": "ea92bebc2116ca18283dad111b46ab1a05754d1526ed3afabfbe81813a578556",
+   "used": true
+  },
+  "t40": {
+   "player": "raziel",
+   "hash": "9a8616a282602dc9053e99fc8eac33f06f130200119eee13dfd1f788295f541d",
+   "used": false
+  },
+  "t41": {
+   "player": "raziel",
+   "hash": "4b798e06baf02fc963d5945ca86176a27878461a541049a23f2d1dc9afb496b6",
+   "used": false
+  },
+  "t42": {
+   "player": "raziel",
+   "hash": "1588963297ba902ab0daed6699b39194b56ffdfa2f4c523129cb97083ae8f170",
+   "used": false
+  },
+  "t43": {
+   "player": "raziel",
+   "hash": "61b65d93ff39275ce632c6c1710fafde66bc3a50b71e9b2c4ae54bbc6f59a493",
+   "used": false
+  },
+  "t44": {
+   "player": "raziel",
+   "hash": "24e69842c6cb5e19bb45b4cd1b0e73472fe59269185e1f0922a7b628ba42a981",
+   "used": false
+  },
+  "t45": {
+   "player": "raziel",
+   "hash": "17395dd0ea8665a753ccbd87dba230313d735af569e4f12c37f76b3bee68ad40",
+   "used": false
+  },
+  "t46": {
+   "player": "erevan",
+   "hash": "d2e4b87333ae3850fccd081573ac30dcfe0ac53c4268270f694b9d39752ce315",
+   "used": true
+  },
+  "t47": {
+   "player": "erevan",
+   "hash": "097a1a2e8340a181d70fd2a4a73e202fc77aefd5640d84f88416e8276bb09469",
+   "used": true
+  },
+  "t48": {
+   "player": "erevan",
+   "hash": "6162c82220a4e9618c7e23a9666ba170d4e1e66781382db0ad2b18e39b87b79e",
+   "used": true
+  },
+  "t49": {
+   "player": "erevan",
+   "hash": "1ef87561be0e66e3dde384e327e1ffe4736984b6f2ad242164b69f82b1f70544",
+   "used": false
+  },
+  "t50": {
+   "player": "erevan",
+   "hash": "8c5195f0824386b9dd7d2bdebbd6a18c69f639c12c13db1e84703abac215c534",
+   "used": false
+  },
+  "t51": {
+   "player": "erevan",
+   "hash": "713eb6108d5d5137adb46200e59387cdd244f4a29ff90f3bfe2af6baf4f5a89e",
+   "used": false
+  },
+  "t52": {
+   "player": "erevan",
+   "hash": "3af6e4208a030add9b6fc7e10528024b62b7c08b67efa14f0bf48800603da248",
+   "used": false
+  },
+  "t53": {
+   "player": "erevan",
+   "hash": "7dfa1f1746311e90caf6959334de397cdee61f672ccd0461e6997f5936d7461e",
+   "used": false
+  },
+  "t54": {
+   "player": "erevan",
+   "hash": "224ea01e4a299102cf8da1698a931bad291415dcefea7493576c17cf1fa960b9",
+   "used": false
+  }
+ }
+}

@@ -90,9 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const supabaseUrl = 'https://jiysxporffwzhmrrpatg.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImppeXN4cG9yZmZ3emhtcnJwYXRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY2MzY3NjEsImV4cCI6MjA2MjIxMjc2MX0.wetVVcVsxQYC4l1hcASJUOL7pcfarDBo5MuXZTy1EuU';
-const client = supabase.createClient(supabaseUrl, supabaseKey);
+// Database: dati da ../utils/db.json, stato salvato nel localStorage (vedi localclient.js)
+const client = createLocalClient();
 
 document.addEventListener('DOMContentLoaded', async () => {
   await client.auth.getSession();
