@@ -1,16 +1,14 @@
-// Sceglie tra vista classica (desktop) e vista mobile dei talenti e della pagina principale.
+// Sceglie tra vista classica (desktop) e vista mobile dei talenti dei personaggi.
+// (La pagina principale ha solo la vista mobile e non usa questo script.)
 // - Senza preferenza, tablet e smartphone usano la vista mobile e il resto la vista classica.
-// - Il pulsante di cambio vista (presente su ogni pagina) salva la preferenza nel localStorage:
-//   da quel momento vale su tutte le pagine e su questo dispositivo.
+// - Il pulsante di cambio vista salva la preferenza nel localStorage: da quel momento vale su questo dispositivo.
 // - ?view=classic|mobile nell'indirizzo ha la precedenza e diventa la nuova preferenza.
 (function () {
   const KEY = 'atlas_view';
-  const CHARACTERS = ['erevan', 'fedra', 'hesperia', 'narkran', 'raziel', 'yvette'];
   const params = new URLSearchParams(location.search);
   const page = location.pathname.split('/').pop().replace(/\.html$/, '');
   const isMobilePage = page === 'mobile';
-  const isIndex = !isMobilePage && !CHARACTERS.includes(page);
-  const character = isMobilePage ? params.get('c') : (isIndex ? null : page);
+  const character = isMobilePage ? params.get('c') : page;
 
   function isTouchDevice() {
     if (window.matchMedia('(pointer: coarse) and (hover: none)').matches) return true;
@@ -18,11 +16,17 @@
     return navigator.maxTouchPoints > 1 && /Android|iPhone|iPad|Mobile|MacIntel/i.test(navigator.userAgent + navigator.platform);
   }
 
+  // Se il localStorage non e' disponibile (navigazione privata, browser integrati) la scelta resta in memoria
+  // finche' la pagina e' aperta, cosi' il pulsante funziona comunque.
+  let memoryView = null;
+
   function stored() {
+    if (memoryView) return memoryView;
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
   }
 
   function remember(view) {
+    memoryView = view;
     try { localStorage.setItem(KEY, view); } catch (e) { /* storage non disponibile */ }
   }
 
@@ -30,13 +34,9 @@
   const forced = params.get('view');
   if (forced === 'classic' || forced === 'mobile') remember(forced);
 
-  const narrowScreen = window.matchMedia('(max-width: 900px), (orientation: portrait)');
-
-  // La pagina principale era gia' adattabile con la larghezza dello schermo: resta il comportamento predefinito
   function currentView() {
     const saved = stored() || forced;
     if (saved === 'classic' || saved === 'mobile') return saved;
-    if (isIndex) return isTouchDevice() || narrowScreen.matches ? 'mobile' : 'classic';
     return isTouchDevice() ? 'mobile' : 'classic';
   }
 
@@ -98,22 +98,8 @@
     return show;
   }
 
-  if (isIndex) {
-    // Sulla pagina principale la vista e' una classe su <html> (vedi ccstyle.css): il cambio e' immediato
-    const root = document.documentElement;
-    const apply = () => root.classList.toggle('view-mobile', currentView() === 'mobile');
-    apply(); // subito, per evitare il lampo del layout sbagliato
-    narrowScreen.addEventListener('change', apply);
-    document.addEventListener('DOMContentLoaded', () => {
-      addToggleStyle();
-      const other = (view) => (view === 'mobile' ? 'classic' : 'mobile');
-      const show = addToggle(other(currentView()), (view) => {
-        remember(view);
-        apply();
-        show(other(view));
-      });
-    });
-  } else if (!isMobilePage) {
+  // Sulle pagine classiche il pulsante porta alla vista mobile
+  if (!isMobilePage) {
     document.addEventListener('DOMContentLoaded', () => {
       addToggleStyle();
       addToggle('mobile', (view) => window.ViewMode.switchTo(view));

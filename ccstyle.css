@@ -302,9 +302,9 @@ h1 {
 }
 
 /*
- * Vista mobile: classe "view-mobile" su <html>, impostata da viewmode.js (schermi stretti, in verticale
- * o scelta dall'utente con il pulsante di cambio vista). Il riquadro dello specchio e' nascosto e le sei icone
- * si dispongono a esagono in un quadrato centrato (le posizioni sono % del quadrato, non della finestra).
+ * La pagina principale ha solo la vista mobile (classe "view-mobile" fissa su <html>): niente specchio,
+ * le sei icone si dispongono a esagono in un quadrato centrato (le posizioni sono % del quadrato, non della finestra).
+ * Le regole desktop piu' sopra (specchio, orb, posizioni a % della finestra) non sono piu' usate.
  */
 html.view-mobile body {
     overflow-x: hidden;
@@ -342,7 +342,7 @@ html.view-mobile #mirror {
 
 html.view-mobile .hexagon-container {
     position: relative;
-    width: min(92vw, 520px);
+    width: min(92vw, 520px, 80svh);
     aspect-ratio: 1;
     margin: 0 auto;
 }
