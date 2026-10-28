@@ -33,10 +33,9 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url('./dist/images/shabalaya._universe_cosmos_background_dark_colors_9ffa5c87-94fa-4780-8b81-477d5ce3f1ee.png');
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+    background-color: #0b0614;
     cursor: url('./dist/images/cccursor.svg');
     overflow: hidden;
     
@@ -251,3 +250,112 @@ h1 {
   100% { transform: rotate(360deg); }
 }
 
+
+/* Sfondo animato: la nebulosa deriva lentamente, sopra ci sono stelle (canvas) e un alone pulsante */
+#container::before {
+    content: "";
+    position: absolute;
+    inset: -6%;
+    z-index: -3;
+    background-image: url('./dist/images/shabalaya._universe_cosmos_background_dark_colors_9ffa5c87-94fa-4780-8b81-477d5ce3f1ee.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: nebula-drift 90s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+#container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 60% 25%, rgba(214, 110, 255, 0.22), transparent 55%),
+        radial-gradient(ellipse at 85% 45%, rgba(255, 70, 140, 0.18), transparent 50%);
+    mix-blend-mode: screen;
+    animation: nebula-glow 14s ease-in-out infinite alternate;
+}
+
+#bg-stars {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes nebula-drift {
+    0%   { transform: scale(1)    translate(0, 0); }
+    100% { transform: scale(1.12) translate(-2.5%, -1.5%); }
+}
+
+@keyframes nebula-glow {
+    0%   { opacity: 0.25; }
+    100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #container::before, #container::after { animation: none; }
+}
+
+/*
+ * Vista mobile: classe "view-mobile" su <html>, impostata da viewmode.js (schermi stretti, in verticale
+ * o scelta dall'utente con il pulsante di cambio vista). Il riquadro dello specchio e' nascosto e le sei icone
+ * si dispongono a esagono in un quadrato centrato (le posizioni sono % del quadrato, non della finestra).
+ */
+html.view-mobile body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+html.view-mobile #container {
+    height: auto;
+    min-height: 100svh;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+html.view-mobile #container > h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+html.view-mobile #orb,
+html.view-mobile #moburat,
+html.view-mobile #topborder {
+    display: none;
+}
+
+html.view-mobile #mirror {
+    display: none;
+}
+
+html.view-mobile .hexagon-container {
+    position: relative;
+    width: min(92vw, 520px);
+    aspect-ratio: 1;
+    margin: 0 auto;
+}
+
+html.view-mobile .hexagon-container .ccicon {
+    translate: -50% -50%;
+    cursor: url('./dist/images/pointerbase.svg'), pointer;
+}
+
+/* Esagono: cinder in alto a sinistra, poi in senso orario */
+html.view-mobile .hexagon-container #cinder   { height: auto; left: 21%; top: 33%; width: 30%; }
+html.view-mobile .hexagon-container #winged   { height: auto; left: 50%; top: 15%; width: 33%; }
+html.view-mobile .hexagon-container #balance  { height: auto; left: 79%; top: 33%; width: 23%; }
+html.view-mobile .hexagon-container #naboar   { height: auto; left: 79%; top: 67%; width: 21%; }
+html.view-mobile .hexagon-container #fireseed { height: auto; left: 50%; top: 85%; width: 14%; }
+html.view-mobile .hexagon-container #storm    { height: auto; left: 21%; top: 67%; width: 17%; }

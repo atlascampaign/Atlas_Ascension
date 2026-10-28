@@ -1,16 +1,10 @@
 // Client minimale compatibile con la parte di supabase-js usata dal sito,
 // che legge e scrive su Firebase Realtime Database tramite la sua API REST.
 // Layout del database: /points/{player} = {available, unlocked}
-//                      /truth/{tNN}     = {player, hash, used}
-// Le parole di "truth" sono salvate come hash SHA-256, mai in chiaro.
+// I punti disponibili (available) vengono assegnati a mano dal DM.
 const FIREBASE_URL = 'https://atlas-ascension-default-rtdb.europe-west1.firebasedatabase.app';
 
 function createLocalClient() {
-  async function sha256(text) {
-    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
-    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
-  }
-
   async function request(path, method = 'GET', body) {
     const res = await fetch(`${FIREBASE_URL}/${path}.json`, {
       method,
@@ -27,18 +21,12 @@ function createLocalClient() {
     return Object.entries(obj).map(([key, row]) => {
       const out = { ...row, _key: key };
       if (table === 'points') out.player = key;
-      if (table === 'truth') out.id = key;
       return out;
     });
   }
 
-  // Nella tabella truth la colonna "word" non esiste in chiaro: il confronto avviene sull'hash
-  async function matcher(table, filters) {
-    const checks = await Promise.all(filters.map(async ({ col, val }) =>
-      table === 'truth' && col === 'word'
-        ? { col: 'hash', val: await sha256(String(val).trim()) }
-        : { col, val }));
-    return row => checks.every(c => row[c.col] === c.val);
+  function matcher(filters) {
+    return row => filters.every(({ col, val }) => row[col] === val);
   }
 
   function project(row, columns) {
@@ -50,7 +38,7 @@ function createLocalClient() {
   }
 
   async function run(q) {
-    const hits = (await readTable(q.table)).filter(await matcher(q.table, q.filters));
+    const hits = (await readTable(q.table)).filter(matcher(q.filters));
     if (q.op === 'update') {
       await Promise.all(hits.map(r => request(`${q.table}/${r._key}`, 'PATCH', q.values)));
       hits.forEach(r => Object.assign(r, q.values));

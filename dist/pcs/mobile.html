@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Atlas - Ascensione</title>
+  <script src="./viewmode.js"></script>
+  <script src="./localclient.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=EB+Garamond&family=Jacques+Francois&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./mobile.css">
+</head>
+<body>
+  <div id="bg"></div>
+
+  <header id="topbar">
+    <a id="back" href="../../index.html" aria-label="Torna alla selezione"><img src="../images/ccorb.png" alt=""></a>
+    <div id="title">
+      <span id="char-name"></span>
+      <small id="asc"></small>
+    </div>
+    <div id="points" aria-label="Rimembranze disponibili"><b id="points-count">0</b><small>Rimembranze</small></div>
+    <button id="view-btn" class="topbtn" aria-label="Passa alla vista classica" title="Vista classica">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+    </button>
+    <button id="menu-btn" class="topbtn" aria-label="Menu">&#9776;</button>
+  </header>
+
+  <main id="tree">
+    <svg id="lines"></svg>
+    <div id="rows"></div>
+  </main>
+
+  <div id="backdrop"></div>
+
+  <aside id="drawer">
+    <h2>Menu</h2>
+    <button id="forget-btn" class="action">Oblio</button>
+    <p class="hint">L'Oblio azzera i talenti sbloccati e restituisce le rimembranze spese.</p>
+  </aside>
+
+  <section id="sheet" aria-live="polite"></section>
+  <div id="toast"></div>
+
+  <script src="./mobile.js"></script>
+</body>
+</html>

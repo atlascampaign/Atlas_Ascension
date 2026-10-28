@@ -33,6 +33,37 @@ let character = document.querySelector('body').id; // Declare character globally
 console.log(character)
 let skillPoints
 
+// Percorso lineare: dopo aver sbloccato un nodo, gli altri nodi dello stesso livello non sono piu' selezionabili.
+// I livelli sono in ../utils/trees.json (generato da tools/build_trees.py); il nodo finale (p13) e' escluso.
+let nodeDepths = null;
+
+fetch('../utils/trees.json')
+  .then((r) => r.json())
+  .then((trees) => {
+    nodeDepths = Object.fromEntries(Object.entries(trees[character].nodes).map(([p, n]) => [p, n.depth]));
+    applyLevelRule();
+  })
+  .catch((e) => console.error('Livelli dei nodi non disponibili:', e));
+
+function pointClassOf(point) {
+  return [...point.classList].find((cls) => /^p\d+$/.test(cls));
+}
+
+function applyLevelRule() {
+  if (!nodeDepths) return;
+  const taken = new Set();
+  document.querySelectorAll('.point.clicked').forEach((point) => {
+    const pc = pointClassOf(point);
+    if (pc && pc !== 'p13' && nodeDepths[pc] != null) taken.add(nodeDepths[pc]);
+  });
+  document.querySelectorAll('.point:not(.clicked)').forEach((point) => {
+    const pc = pointClassOf(point);
+    if (pc && pc !== 'p13' && nodeDepths[pc] != null && taken.has(nodeDepths[pc])) {
+      point.classList.add('blocked'); // resta visibile (card) se era gia' sbloccabile, ma non si puo' cliccare
+    }
+  });
+}
+
 document.body.addEventListener('touchmove', (e) => {
   if (window.scrollY <= 0) e.preventDefault();
 }, { passive: false });
@@ -76,6 +107,7 @@ async function initializeCharacterState() {
   });
 
   console.log("Character state initialized for:", character);
+  applyLevelRule();
   drawLines(); // Ensure lines are drawn after initial state is loaded
 }
 
@@ -276,91 +308,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const container = document.getElementById('container');
 
-const skillsContainer = document.createElement('div');
-skillsContainer.id = 'skills-container';
-
-
-const skillsLeftDiv = document.createElement('div');
-skillsLeftDiv.id = 'skills-left';
-skillsLeftDiv.textContent = 'Recupera Ricordo';
-
-const inputBoxWrapper = document.createElement('div');
-inputBoxWrapper.style.display = 'flex';
-
-const inputBox = document.createElement('input');
-inputBox.id = 'input-box';
-inputBox.type = 'text';
-inputBox.style.alignSelf = 'center';
-
-inputBoxWrapper.appendChild(inputBox);
-skillsContainer.appendChild(skillsLeftDiv);
-skillsContainer.appendChild(inputBoxWrapper);
-container.appendChild(skillsContainer);
-
 // Set the ascension description in the UI
 const desc = ascension[character];
 document.querySelector('.skillsleft h1').textContent = desc;
-
-// TODO: CHANGE THIS PART TO A FUNCTION THAT ALLOWS TO USE POWER WORDS TO GAIN TALENT POINTS --------------------------------------------------------------------------------------
-inputBox.addEventListener('keydown', async (event) => {
-  if (event.key === 'Enter') {
-    const typedValue = event.target.value.trim(); // Trim input
-    if (!typedValue) return;
-
-    // Step 1: Fetch the matching word for the current character (character)
-    const { data: truthEntry, error: fetchError } = await client
-      .from('truth')
-      .select('id, used')
-      .eq('player', character)
-      .eq('word', typedValue)
-      .maybeSingle();
-
-    if (fetchError) {
-      console.error('Error fetching word from truth table:', fetchError.message);
-      return;
-    }
-
-    if (!truthEntry) {
-      console.log("Memory not found.");
-      return;
-    }
-
-    if (truthEntry.used) {
-      console.log("Memory already recovered — no points awarded.");
-      return;
-    }
-
-    // Step 2: Mark the word as used
-    const { error: updateError } = await client
-      .from('truth')
-      .update({ used: true })
-      .eq('id', truthEntry.id);
-
-    if (updateError) {
-      console.error("Failed to mark memory as used:", updateError.message);
-      return;
-    }
-
-    // Step 3: Increment skill points in 'points' table
-    const { error: incrementError } = await client
-      .rpc('increment_available_points', { player_name: character });
-
-    if (incrementError) {
-      console.error("Failed to increment available points:", incrementError.message);
-      return;
-    }
-
-    // Step 4: Update local state/UI
-    skillPoints++;
-    updateSkillPoints();
-    inputBox.value = '';
-
-    console.log(`Recovered memory: ${typedValue}. Skill points now: ${skillPoints}`);
-  }
-});
-
-
-
 
 // Create a new link element for the preconnect to Google Fonts
 const preconnectGoogleFonts = document.createElement('link');
@@ -422,15 +372,15 @@ document.querySelector('.forget').addEventListener('click', async function () {
   sessionStorage.removeItem('memories');
   console.log("Local storage cleared.");
 
-  // Fetch current unlocked state for this character
+  // Stato attuale del personaggio
   const { data, error: fetchError } = await client
     .from('points')
-    .select('unlocked')
+    .select('available, unlocked')
     .eq('player', character)
     .single();
 
   if (fetchError) {
-    console.error('Error fetching current unlocked state:', fetchError.message);
+    console.error('Error fetching current state:', fetchError.message);
     return;
   }
 
@@ -438,36 +388,18 @@ document.querySelector('.forget').addEventListener('click', async function () {
   const resetUnlocked = Object.fromEntries(
     Object.keys(currentUnlocked).map(key => [key, false])
   );
+  // Ogni nodo sbloccato aveva richiesto un punto: tornano tutti disponibili
+  const refund = Object.values(currentUnlocked).filter(v => v === true).length;
 
-  // Update the unlocked field with all false
   const { error: updateError } = await client
     .from('points')
-    .update({ unlocked: resetUnlocked })
+    .update({ unlocked: resetUnlocked, available: (data.available || 0) + refund })
     .eq('player', character);
 
   if (updateError) {
-    console.error('Failed to reset unlocked state:', updateError.message);
-  } else {
-    console.log('Unlocked state reset in database.');
+    console.error('Failed to reset state:', updateError.message);
+    return;
   }
-
-  const { count, error } = await client
-  .from('truth')
-  .select('*', { count: 'exact' }) // The key part for counting
-  .eq('player', character)         // The 'where' clause for the player
-  .eq('used', true);
-
-  if (error) {
-  console.error('Error fetching used memory count:', error.message);
-  // Optionally, alert the user or handle the UI state
-  return;
-  }
-
-  const { data: updatedPointsData, error: availableError } = await client
-  .from('points')
-  .update({ available: count }) // Set the 'available' column to the count
-  .eq('player', character)                  // For the current character
-  .select(); 
 
   location.reload();
 });
@@ -540,6 +472,10 @@ async function decrementSkillPoints() {
 
 points.forEach(point => {
   point.addEventListener('click', async function () {
+    if (this.classList.contains('blocked')) {
+      console.log("Nodo non selezionabile: un altro nodo di questo livello e' gia' stato scelto.");
+      return;
+    }
     if (!this.classList.contains('locked')) {
       // Check if the point has already been clicked BEFORE trying to spend a point
       if (this.classList.contains('clicked')) {
@@ -586,6 +522,8 @@ points.forEach(point => {
           if (pointsClicked >= 8) {
             unlockPoint('p13'); // Ensure unlockPoint logic is sound
           }
+
+          applyLevelRule();
 
           console.log("Points clicked count:", pointsClicked);
           drawLines();

@@ -4,12 +4,9 @@
     "points": {
       "$player": {
         ".write": true,
-        "available": { ".validate": "newData.isNumber() && newData.val() >= 0" }
-      }
-    },
-    "truth": {
-      "$id": {
-        "used": { ".write": true, ".validate": "newData.isBoolean()" }
+        "available": {
+          ".validate": "newData.isNumber() && newData.val() >= 0"
+        }
       }
     }
   }
